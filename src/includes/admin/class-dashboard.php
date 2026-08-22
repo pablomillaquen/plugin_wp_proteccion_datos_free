@@ -152,6 +152,14 @@ class Chilean_DP_Dashboard {
                 'confirmar'   => __( 'Cuando la autoridad publique definiciones, WooPrivacy PRO incorporará los criterios actualizados.', 'chilean-data-protection' ),
                 'hecho'       => __( 'WooPrivacy PRO puede automatizar estos controles y auditarlos de forma continua.', 'chilean-data-protection' ),
             ];
+            $guide_url = admin_url( 'admin.php?page=chilean-dp-guide' );
+            $kd_link   = [
+                'confirmar' => sprintf(
+                    '<a href="%s#confirmaciones">%s</a>',
+                    esc_url( $guide_url ),
+                    esc_html__( '¿Por qué aparece este aviso? Ver explicación en la Guía.', 'chilean-data-protection' )
+                ),
+            ];
             $sections = [
                 'hacer_ahora' => __( 'Acciones prioritarias', 'chilean-data-protection' ),
                 'confirmar'   => __( 'Necesitan confirmación', 'chilean-data-protection' ),
@@ -162,7 +170,7 @@ class Chilean_DP_Dashboard {
                 if ( empty( $g['roadmap'][ $key ] ) ) { continue; } ?>
                 <h2 class="chilean-dp-section-title"><?php echo esc_html( $label ); ?> <span class="count">(<?php echo count( $g['roadmap'][ $key ] ); ?>)</span></h2>
                 <?php if ( isset( $pro_notes[ $key ] ) ) : ?>
-                    <p class="chilean-dp-pro-note"><?php echo esc_html( $pro_notes[ $key ] ); ?></p>
+                    <p class="chilean-dp-pro-note"><?php echo esc_html( $pro_notes[ $key ] ); ?><?php if ( isset( $kd_link[ $key ] ) ) : ?> <span class="chilean-dp-kd-link">— <?php echo wp_kses_post( $kd_link[ $key ] ); ?></span><?php endif; ?></p>
                 <?php endif; ?>
                 <?php foreach ( $g['roadmap'][ $key ] as $item ) : ?>
                     <?php $this->render_item( $item, $key ); ?>

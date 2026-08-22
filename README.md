@@ -1,6 +1,6 @@
 # WooPrivacy (FREE)
 
-**Assessment & Guidance de privacidad para tiendas WooCommerce bajo la [Ley 21.719](https://www.bcn.cl/leychile/navegar?idNorma=1185493) de Chile** — que entra en vigencia el **01-diciembre-2026**.
+**Assessment & Guidance de privacidad para tiendas WooCommerce bajo la [Ley 21.719](https://www.bcn.cl/leychile/navegar?idNorma=1209272) de Chile** — que entra en vigencia el **01-diciembre-2026**.
 
 > *WooPrivacy FREE te ayuda a entender qué aspectos de privacidad debes revisar en tu tienda WooCommerce y qué deberías abordar primero.*
 
