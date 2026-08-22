@@ -210,7 +210,7 @@ class Chilean_DP_Dashboard {
                 <div class="chilean-dp-guide">
                     <p class="g-q"><?php esc_html_e( '¿Qué significa?', 'chilean-data-protection' ); ?></p>
                     <p><?php echo esc_html( $gc['what_it_means'] ); ?></p>
-                    <p class="g-q"><?php esc_html_e( '¿Por qué te importa?', 'chilean-data-protection' ); ?></p>
+                    <p class="g-q"><?php esc_html_e( 'Por qué importa', 'chilean-data-protection' ); ?></p>
                     <p><?php echo esc_html( $gc['why_it_matters'] ); ?></p>
                     <p class="g-q"><?php esc_html_e( '¿Qué debes revisar?', 'chilean-data-protection' ); ?></p>
                     <p><?php echo esc_html( $gc['what_to_check'] ); ?></p>
