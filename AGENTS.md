@@ -238,7 +238,7 @@ docker compose -f docker/docker-compose.yml exec wordpress wp core update-db --a
 14. ~~FREE-011: FREE/PRO Boundary~~ ✅ Contrato analítico completado, gates 7/7 PASS — **PENDIENTE: aprobación del usuario** para freeze (`specs/free-011-free-pro-boundary/`; línea: FREE=conocimiento snapshot, PRO=cambio+prueba continua; hallazgos F11-01/02 scaffold→FREE-012)
 15. ~~FREE-012~~ ✅ FROZEN — v1.0.0 RELEASE CANDIDATE
 16. ~~RG-SEC~~ ✅ **GATE SUPERADO** (`specs/release-gate-rg-sec/`): no-destructivo demostrado (A→lifecycle→S0 idéntico en 15 tablas), escrituras=4 options propias, 0 destructivos/SQL/HTTP/vendor, hooks solo admin (comercio inalcanzable), uninstall fix F12-SEC-01 + test OK, comercio operativo con plugin activo (orden+stock 8→5)
-17. **RELEASE PÚBLICO v1.0.0 → pendiente de declaración final del usuario**
+17. **🎉 RELEASE PÚBLICO DECLARADO — WooPrivacy (FREE) v1.0.0** · git main+tag v1.0.0 → github.com/pablomillaquen/plugin_wp_proteccion_datos_free · declaración en specs/free-012-validation-release/evidence/release-declaration.md
 
 ## Notas Importantes
 
@@ -251,4 +251,4 @@ docker compose -f docker/docker-compose.yml exec wordpress wp core update-db --a
 
 ---
 
-*Última actualización: 2026-08-21 — FREE-001..012 FROZEN · RG-SEC superado · WooPrivacy (FREE) v1.0.0 listo para release público (pendiente declaración final del usuario)*
+*Última actualización: 2026-08-21 — 🎉 WooPrivacy (FREE) v1.0.0 RELEASED · FREE-001..012 FROZEN · RG-SEC superado · distribuido en GitHub*
