@@ -225,3 +225,5 @@
 
 /* Upgrade path (FREE-012) */
 .chilean-dp-pro-note { color: #50575e; background: #f6f7f7; border-radius: 3px; padding: 6px 10px; font-size: 12px; margin: -4px 0 10px; }
+
+.badge-user-eval { background: #e7f3ff; color: #135e96; }

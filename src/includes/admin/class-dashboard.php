@@ -12,6 +12,7 @@ class Chilean_DP_Dashboard {
     const NONCE_FIELD  = 'chilean_dp_dash_nonce';
 
     private static $instance = null;
+    private $flash_notice = '';
 
     public static function instance() {
         if ( null === self::$instance ) {
@@ -61,24 +62,40 @@ class Chilean_DP_Dashboard {
             $rec = wp_unslash( $_POST['chilean_dp_record'] );
             $cid = sanitize_text_field( $rec['control_id'] ?? '' );
             if ( '' !== $cid ) {
-                $assess->record(
+                $result = $assess->record(
                     $cid,
                     isset( $rec['status'] ) ? sanitize_text_field( $rec['status'] ) : '',
                     'user-declared',
                     isset( $rec['observation'] ) ? sanitize_text_field( $rec['observation'] ) : ''
                 );
+                if ( ! empty( $result['ok'] ) ) {
+                    $this->flash_notice = __( 'Evaluación guardada correctamente.', 'chilean-data-protection' );
+                }
             }
         }
 
         if ( isset( $_POST['chilean_dp_retract'] ) ) {
-            $assess->retract( sanitize_text_field( wp_unslash( $_POST['chilean_dp_retract'] ) ) );
+            if ( $assess->retract( sanitize_text_field( wp_unslash( $_POST['chilean_dp_retract'] ) ) ) ) {
+                $this->flash_notice = __( 'Evaluación retirada.', 'chilean-data-protection' );
+            }
         }
 
         if ( isset( $_POST['chilean_dp_adopt'] ) ) {
             $dim     = sanitize_text_field( wp_unslash( $_POST['chilean_dp_adopt'] ) );
             $value   = isset( $_POST['chilean_dp_adopt_value'] ) && '1' === sanitize_text_field( wp_unslash( $_POST['chilean_dp_adopt_value'] ) );
-            Chilean_DP_Environment_Detector::instance()->adopt_dimension( $dim, $value );
+            if ( Chilean_DP_Environment_Detector::instance()->adopt_dimension( $dim, $value ) ) {
+                $this->flash_notice = __( 'Respuesta actualizada con la detección del entorno.', 'chilean-data-protection' );
+            }
         }
+    }
+
+    private function eval_label( $status ) {
+        return [
+            'IMPLEMENTED' => __( 'Cubierto', 'chilean-data-protection' ),
+            'PARTIAL'     => __( 'Cubierto a medias', 'chilean-data-protection' ),
+            'PENDING'     => __( 'Por hacer', 'chilean-data-protection' ),
+            'UNKNOWN'     => __( 'Sin confirmar', 'chilean-data-protection' ),
+        ][ $status ] ?? $status;
     }
 
     public function render_page() {
@@ -96,7 +113,12 @@ class Chilean_DP_Dashboard {
                 · <a href="<?php echo esc_url( admin_url( 'admin.php?page=chilean-dp-profile' ) ); ?>"><?php esc_html_e( 'Editar perfil de tienda', 'chilean-data-protection' ); ?></a>
             </p>
 
-            <?php settings_errors( 'chilean_dp_profile' ); ?>
+            <?php
+            settings_errors( 'chilean_dp_profile' );
+            if ( '' !== $this->flash_notice ) {
+                printf( '<div class="notice notice-success is-dismissible"><p>%s</p></div>', esc_html( $this->flash_notice ) );
+            }
+            ?>
 
             <div class="chilean-dp-attention chilean-dp-attention-<?php echo esc_attr( $att['level'] ); ?>">
                 <?php echo esc_html( $att['message'] ); ?>
@@ -169,6 +191,9 @@ class Chilean_DP_Dashboard {
                 <?php if ( 'alta' === $i['priority'] ) : ?><span class="badge badge-alta">Prioridad alta</span><?php endif; ?>
                 <?php if ( 'media' === $i['priority'] ) : ?><span class="badge badge-media">Prioridad media</span><?php endif; ?>
                 <span class="badge badge-status"><?php echo esc_html( $i['status_label'] ); ?></span>
+                <?php if ( 'confirmar' === $section && ! empty( $i['status_internal'] ) && null !== Chilean_DP_Assessment_Engine::instance()->get_evaluation( $i['id'] ) ) : ?>
+                    <span class="badge badge-user-eval"><?php echo esc_html( sprintf( __( 'Tu evaluación: %s', 'chilean-data-protection' ), $this->eval_label( $i['status_internal'] ) ) ); ?></span>
+                <?php endif; ?>
             </div>
 
             <p class="why"><em><?php echo esc_html( $i['why'] ); ?></em></p>

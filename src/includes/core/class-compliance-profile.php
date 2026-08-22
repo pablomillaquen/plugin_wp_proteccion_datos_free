@@ -192,13 +192,15 @@ class Chilean_DP_Compliance_Profile {
             '0' => __( 'No', 'chilean-data-protection' ),
             ''  => __( 'Aún no lo sé', 'chilean-data-protection' ),
         ];
+        // BUG-004: (string)false === '' marcaba "Sin responder" tras guardar No.
+        $cur = null === $current ? '' : ( true === $current ? '1' : '0' );
         printf( '<input type="hidden" name="chilean_dp_profile[%s]" value="" />', esc_attr( $dimension ) );
         foreach ( $options as $value => $label ) {
             printf(
                 '<label style="margin-right:14px;"><input type="radio" name="chilean_dp_profile[%s]" value="%s" %s /> %s</label>',
                 esc_attr( $dimension ),
                 esc_attr( $value ),
-                checked( (string) $current, $value, false ),
+                checked( $cur, $value, false ),
                 esc_html( $label )
             );
         }
