@@ -243,6 +243,7 @@ docker compose -f docker/docker-compose.yml exec wordpress wp core update-db --a
 17. **🎉 RELEASE PÚBLICO DECLARADO — WooPrivacy (FREE) v1.0.0** · git main+tag v1.0.0 → github.com/pablomillaquen/plugin_wp_proteccion_datos_free
 18. ~~Mantenimiento 1.0.1~~ ✅ BUG-001..004 corregidos y verificados con Chrome DevTools (`594a95b..5b4ea50`, tag v1.0.1 + zip asset publicado). Detalle: BUG-001=FeaturesUtil×5 features; BUG-002=notice éxito+badge "Tu evaluación" en confirmar (guardado ya funcionaba; era invisible por D-F402); BUG-004=(string)false='' marcaba "Sin responder" tras guardar No; BUG-003=URL ya correcta, no reproducible (era scaffold viejo). Sin tocar motores frozen.
 19. ~~Mantenimiento 1.0.2~~ ✅ Explicación KD en Guía (`#confirmaciones`: delegación a la Agencia, ejemplo Art.11, qué hacer mientras tanto, actualización automática futura) + enlace contextual desde sección confirmar del panel (`7a01aca`, tag v1.0.2 + zip). Motivado por feedback de usuario: el mensaje KD generaba incertidumbre sin explicación.
+20. **SPEC-FREE-013 — Human Guidance & Actionability (CREADA, pendiente aprobación)**: primera prueba exploratoria real encontró F-EVAL-08 — contenido de tarjetas en lenguaje jurídico-técnico incomprensible para dueño de tienda (`specs/free-013-human-guidance/`). Solución: capa overlay `guide-content.json` (29 controles × estructura ¿Qué significa?/¿Por qué importa?/¿Qué revisar?/¿Dónde?/¿Qué detecta WooPrivacy?/¿Cuándo Cubierto?/explicación legal humana) + rediseño tarjeta dashboard + etiquetas detección 🔎/👤/🔎👤 + mensaje perfil→recalculo. INVARIANTES: motores frozen intactos, IDs/estados/aplicabilidad intactos, no inventar plazos, no inducir borrados, referencia legal nunca sustituye explicación. Gate de aceptación = "prueba del dueño" 8 preguntas × 29 tarjetas.
 
 ## Notas Importantes
 
@@ -255,4 +256,4 @@ docker compose -f docker/docker-compose.yml exec wordpress wp core update-db --a
 
 ---
 
-*Última actualización: 2026-08-21 — 🎉 WooPrivacy (FREE) v1.0.0 RELEASED · FREE-001..012 FROZEN · RG-SEC superado · distribuido en GitHub*
+*Última actualización: 2026-08-22 · v1.0.2 publicada (mantenimiento 1.0.1+1.0.2) · FREE-013 creada pendiente aprobación*
