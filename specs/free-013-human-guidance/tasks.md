@@ -6,4 +6,5 @@
 - [ ] T1305 Loader class-guide-content.php (fail-closed→fallback base)
 - [ ] T1306 Rediseño tarjeta Dashboard (secciones ¿Qué/Dónde/Cuándo/Qué dice la ley + etiqueta detección + mensaje perfil-recalculo)
 - [ ] G-gates: I-checks · 29/29 · prueba dueño 8×29 · grep editoriales · regresión · DevTools visual
-- [ ] T1307 Aprobación usuario → freeze → release v1.1.0
+- [x] T1308 Pasada 2 editorial-jurídica (criterio asistente: solo sobreafirmaciones) — 10 correcciones con evidencia legal (Art.10 gratuidad exacta, Art.11 prórroga sin aviso no evidenciado, cookies/HTTPS/roles/DPA desabsolutizados) + barrido global
+- [ ] T1307 Aprobación usuario → cierre FREE-013

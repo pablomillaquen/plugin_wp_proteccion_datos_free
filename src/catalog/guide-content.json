@@ -10,7 +10,7 @@
     "CTRL-RIGHTS-CHANNEL-001": {
       "title": "Indica a tus clientes cómo pueden solicitar sus derechos",
       "what_it_means": "Tus clientes pueden pedir cosas sobre sus datos: verlos, corregirlos, eliminarlos, entre otros. Deben poder encontrar fácilmente cómo hacer esas solicitudes.",
-      "why_it_matters": "Si nadie sabe cómo pedir esto, la ley se considera incumplida directamente: es uno de los deberes más básicos.",
+      "why_it_matters": "Si nadie sabe cómo solicitar estos derechos, tu tienda no está ofreciendo el mecanismo de ejercicio que exige la ley.",
       "what_to_check": "Revisa si tu sitio tiene un lugar visible donde el cliente vea cómo solicitar sus derechos. Si no existe, crea una página sencilla con un correo de contacto y explica qué datos debe incluir la solicitud.",
       "where_to_check": "Tu sitio web: pie de página, página de contacto o política de privacidad.",
       "detection_capability": "manual",
@@ -20,7 +20,7 @@
     },
     "CTRL-RIGHTS-COVERAGE-001": {
       "title": "Asegúrate de ofrecer los seis derechos ARCO+",
-      "what_it_means": "Los clientes tienen seis derechos sobre sus datos: acceso, rectificación, supresión, oposición, portabilidad y bloqueo. Tu canal de solicitudes debe permitir pedirlos todos.",
+      "what_it_means": "La ley reconoce seis derechos principales que debes poder atender: acceso, rectificación, supresión, oposición, portabilidad y bloqueo.",
       "why_it_matters": "Si un cliente no puede ejercer alguno de los seis, su derecho queda vulnerado aunque tengas un correo de contacto.",
       "what_to_check": "Lee tu página o formulario de contacto de privacidad y marca cuáles de los seis derechos aparecen mencionados. Agrega los que falten.",
       "where_to_check": "La misma página o formulario donde publicaste cómo solicitar derechos.",
@@ -31,18 +31,18 @@
     },
     "CTRL-RIGHTS-FREE-001": {
       "title": "No cobres por atender solicitudes de derechos",
-      "what_it_means": "Corregir, eliminar u oponerse al uso de datos es gratis para el cliente. Entregarle una copia de sus datos también es gratis la primera vez de cada trimestre.",
+      "what_it_means": "Corregir, eliminar u oponerse al uso de datos es siempre gratis para el cliente. Ver sus datos (acceso) es gratis al menos una vez por trimestre; solo si los pide más de una vez en el trimestre puedes cobrar los costos directos, y nunca en los casos que la propia ley exceptúa.",
       "why_it_matters": "Cobrar por estos trámites desincentiva el ejercicio del derecho y contraviene directamente la ley.",
       "what_to_check": "Abre tus condiciones comerciales o términos de venta y busca cualquier cobro asociado a solicitudes sobre datos personales. Elimínalo si existe.",
       "where_to_check": "Tus términos y condiciones, políticas de venta o el texto que usas al confirmar compras.",
       "detection_capability": "manual",
       "detection_note": "WooPrivacy FREE no lee tus condiciones comerciales: esto solo tú puedes revisarlo.",
-      "how_to_know_covered": "Cuando ninguna de tus políticas establezca cargos fijos por atender una solicitud de derechos.",
+      "how_to_know_covered": "Cuando ninguna de tus políticas establezca cargos fijos por solicitudes, y cualquier cobro por acceso/portabilidad repetida esté limitado a costos directos documentados.",
       "legal_explanation": "El Art. 10 fija la gratuidad: solo se permite cobrar costos directos cuando el titular repite solicitudes de acceso dentro del mismo trimestre."
     },
     "CTRL-RIGHTS-SLA-001": {
       "title": "Responde dentro de plazo y confirma la recepción",
-      "what_it_means": "Cuando alguien pide algo sobre sus datos, debes acusar recibo y responder por escrito en máximo 30 días corridos (una sola prórroga de otros 30 días avisando al cliente).",
+      "what_it_means": "Cuando alguien pide algo sobre sus datos, debes acusar recibo y responder por escrito en máximo 30 días corridos. El plazo solo puede prorrogarse una única vez, hasta por otros 30 días corridos.",
       "why_it_matters": "Los plazos son exigibles. Una solicitud olvidada en un buzón es la forma más común de incumplimiento accidental.",
       "what_to_check": "Decide quién recibe estas solicitudes y crea un registro simple de fecha de entrada y fecha límite. Por ejemplo, una etiqueta en tu correo o una hoja de cálculo con vencimientos.",
       "where_to_check": "El correo donde hoy llegarían mensajes de clientes sobre sus datos.",
@@ -208,8 +208,8 @@
     "CTRL-COOKIES-001": {
       "title": "Informa y gestiona las cookies de tu tienda",
       "what_it_means": "Debes saber qué cookies instala tu sitio (incluidas las de plugins y scripts externos), informarlo y permitir rechazar las que no son esenciales.",
-      "why_it_matters": "Las cookies de seguimiento requieren transparencia y, según su uso, consentimiento del visitante.",
-      "what_to_check": "Haz una tabla simple: nombre de cookie, para qué sirve y quién la instala. Publícala en tu política. Luego evalúa si necesitas un banner o mecanismo que permita rechazar las no esenciales antes de cargarlas.",
+      "why_it_matters": "Las cookies de seguimiento deben estar cubiertas por una base de licitud válida y explicadas al visitante; las estrictamente necesarias para funcionar están entre las menos problemáticas.",
+      "what_to_check": "Inventaria tus cookies (incluidas las de plugins y scripts externos) y publícala en tu política. Evalúa luego qué base aplica a cada una y si necesitas un mecanismo que permita rechazar las no esenciales antes de cargarlas.",
       "where_to_check": "Plugins activos, scripts de terceros integrados en tu tema, y tu página de privacidad donde publicarás la tabla.",
       "detection_capability": "mixed",
       "detection_note": "🔎👤 WooPrivacy FREE puede detectar plugins conocidos de cookies/consentimiento instalados, pero no puede escanear todas las cookies que tu tema y scripts generan.",
@@ -230,24 +230,24 @@
     "CTRL-SEC-HTTPS-001": {
       "title": "Activa HTTPS en todo tu sitio",
       "what_it_means": "Tu sitio debe cargarse con candado (https://) en todas sus páginas, incluidas la de pago y la administración.",
-      "why_it_matters": "Sin HTTPS, los datos que el cliente escribe viajan sin protección: es la medida de seguridad más básica e indispensable.",
+      "why_it_matters": "HTTPS protege los datos mientras viajan entre el navegador y tu tienda; es una medida básica para cualquier comercio electrónico.",
       "what_to_check": "Abre tu sitio en un navegador y mira la barra de direcciones. Si muestra advertencia o http:// simple (sin candado), activa un certificado SSL gratuito (Let's Encrypt lo ofrece casi todo hosting) y fuerza la redirección automática a https.",
       "where_to_check": "Barra del navegador al navegar tu tienda · panel de tu hosting (sección SSL/Seguridad).",
       "detection_capability": "manual",
       "detection_note": "Hoy WooPrivacy FREE NO lo verifica automáticamente; en próximas versiones podrá hacerlo leyendo la configuración del sitio. Mientras tanto, revísalo tú en la barra del navegador.",
       "how_to_know_covered": "Cuando todas las páginas abran con https:// y candado válido, sin avisos del navegador.",
-      "legal_explanation": "El Art. 14 quinquies exige medidas técnicas apropiadas; el cifrado del transporte es la más elemental."
+      "legal_explanation": "El Art. 14 quinquies exige medidas de seguridad apropiadas al riesgo; HTTPS es una medida técnica básica para proteger las comunicaciones de la tienda."
     },
     "CTRL-SEC-ROLES-001": {
       "title": "Revisa quién tiene acceso de administrador",
-      "what_it_means": "Solo las personas que realmente lo necesitan deben tener acceso administrativo a tu tienda, con cuentas propias y claves robustas.",
+      "what_it_means": "Limitar el acceso administrativo a quienes realmente lo necesitan es una práctica clave para proteger los datos de tus clientes: cuentas propias, claves robustas y sin accesos abandonados.",
       "why_it_matters": "Cada administrador innecesario o cuenta abandonada es una puerta abierta a los datos de tus clientes.",
       "what_to_check": "Abre la lista de usuarios, filtra por rol Administrador y Tienda: elimina cuentas que ya no se usan, cambia claves débiles y evita compartir credenciales entre personas. Si tu hosting lo permite, activa verificación en dos pasos.",
       "where_to_check": "WordPress → Usuarios → todos los roles administrativos.",
       "detection_capability": "manual",
       "detection_note": "WooPrivacy FREE NO puede listar ni auditar usuarios: esta revisión es completamente tuya.",
       "how_to_know_covered": "Cuando cada administrador tenga cuenta propia vigente y no existan cuentas sin uso real.",
-      "legal_explanation": "El Art. 14 quinquies exige medidas organizativas proporcionales; controlar accesos es la básica sobre personas."
+      "legal_explanation": "El Art. 14 quinquies exige medidas organizativas apropiadas; limitar y controlar los accesos es la forma concreta de cumplirlo en la gestión de tu tienda."
     },
     "CTRL-SEC-BACKUP-001": {
       "title": "Ten copias de seguridad definidas",
@@ -274,7 +274,7 @@
     "CTRL-THIRDPARTY-DPA-001": {
       "title": "Conserva los acuerdos de tratamiento de tus proveedores",
       "what_it_means": "Los proveedores clave que procesan datos por ti deben tener condiciones contractuales que regulen esa labor (confidencialidad, seguridad, instrucciones).",
-      "why_it_matters": "Si delegas el tratamiento sin marco contractual, el riesgo legal termina siendo tuyo.",
+      "why_it_matters": "Si un proveedor procesa datos por tu cuenta, necesitas asegurarte de que esa relación y sus obligaciones estén correctamente reguladas mediante un acuerdo o condiciones contractuales.",
       "what_to_check": "Para tus proveedores principales (pasarela de pago, email marketing): busca en su sitio los términos de servicio o acuerdo de tratamiento de datos (DPA), descárgalos y guárdalos junto a los documentos que usas para administrar tu tienda.",
       "where_to_check": "Sitio web o centro legal de cada proveedor; crea una carpeta propia para conservar esas copias.",
       "detection_capability": "manual",
