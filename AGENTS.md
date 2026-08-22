@@ -157,6 +157,8 @@ plugin_wordpress_proteccion_datos_free/
 
 ## MCPs Disponibles (Engram)
 
+> **Nota de proyecto Engram**: desde que existe `.git` con remote, Engram puede detectar `plugin_wp_proteccion_datos_free` (desde la URL remota) en lugar del histórico `plugin_wordpress_proteccion_datos_free` (basename del directorio, donde viven las ~860 observaciones históricas). Si buscas memoria antigua sin resultados, probar ambos nombres o usar `all_projects=true`.
+
 El sistema **Engram** proporciona memoria persistente entre sesiones:
 - `mem_save` - Guardar observaciones (decisions, bugfixes, architecture, etc.)
 - `mem_search` - Buscar en memoria histórica
