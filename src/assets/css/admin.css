@@ -229,3 +229,14 @@
 .badge-user-eval { background: #e7f3ff; color: #135e96; }
 
 .chilean-dp-kd-link a { font-weight: 600; }
+
+/* Tarjeta guiada (FREE-013) */
+.chilean-dp-guide { margin-top: 6px; }
+.chilean-dp-guide .g-q { font-weight: 600; margin: 10px 0 2px; color: #1d2327; }
+.chilean-dp-guide .g-q:first-child { margin-top: 4px; }
+.badge-cap { background: #f0f6fc; color: #135e96; }
+.cap-manual { background: #fcf9e8 !important; color: #8a6116 !important; }
+.cap-auto { background: #edfaef !important; color: #00a32a !important; }
+.g-note { color: #646970; font-size: 12.5px; margin: 4px 0 0; }
+.chilean-dp-profile-hint { background: #f0f6fc; border-left: 3px solid #72aee6; padding: 6px 10px; margin: 8px 0; font-size: 12.5px; }
+.chilean-dp-details summary { cursor: pointer; color: #2271b1; font-weight: 600; margin: 10px 0 6px; }

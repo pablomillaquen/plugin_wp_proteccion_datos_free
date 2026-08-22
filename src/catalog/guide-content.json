@@ -1,0 +1,330 @@
+{
+  "meta": {
+    "guide_content_version": "1.0.0",
+    "language": "es_CL",
+    "audience": "Dueño de tienda WooCommerce sin conocimientos jurídicos",
+    "rule": "Una referencia legal complementa la explicación; nunca la reemplaza.",
+    "covered_definition": "'Cubierto' significa que, según la condición descrita en la tarjeta, el administrador declara la situación resuelta. Nunca significa que WooPrivacy certificó cumplimiento legal."
+  },
+  "controls": {
+    "CTRL-RIGHTS-CHANNEL-001": {
+      "title": "Indica a tus clientes cómo pueden solicitar sus derechos",
+      "what_it_means": "Tus clientes pueden pedir cosas sobre sus datos: verlos, corregirlos, eliminarlos, entre otros. Deben poder encontrar fácilmente cómo hacer esas solicitudes.",
+      "why_it_matters": "Si nadie sabe cómo pedir esto, la ley se considera incumplida directamente: es uno de los deberes más básicos.",
+      "what_to_check": "Revisa si tu sitio tiene un lugar visible donde el cliente vea cómo solicitar sus derechos. Si no existe, crea una página sencilla con un correo de contacto y explica qué datos debe incluir la solicitud.",
+      "where_to_check": "Tu sitio web: pie de página, página de contacto o política de privacidad.",
+      "detection_capability": "manual",
+      "detection_note": "Hoy WooPrivacy NO puede detectarlo; en próximas versiones podrá avisarte si existe una página de privacidad creada. Mientras tanto, revísalo tú.",
+      "how_to_know_covered": "Cuando exista una página o correo publicado y accesible desde tu sitio que explique cómo solicitar cada derecho.",
+      "legal_explanation": "La ley obliga a ofrecer medios sencillos para que las personas ejerzan sus derechos sobre sus datos."
+    },
+    "CTRL-RIGHTS-COVERAGE-001": {
+      "title": "Asegúrate de ofrecer los seis derechos ARCO+",
+      "what_it_means": "Los clientes tienen seis derechos sobre sus datos: acceso, rectificación, supresión, oposición, portabilidad y bloqueo. Tu canal de solicitudes debe permitir pedirlos todos.",
+      "why_it_matters": "Si un cliente no puede ejercer alguno de los seis, su derecho queda vulnerado aunque tengas un correo de contacto.",
+      "what_to_check": "Lee tu página o formulario de contacto de privacidad y marca cuáles de los seis derechos aparecen mencionados. Agrega los que falten.",
+      "where_to_check": "La misma página o formulario donde publicaste cómo solicitar derechos.",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy no lee el contenido de tus páginas: solo tú puedes confirmar que los seis derechos están incluidos.",
+      "how_to_know_covered": "Cuando tu canal mencione explícitamente los seis derechos y cómo solicitar cada uno.",
+      "legal_explanation": "El Art. 4 enumera los derechos que toda persona tiene sobre sus datos personales."
+    },
+    "CTRL-RIGHTS-FREE-001": {
+      "title": "No cobres por atender solicitudes de derechos",
+      "what_it_means": "Corregir, eliminar u oponerse al uso de datos es gratis para el cliente. Entregarle una copia de sus datos también es gratis la primera vez de cada trimestre.",
+      "why_it_matters": "Cobrar por estos trámites desincentiva el ejercicio del derecho y contraviene directamente la ley.",
+      "what_to_check": "Abre tus condiciones comerciales o términos de venta y busca cualquier cobro asociado a solicitudes sobre datos personales. Elimínalo si existe.",
+      "where_to_check": "Tus términos y condiciones, políticas de venta o el texto que usas al confirmar compras.",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy no lee tus condiciones comerciales: esto solo tú puedes revisarlo.",
+      "how_to_know_covered": "Cuando ninguna de tus políticas establezca cargos fijos por atender una solicitud de derechos.",
+      "legal_explanation": "El Art. 10 fija la gratuidad: solo se permite cobrar costos directos cuando el titular repite solicitudes de acceso dentro del mismo trimestre."
+    },
+    "CTRL-RIGHTS-SLA-001": {
+      "title": "Responde dentro de plazo y confirma la recepción",
+      "what_it_means": "Cuando alguien pide algo sobre sus datos, debes acusar recibo y responder por escrito en máximo 30 días corridos (una sola prórroga de otros 30 días avisando al cliente).",
+      "why_it_matters": "Los plazos son exigibles. Una solicitud olvidada en un buzón es la forma más común de incumplimiento accidental.",
+      "what_to_check": "Decide quién recibe estas solicitudes y crea un registro simple de fecha de entrada y fecha límite. Por ejemplo, una etiqueta en tu correo o una hoja de cálculo con vencimientos.",
+      "where_to_check": "El correo donde hoy llegarían mensajes de clientes sobre sus datos.",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy no puede saber cómo organizas tu correo interno: este control depende completamente de ti.",
+      "how_to_know_covered": "Cuando tengas escrito y funcionando un proceso: dónde llegan las solicitudes, quién responde y cómo registras el plazo.",
+      "legal_explanation": "El Art. 11 define el procedimiento: acuse de recibo y respuesta escrita en 30 días corridos, prorrogables una vez por otros 30."
+    },
+    "CTRL-RIGHTS-BLOCK-001": {
+      "title": "Puedes detener temporalmente el uso de los datos de un cliente",
+      "what_it_means": "Si un cliente pide corregir, eliminar u oponerse al uso de sus datos, puede pedir además que los dejes de usar mientras resuelves su solicitud. Debes poder hacerlo.",
+      "why_it_matters": "Seguir enviando publicidad con datos que están siendo cuestionados agrava el problema original.",
+      "what_to_check": "Piensa qué harías mañana si un cliente pide detener el uso de sus datos: ¿sabrías exactamente dónde apagarlo? Anota las herramientas donde habría que pausarlo (por ejemplo, tu plataforma de email marketing).",
+      "where_to_check": "Las herramientas externas que usan datos de clientes: email marketing, CRM, campañas publicitarias.",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy FREE NO puede modificar ni bloquear tratamientos por ti: esta acción corresponde siempre al administrador o a sus herramientas.",
+      "how_to_know_covered": "Cuando puedas explicar paso a paso cómo detendrías el uso de los datos de un cliente mientras resuelves su caso.",
+      "legal_explanation": "Los Arts. 8 ter y 11 regulan el bloqueo temporal: suspender el uso sin borrar nada, respondiendo en 2 días hábiles."
+    },
+    "CTRL-RIGHTS-DENIAL-001": {
+      "title": "Si rechazas una solicitud, explica el motivo e informa sobre la Agencia",
+      "what_it_means": "No puedes rechazar una solicitud en silencio: debes escribir por qué la rechazas y avisar al cliente que puede reclamar ante la Agencia de Protección de Datos dentro de 30 días hábiles.",
+      "why_it_matters": "Una denegación sin fundamento te deja sin defensa ante la autoridad y empeora la situación del cliente.",
+      "what_to_check": "Prepara un texto modelo para rechazos: motivo concreto, antecedentes y la frase informando el derecho a reclamar ante la Agencia.",
+      "where_to_check": "Guarda esa plantilla junto a las herramientas donde respondes a clientes (correo, documentos de la empresa).",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy no participa en tus respuestas a clientes: solo tú sabes si tienes esta plantilla lista.",
+      "how_to_know_covered": "Cuando exista una plantilla escrita que incluya causa, antecedentes y aviso de reclamación ante la Agencia.",
+      "legal_explanation": "El Art. 11 exige fundar toda denegación e informar al titular su derecho a reclamar ante la Agencia."
+    },
+    "CTRL-RIGHTS-IDVERIFY-001": {
+      "title": "Comprueba quién pide los datos antes de entregarlos",
+      "what_it_means": "Antes de enviar datos de un cliente a quien los pide, asegúrate de que es realmente ese cliente y no alguien haciéndose pasar por él.",
+      "why_it_matters": "Entregar datos a un impostor es una filtración de información personal. Pero exigir demasiados pasos convierte el derecho en trámite imposible: ese equilibrio lo definirá la Agencia.",
+      "what_to_check": "Define un mecanismo simple y proporcional: por ejemplo, responder solo al correo registrado del cliente. Escríbelo y aplícalo siempre igual.",
+      "where_to_check": "El proceso con el que hoy atiendes solicitudes sobre datos (tu correo de contacto de privacidad).",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy no puede comprobar tu proceso interno. Además este punto permanece abierto: la Agencia aún no publica qué nivel de autenticación exigirá (KD-002).",
+      "how_to_know_covered": "Cuando tengas escrito tu criterio de verificación y lo apliques a toda solicitud antes de entregar o modificar datos.",
+      "legal_explanation": "El Art. 11 exige identificar y autenticar al solicitante; el procedimiento específico lo definirá la Agencia."
+    },
+    "CTRL-RIGHTS-EVIDENCE-001": {
+      "title": "Guarda una copia de cada respuesta que envíes",
+      "what_it_means": "Cada respuesta a una solicitud de derechos debe quedar respaldada: qué dijiste, cuándo y a quién.",
+      "why_it_matters": "Si un cliente o la Agencia cuestiona tu gestión, esa copia es tu única prueba de que respondiste a tiempo y con qué contenido.",
+      "what_to_check": "Crea una carpeta o etiqueta dedicada en tu correo donde guardes copia completa de todas las respuestas sobre datos, con fecha y destinatario.",
+      "where_to_check": "Tu correo electrónico: una etiqueta dedicada funciona perfectamente para empezar.",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy no accede a tu correo ni a tus archivos: solo tú puedes crear y mantener este respaldo.",
+      "how_to_know_covered": "Cuando exista una ubicación definida donde guardes todas las respuestas y la uses consistentemente.",
+      "legal_explanation": "El Art. 11 obliga a conservar respaldo de remisión, fecha y contenido íntegro; el Art. 3 letra a) exige acreditar el tratamiento lícito."
+    },
+    "CTRL-INVENTORY-001": {
+      "title": "Haz una lista de los datos personales que guarda tu tienda",
+      "what_it_means": "Debes saber qué datos de personas existen en tu tienda, dónde están guardados y para qué los usas.",
+      "why_it_matters": "Un cliente puede preguntarte qué datos tienes suyos: merece una respuesta exacta. Además, casi todo lo demás del diagnóstico parte de esta lista.",
+      "what_to_check": "Escribe una lista simple: por cada fuente (clientes y pedidos de WooCommerce, formularios, newsletter, analítica, plugins) anota qué datos guarda y para qué la usas.",
+      "where_to_check": "WooCommerce → Clientes y Pedidos · tus plugins activos · servicios externos contratados. La lista escríbela en un documento propio (hoja de cálculo o texto) y guárdalo donde lo encuentres después.",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy puede mostrarte qué componentes técnicos existen, pero NO conoce tus servicios externos ni las finalidades reales de uso: la lista la construye el administrador.",
+      "how_to_know_covered": "Cuando tengas un documento con tus fuentes de datos, qué guarda cada una y para qué.",
+      "legal_explanation": "El Art. 5 obliga a informar origen y finalidad de los datos tratados; sin inventario propio eso es imposible."
+    },
+    "CTRL-TRANSP-PAGE-001": {
+      "title": "Crea una página de privacidad completa y visible",
+      "what_it_means": "Tu sitio debe tener, siempre disponible, una página que explique lo relevante del uso de datos: quién eres, qué datos usas, para qué, cuánto tiempo los conservas y cómo ejercer derechos.",
+      "why_it_matters": "Es el deber de transparencia central de la ley: doce elementos obligatorios que deben estar visibles permanentemente.",
+      "what_to_check": "Abre tu página de privacidad y comprueba que cubre estos doce puntos: política con fecha y versión · quién es el responsable · contacto · categorías/finalidades/bases · seguridad · derechos ARCO+ · reclamar ante la Agencia · transferencias internacionales · plazos de conservación · fuente de los datos · retiro del consentimiento · decisiones automatizadas si existen.",
+      "where_to_check": "WordPress → Ajustes → Privacidad muestra qué página está asignada. Revisa además que esté enlazada de forma visible (por ejemplo, en el pie del sitio).",
+      "detection_capability": "manual",
+      "detection_note": "En futuras versiones WooPrivacy podrá detectar si existe una página de privacidad asignada; hoy el contenido lo revisas tú.",
+      "how_to_know_covered": "Cuando tu página contenga los doce puntos y esté enlazada de manera visible.",
+      "legal_explanation": "El Art. 14 ter enumera los doce elementos de información que el responsable debe mantener accesibles permanentemente."
+    },
+    "CTRL-PRIVACYPOLICY-001": {
+      "title": "Tu política de privacidad debe tener fecha y versión",
+      "what_it_means": "La política publicada debe indicar cuándo se actualizó por última vez y qué versión es, para que cualquier cambio quede trazado.",
+      "why_it_matters": "Sin fecha ni versión no hay forma de probar qué decía tu política cuando ocurrió algo, ni de demostrar que la mantienes actualizada.",
+      "what_to_check": "Abre tu política de privacidad: si no tiene encabezado con fecha de actualización y número de versión, agrégalo (por ejemplo: Versión 2 — actualizada 01/09/2026). Cada vez que cambies algo, sube la versión.",
+      "where_to_check": "La página de privacidad de tu sitio (WordPress → Páginas → Política de privacidad).",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy no lee el contenido de tus páginas: la fecha y versión las controla tú al editar.",
+      "how_to_know_covered": "Cuando la política muestre fecha de última actualización y número de versión visibles al inicio.",
+      "legal_explanation": "El literal a) del Art. 14 ter exige publicar la política de tratamiento con su fecha y versión."
+    },
+    "CTRL-TRANSP-CONTACT-001": {
+      "title": "Publica quién es tu empresa y cómo contactarla",
+      "what_it_means": "En algún lugar visible del sitio deben estar la identificación legal de tu negocio (nombre/RUT) y un canal real donde los clientes puedan escribir sobre sus datos.",
+      "why_it_matters": "El cliente necesita saber contra quién ejerce derechos y a quién escribirle; un correo inexistente equivale a no tener canal.",
+      "what_to_check": "Completa los datos legales de tu empresa en la página de privacidad. Envía una prueba al correo de contacto publicado y confirma que alguien realmente lo revisa.",
+      "where_to_check": "Tu página de privacidad o contacto, más el buzón de correo que publiques.",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy puede detectar datos de empresa configurados, pero no puede comprobar que el correo publicado funcione y sea revisado: eso es tuyo.",
+      "how_to_know_covered": "Cuando los datos legales estén publicados y hayas probado que el canal responde.",
+      "legal_explanation": "Los literales b) y c) del Art. 14 ter exigen identificar al responsable y mantener un canal vigente para solicitudes."
+    },
+    "CTRL-RETENTION-DECL-001": {
+      "title": "Define cuánto tiempo necesitas conservar cada tipo de dato",
+      "what_it_means": "No todos los datos deben guardarse para siempre. Para cada tipo de información define cuánto tiempo la necesitas y por qué, y publícalo.",
+      "why_it_matters": "Conservar datos sin necesidad amplía el riesgo sin beneficio, y la ley exige informar los períodos de conservación.",
+      "what_to_check": "Escribe plazos por categoría según tu realidad: los datos de compras pueden requerir conservarse por razones legales o tributarias; los datos usados solo para publicidad pueden eliminarse cuando el cliente retira su autorización. Si dudas con casos como pedidos (que suelen tener obligación tributaria), consulta con un profesional.",
+      "where_to_check": "Primero tu inventario de datos (qué guardas y para qué); luego publica los plazos definidos en tu página de privacidad.",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy no puede inventar plazos: dependen de tu actividad y de normas tributarias o comerciales aplicables. Este punto permanece abierto mientras se aclare hasta dónde llega la obligación de conservar pedidos (KD-001).",
+      "how_to_know_covered": "Cuando tengas escritos los plazos por categoría y estén publicados en tu página de privacidad.",
+      "legal_explanation": "El literal i) del Art. 14 ter exige informar el período de conservación de los datos."
+    },
+    "CTRL-AUTOMATEDDEC-DECL-001": {
+      "title": "Si tu tienda toma decisiones automáticas, dilo públicamente",
+      "what_it_means": "Si alguna herramienta toma decisiones sobre clientes sin intervención humana (por ejemplo, bloqueos antifraude automáticos), debes declararlo en tu política. Si no usas ninguna, declara también que no existen.",
+      "why_it_matters": "Las personas tienen derecho a saber si una máquina decide cosas que les afectan.",
+      "what_to_check": "Revisa tus plugins y servicios: ¿hay antifraude, precios dinámicos o filtros automáticos que rechacen clientes? Agrega a tu política de privacidad una línea explicándolo, o una línea que diga que no realizas decisiones automatizadas.",
+      "where_to_check": "Lista de plugins activos y servicios contratados; el texto va en tu página de privacidad (literal l).",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy no puede leer la lógica interna de otros plugins: identificar decisiones automatizadas es tarea del administrador.",
+      "how_to_know_covered": "Cuando tu página de privacidad declare explícitamente si existen o no decisiones automatizadas.",
+      "legal_explanation": "El literal l) del Art. 14 ter exige informar la existencia de decisiones automatizadas o perfilado."
+    },
+    "CTRL-LAWFULBASE-MAP-001": {
+      "title": "Anota por qué razón tratas cada tipo de dato",
+      "what_it_means": "Para cada cosa que haces con datos personales (vender, facturar, enviar publicidad, medir visitas) debe existir una razón válida: ejecutar el contrato, cumplir una obligación legal, interés legítimo o consentimiento del cliente.",
+      "why_it_matters": "Sin razón válida, el tratamiento no es lícito y todo lo demás pierde sustento.",
+      "what_to_check": "Escribe un mapa simple junto a tu inventario: venta y facturación → contrato y obligación legal · marketing → consentimiento o interés legítimo evaluado · analítica → según cómo la configures.",
+      "where_to_check": "Guárdalo junto a tu inventario de datos (mismo documento).",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy no puede determinar tus razones de negocio: el mapa lo construye quien conoce la tienda.",
+      "how_to_know_covered": "Cuando cada tratamiento de tu lista tenga anotada su base de licitud.",
+      "legal_explanation": "Los Arts. 3 y 13 exigen que todo tratamiento tenga consentimiento válido o una de las bases legales enumeradas."
+    },
+    "CTRL-CONSENT-MECH-001": {
+      "title": "Consentimiento separado de la compra",
+      "what_it_means": "Si pides autorización para enviar publicidad o newsletters, esa autorización debe ser independiente de la compra: casilla sin marcar previamente y texto específico sobre qué autoriza el cliente.",
+      "why_it_matters": "Un consentimiento mezclado con la compra o premarcado no es válido, y contamina todo el envío posterior.",
+      "what_to_check": "Abre tu formulario de checkout y de registro: busca las casillas de marketing/newsletter y confirma que ninguna viene marcada de fábrica y que su texto dice exactamente qué autoriza el cliente.",
+      "where_to_check": "WooCommerce → ajustes de cuentas y checkout; formularios de registro; plugins de newsletter.",
+      "detection_capability": "mixed",
+      "detection_note": "🔎👤 WooPrivacy puede detectar si tienes plugins de marketing instalados, pero no puede ver cómo están configuradas tus casillas: esa revisión es tuya.",
+      "how_to_know_covered": "Cuando todas las casillas de autorización estén sin premarcar y su texto explique específicamente qué acepta el cliente.",
+      "legal_explanation": "El Art. 12 exige consentimiento libre, informado, específico e inequívoco: una casilla oculta o premarcada no cumple ese estándar."
+    },
+    "CTRL-CONSENT-REG-001": {
+      "title": "Guarda una prueba de que el cliente aceptó recibir publicidad",
+      "what_it_means": "Si un cliente acepta recibir newsletters u ofertas, debes poder demostrar después que dio esa autorización y cuándo.",
+      "why_it_matters": "Ante una reclamación, corresponde a ti probar que existió consentimiento: sin registro, estás indefenso.",
+      "what_to_check": "Abre la herramienta que usa tu tienda para enviar correos masivos (Mailchimp, Brevo u otra) y busca si guarda, por cada contacto, cuándo y cómo aceptó recibir comunicaciones.",
+      "where_to_check": "Tu plugin o servicio de email marketing: ficha del contacto, sección de consentimiento o similar.",
+      "detection_capability": "mixed",
+      "detection_note": "🔎👤 WooPrivacy puede detectar qué herramientas de marketing tienes instaladas, pero no puede entrar a ellas para comprobar si cada contacto tiene prueba válida de consentimiento.",
+      "how_to_know_covered": "Cuando puedas abrir la ficha de un contacto cualquiera y encontrar registrada su autorización con fecha.",
+      "legal_explanation": "El Art. 12 establece que corresponde al responsable probar que contó con el consentimiento."
+    },
+    "CTRL-CONSENT-REV-001": {
+      "title": "Permite al cliente cancelar su autorización fácilmente",
+      "what_it_means": "Todo correo masivo debe incluir un enlace de baja funcional, y el cliente debe poder retirar su autorización también desde el canal de derechos.",
+      "why_it_matters": "Una baja rota equivale a seguir usando los datos sin permiso vigente.",
+      "what_to_check": "Envíate una campaña de prueba: abre el enlace de baja, confírmala y verifica que el contacto quedó fuera de la lista. Comprueba además que sincronizaciones posteriores no lo reingresen.",
+      "where_to_check": "Tu plataforma de email marketing (probar de punta a punta) y el canal público de derechos.",
+      "detection_capability": "mixed",
+      "detection_note": "🔎👤 WooPrivacy puede detectar la plataforma instalada, pero NO puede probar tu enlace de baja ni verificar sincronizaciones: esa prueba de punta a punta es tuya.",
+      "how_to_know_covered": "Cuando hayas probado la baja de punta a punta y confirmes que el contacto sale de la lista y permanece fuera.",
+      "legal_explanation": "El Art. 12 permite revocar el consentimiento en cualquier momento sin efectos retroactivos."
+    },
+    "CTRL-COOKIES-001": {
+      "title": "Informa y gestiona las cookies de tu tienda",
+      "what_it_means": "Debes saber qué cookies instala tu sitio (incluidas las de plugins y scripts externos), informarlo y permitir rechazar las que no son esenciales.",
+      "why_it_matters": "Las cookies de seguimiento requieren transparencia y, según su uso, consentimiento del visitante.",
+      "what_to_check": "Haz una tabla simple: nombre de cookie, para qué sirve y quién la instala. Publícala en tu política. Luego evalúa si necesitas un banner o mecanismo que permita rechazar las no esenciales antes de cargarlas.",
+      "where_to_check": "Plugins activos, scripts de terceros integrados en tu tema, y tu página de privacidad donde publicarás la tabla.",
+      "detection_capability": "mixed",
+      "detection_note": "🔎👤 WooPrivacy puede detectar plugins conocidos de cookies/consentimiento instalados, pero no puede escanear todas las cookies que tu tema y scripts generan.",
+      "how_to_know_covered": "Cuando tengas la tabla publicada y un mecanismo que permita rechazar cookies no esenciales (si las usas).",
+      "legal_explanation": "El uso de tecnologías de seguimiento debe alinearse con las bases de licitud (Arts. 12-13) y la transparencia (Art. 14 ter)."
+    },
+    "CTRL-NEWSLETTER-001": {
+      "title": "Que darse de baja funcione de verdad",
+      "what_it_means": "Suscribirse debe ser un acto voluntario y darse de baja debe funcionar de inmediato, reflejándose en la lista real de envío.",
+      "why_it_matters": "Seguir escribiéndole a quien se dio de baja es usar sus datos contra su decisión expresa.",
+      "what_to_check": "Registra una cuenta de prueba, suscríbela, dale de baja y comprueba que desaparece de la lista de envío. Revisa además que sincronizaciones automáticas no la reingresen.",
+      "where_to_check": "Formulario de suscripción de tu sitio + panel de tu plataforma de email marketing.",
+      "detection_capability": "mixed",
+      "detection_note": "🔎👤 WooPrivacy puede detectar plataformas de email marketing instaladas; probar la baja de punta a punta es tuyo.",
+      "how_to_know_covered": "Cuando la baja probada elimine el contacto de la lista y no vuelva a ingresar.",
+      "legal_explanation": "Arts. 4 y 8: continuar tratando datos tras la oposición o baja carece de sustento."
+    },
+    "CTRL-SEC-HTTPS-001": {
+      "title": "Activa HTTPS en todo tu sitio",
+      "what_it_means": "Tu sitio debe cargarse con candado (https://) en todas sus páginas, incluidas la de pago y la administración.",
+      "why_it_matters": "Sin HTTPS, los datos que el cliente escribe viajan sin protección: es la medida de seguridad más básica e indispensable.",
+      "what_to_check": "Abre tu sitio en un navegador y mira la barra de direcciones. Si muestra advertencia o http:// simple (sin candado), activa un certificado SSL gratuito (Let's Encrypt lo ofrece casi todo hosting) y fuerza la redirección automática a https.",
+      "where_to_check": "Barra del navegador al navegar tu tienda · panel de tu hosting (sección SSL/Seguridad).",
+      "detection_capability": "manual",
+      "detection_note": "Hoy WooPrivacy NO lo verifica automáticamente; en próximas versiones podrá hacerlo leyendo la configuración del sitio. Mientras tanto, revísalo tú en la barra del navegador.",
+      "how_to_know_covered": "Cuando todas las páginas abran con https:// y candado válido, sin avisos del navegador.",
+      "legal_explanation": "El Art. 14 quinquies exige medidas técnicas apropiadas; el cifrado del transporte es la más elemental."
+    },
+    "CTRL-SEC-ROLES-001": {
+      "title": "Revisa quién tiene acceso de administrador",
+      "what_it_means": "Solo las personas que realmente lo necesitan deben tener acceso administrativo a tu tienda, con cuentas propias y claves robustas.",
+      "why_it_matters": "Cada administrador innecesario o cuenta abandonada es una puerta abierta a los datos de tus clientes.",
+      "what_to_check": "Abre la lista de usuarios, filtra por rol Administrador y Tienda: elimina cuentas que ya no se usan, cambia claves débiles y evita compartir credenciales entre personas. Si tu hosting lo permite, activa verificación en dos pasos.",
+      "where_to_check": "WordPress → Usuarios → todos los roles administrativos.",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy NO puede listar ni auditar usuarios: esta revisión es completamente tuya.",
+      "how_to_know_covered": "Cuando cada administrador tenga cuenta propia vigente y no existan cuentas sin uso real.",
+      "legal_explanation": "El Art. 14 quinquies exige medidas organizativas proporcionales; controlar accesos es la básica sobre personas."
+    },
+    "CTRL-SEC-BACKUP-001": {
+      "title": "Ten copias de seguridad definidas",
+      "what_it_means": "Tu tienda necesita respaldos periódicos automáticos y debes saber cómo restaurarlos si algo falla. Ojo: esos respaldos también contienen datos personales.",
+      "why_it_matters": "Sin restauración probada, una copia no sirve; y su ubicación puede implicar que los datos salgan del país.",
+      "what_to_check": "Confirma tres cosas en tu hosting o plugin de backups: cada cuánto se copia, dónde se guarda y cómo se restaura. Anota el proveedor de backup en tu lista de servicios que tratan datos.",
+      "where_to_check": "Panel de tu hosting o plugin de backups instalado; anota lo encontrado en tu inventario.",
+      "detection_capability": "manual",
+      "detection_note": "WooPrivacy no puede ver tu configuración de hosting: frecuencia y destino de backups solo tú los conoces.",
+      "how_to_know_covered": "Cuando puedas responder las tres preguntas (cada cuánto, dónde, cómo restaurar) y tengas el proveedor anotado.",
+      "legal_explanation": "Disponibilidad e integridad forman parte de la seguridad exigida por el Art. 14 quinquies."
+    },
+    "CTRL-THIRDPARTY-INV-001": {
+      "title": "Haz una lista de los servicios que manejan datos de tus clientes",
+      "what_it_means": "Pasarelas de pago, plataformas de correo, CRM, hosting, soporte: cada servicio externo que recibe datos de clientes debe estar identificado por ti.",
+      "why_it_matters": "No puedes gestionar acuerdos ni informar cesiones de servicios que no conoces.",
+      "what_to_check": "Recorre dos listas y consolida: 1) plugins activos de WooCommerce (pasarelas, envíos, marketing), 2) servicios contratados fuera de WordPress (hosting, email, contabilidad). Anota qué datos recibe cada uno.",
+      "where_to_check": "WordPress → Plugins · tus contratos y paneles de servicios externos. Anótalo junto a tu inventario de datos.",
+      "detection_capability": "mixed",
+      "detection_note": "🔎👤 WooPrivacy puede detectar pasarelas activas y algunos plugins conocidos, pero NO conoce tus servicios contratados fuera de WordPress: solo tú los conoces.",
+      "how_to_know_covered": "Cuando tu lista incluya todos los proveedores con los datos que maneja cada uno.",
+      "legal_explanation": "Conocer a quiénes les llegan datos alimenta las literales d) y h) del Art. 14 ter y la gestión de encargados."
+    },
+    "CTRL-THIRDPARTY-DPA-001": {
+      "title": "Conserva los acuerdos de tratamiento de tus proveedores",
+      "what_it_means": "Los proveedores clave que procesan datos por ti deben tener condiciones contractuales que regulen esa labor (confidencialidad, seguridad, instrucciones).",
+      "why_it_matters": "Si delegas el tratamiento sin marco contractual, el riesgo legal termina siendo tuyo.",
+      "what_to_check": "Para tus proveedores principales (pasarela de pago, email marketing): busca en su sitio los términos de servicio o acuerdo de tratamiento de datos (DPA), descárgalos y guárdalos junto a los documentos que usas para administrar tu tienda.",
+      "where_to_check": "Sitio web o centro legal de cada proveedor; crea una carpeta propia para conservar esas copias.",
+      "detection_capability": "manual",
+      "detection_note": "🔎👤 WooPrivacy puede detectar qué proveedores tienes activos, pero NO puede obtener ni guardar sus acuerdos por ti: eso es tarea tuya.",
+      "how_to_know_covered": "Cuando tengas copia guardada de los términos/acuerdos de tus proveedores principales.",
+      "legal_explanation": "La normativa exige regular contractualmente el tratamiento por cuenta de terceros."
+    },
+    "CTRL-TRANSFERS-DECL-001": {
+      "title": "Identifica si tus proveedores guardan datos fuera de Chile",
+      "what_it_means": "Muchos servicios (hosting, email, pasarelas) almacenan información en otros países. Debes saber cuáles lo hacen y publicarlo si aplica.",
+      "why_it_matters": "Las transferencias al exterior requieren garantías y deben declararse: es uno de los doce puntos de transparencia.",
+      "what_to_check": "Revisa en los sitios de tus proveedores dónde alojan sus servidores (busca data center, ubicación o país). Con esa lista, agrega a tu política de privacidad una sección de transferencias internacionales indicando qué categorías de datos viajan.",
+      "where_to_check": "Sitios y centros legales de tus proveedores; la declaración va en tu página de privacidad.",
+      "detection_capability": "manual",
+      "detection_note": "🔎👤 WooPrivacy detecta qué proveedores tienes, pero NO puede determinar los países de destino ni las garantías: están en la documentación pública de cada proveedor.",
+      "how_to_know_covered": "Cuando sepas qué proveedores operan desde el extranjero y tu política declare esas transferencias.",
+      "legal_explanation": "Art. 27 regula transferencias internacionales; literal h) del Art. 14 ter exige declararlas."
+    },
+    "CTRL-SENSITIVE-EXCL-001": {
+      "title": "Revisa si tu tienda recibe datos especialmente sensibles",
+      "what_it_means": "Existen datos especialmente protegidos: salud, origen étnico, ideología, afiliación, biometría. La regla general es no tratarlos; conviene confirmar que tu tienda no los reciba por accidente.",
+      "why_it_matters": "Un cliente podría escribir información sensible en una nota de pedido o formulario sin que lo pidas: eso genera obligaciones especiales que el comercio estándar no está diseñado para cumplir.",
+      "what_to_check": "Revisa campos de checkout y registro, notas internas de pedidos históricas y formularios personalizados. Si encuentras este tipo de información, NO la elimines por tu cuenta: primero identifica para qué se recibió y consulta cómo manejarla, porque requiere un tratamiento específico.",
+      "where_to_check": "Pedidos (notas), páginas de contacto, formularios de productos personalizados.",
+      "detection_capability": "manual",
+      "detection_note": "🔎👤 WooPrivacy puede preguntarte si tratas categorías especiales (perfil), pero no puede escanear el contenido de tus pedidos: esa revisión es tuya.",
+      "how_to_know_covered": "Cuando hayas comprobado que no recibes estos datos, o tengas diseñado con asesoría profesional el manejo de los que recibes.",
+      "legal_explanation": "El Art. 16 establece la regla general reforzada sobre datos sensibles."
+    },
+    "CTRL-DATA-MIN-001": {
+      "title": "Pide solo los datos que realmente necesitas",
+      "what_it_means": "Los formularios de registro y compra deben pedir únicamente lo necesario para vender y despachar. Cada campo extra es riesgo sin beneficio.",
+      "why_it_matters": "Menos datos recogidos = menos responsabilidad almacenada y menos superficie ante incidentes.",
+      "what_to_check": "Abre tu página de registro y tu checkout como cliente: elimina campos obligatorios que no uses realmente (segundo teléfono, empresa, campos personalizados heredados de algún plugin).",
+      "where_to_check": "WooCommerce → Ajustes → Cuentas y privacidad · campos de checkout (con tu tema o plugin de checkout) · formulario Mi cuenta / Registro.",
+      "detection_capability": "mixed",
+      "detection_note": "🔎👤 WooPrivacy sabe si tu tienda usa cuentas y checkout, pero NO puede leer tus formularios campo a campo: esa revisión es visual y tuya.",
+      "how_to_know_covered": "Cuando ningún campo obligatorio carezca de finalidad real que puedas explicar.",
+      "legal_explanation": "Principio de proporcionalidad: Arts. 4 y 13."
+    },
+    "CTRL-CHECKOUT-NOTICE-001": {
+      "title": "Explica en el checkout qué haces con los datos",
+      "what_it_means": "Justo donde el cliente escribe sus datos debe verse un texto breve que diga para qué los pides y enlace a tu política completa.",
+      "why_it_matters": "La política lejana no reemplaza la información en el momento exacto en que el cliente entrega sus datos.",
+      "what_to_check": "Agrega en tu checkout un párrafo breve: finalidad principal (procesar y despachar tu pedido), enlace a la política de privacidad y mención del correo para ejercer derechos. La mayoría de los temas/plugins de checkout permiten añadir texto antes del botón de compra.",
+      "where_to_check": "Página de checkout (con el editor de bloques de Woo o el ajuste de tu plugin de checkout).",
+      "detection_capability": "manual",
+      "detection_note": "🔎👤 WooPrivacy sabe si tu tienda usa checkout, pero NO puede ver el contenido de tu página de pago: la existencia y redacción del aviso se revisa visualmente.",
+      "how_to_know_covered": "Cuando el checkout muestre ese texto con enlace funcionando a la política.",
+      "legal_explanation": "Transparencia contextual exigida por Arts. 14 ter y 12."
+    }
+  }
+}

@@ -101,9 +101,20 @@ Detalles secundarios desplegables si excede altura.
 
 Prohibiciones: jerga sin glosa (opt-in, DPA, RoPA, HPOS) · frases-oráculo · referencia legal como instrucción · inducir borrado de datos · prometer detección que no existe.
 
-## Mensaje perfil→recalculo (F-EVAL respuesta)
+## Mensaje perfil→recalculo (F-EVAL respuesta, redacción final congelada)
 
-En controles condicionados: *"Este punto depende de una respuesta de tu perfil de tienda. Cuando completes o cambies el perfil, WooPrivacy volverá a calcular automáticamente qué controles aplican."*
+En controles condicionados:
+> **¿Cambiaste algo en tu tienda?**
+> Puedes volver a tu perfil y actualizar tus respuestas. WooPrivacy revisará automáticamente qué aspectos de privacidad aplican a tu tienda.
+
+El usuario nunca necesita entender la palabra "recalcular".
+
+## Definición congelada de "Cubierto"
+
+> **"Cubierto" NUNCA significa "WooPrivacy verificó que cumples la ley".**
+> Significa que, según la condición descrita por la tarjeta, el administrador declara que la situación está resuelta.
+
+Mantiene intacta FREE-005 (Applicability ≠ Assessment) y evita falsa certificación por parte de la capa amigable.
 
 ## Alcance de trabajo
 
@@ -118,4 +129,6 @@ En controles condicionados: *"Este punto depende de una respuesta de tu perfil d
 
 ## Gates
 
-G1 invariantes I1–I12 verificados (diff de archivos frozen = 0) · G2 cobertura 29/29 controles con estructura completa · G3 prueba del dueño de tienda 8/8 por tarjeta (revisión documentada) · G4 reglas editoriales auditadas (grep prohibidos + lectura) · G5 etiquetas detección correctas por método real del catálogo · G6 regresión suites existentes · G7 verificación visual Chrome DevTools.
+G1 invariantes I1–I12 verificados (diff de archivos frozen = 0) · G2 cobertura 29/29 controles con estructura completa · **G3 prueba del dueño 9/9 por tarjeta — pregunta 9 añadida: "¿Sé qué NO hace WooPrivacy en este punto?"** (cubierto internamente por la nota de detección de cada entrada) · G4 reglas editoriales auditadas · G5 etiquetas detección correctas según capacidades REALES actuales del detector · G6 regresión suites existentes · G7 verificación visual Chrome DevTools.
+
+**Fórmula de contenido congelada**: acción + ubicación + límite de detección + criterio de cierre. Cada tarjeta responde *"tengo esta tienda delante, ¿qué hago ahora?"* — sin convertirse en manual genérico de protección de datos.

@@ -3,7 +3,7 @@
  * Plugin Name: WooPrivacy (FREE)
  * Plugin URI: https://example.com/chilean-data-protection
  * Description: Plugin informativo para apoyo en el cumplimiento de la Ley de Protección de Datos Chilena (vigente desde 01-diciembre-2026). Versión FREE - Solo informativa.
- * Version: 1.0.2
+ * Version: 1.1.0
  * Author: Tu Nombre
  * Author URI: https://example.com
  * License: GPL v2 or later
@@ -95,6 +95,7 @@ final class Chilean_Data_Protection {
         require_once CHILEAN_DP_PLUGIN_DIR . 'includes/core/class-diagnostic-engine.php';
         require_once CHILEAN_DP_PLUGIN_DIR . 'includes/core/class-guidance-engine.php';
         require_once CHILEAN_DP_PLUGIN_DIR . 'includes/core/class-environment-detector.php';
+        require_once CHILEAN_DP_PLUGIN_DIR . 'includes/core/class-guide-content.php';
         require_once CHILEAN_DP_PLUGIN_DIR . 'includes/core/class-report.php';
         require_once CHILEAN_DP_PLUGIN_DIR . 'includes/core/class-guide.php';
         require_once CHILEAN_DP_PLUGIN_DIR . 'includes/admin/class-dashboard.php';
@@ -106,6 +107,7 @@ final class Chilean_Data_Protection {
         Chilean_DP_Diagnostic_Engine::instance();
         Chilean_DP_Guidance_Engine::instance();
         Chilean_DP_Environment_Detector::instance();
+        Chilean_DP_Guide_Content::instance();
         Chilean_DP_Report::instance();
         Chilean_DP_Guide::instance();
         Chilean_DP_Dashboard::instance();

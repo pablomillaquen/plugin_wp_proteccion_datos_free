@@ -73,7 +73,7 @@ class Chilean_DP_Guide {
                 <h2><?php esc_html_e( 'Recursos oficiales', 'chilean-data-protection' ); ?></h2>
                 <ul>
                     <li><a href="https://www.bcn.cl/leychile/navegar?idNorma=1209272" target="_blank" rel="noopener"><?php esc_html_e( 'Ley 21.719 — Biblioteca del Congreso Nacional', 'chilean-data-protection' ); ?></a></li>
-                    <li><a href="https://www.datosproteccion.cl" target="_blank" rel="noopener"><?php esc_html_e( 'Agencia de Protección de Datos Personales', 'chilean-data-protection' ); ?></a></li>
+                    <li><a href="https://www.agenciadatos.cl" target="_blank" rel="noopener"><?php esc_html_e( 'Agencia de Protección de Datos Personales', 'chilean-data-protection' ); ?></a></li>
                 </ul>
                 <p class="description"><?php printf( esc_html__( 'Versión %s · Catálogo normativo %s', 'chilean-data-protection' ), esc_html( CHILEAN_DP_VERSION ), esc_html( Chilean_DP_Catalog_Loader::instance()->get_meta()['catalog_version'] ?? '' ) ); ?></p>
             </div>

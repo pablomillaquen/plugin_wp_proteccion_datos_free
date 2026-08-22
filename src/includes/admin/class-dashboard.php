@@ -192,35 +192,65 @@ class Chilean_DP_Dashboard {
         ];
     }
 
-    private function render_item( array $i, string $section ) { ?>
+    private function render_item( array $i, string $section ) {
+        $gc = Chilean_DP_Guide_Content::instance()->get( $i['id'] );
+        ?>
         <div class="chilean-dp-item chilean-dp-item-<?php echo esc_attr( $section ); ?>">
             <div class="chilean-dp-item-head">
-                <strong><?php echo esc_html( $i['title'] ); ?></strong>
-                <?php if ( 'alta' === $i['priority'] ) : ?><span class="badge badge-alta">Prioridad alta</span><?php endif; ?>
-                <?php if ( 'media' === $i['priority'] ) : ?><span class="badge badge-media">Prioridad media</span><?php endif; ?>
+                <strong><?php echo esc_html( $gc['title'] ?? $i['title'] ); ?></strong>
+                <?php if ( 'alta' === $i['priority'] ) : ?><span class="badge badge-alta"><?php esc_html_e( 'Prioridad alta', 'chilean-data-protection' ); ?></span><?php endif; ?>
+                <?php if ( 'media' === $i['priority'] ) : ?><span class="badge badge-media"><?php esc_html_e( 'Prioridad media', 'chilean-data-protection' ); ?></span><?php endif; ?>
                 <span class="badge badge-status"><?php echo esc_html( $i['status_label'] ); ?></span>
                 <?php if ( 'confirmar' === $section && ! empty( $i['status_internal'] ) && null !== Chilean_DP_Assessment_Engine::instance()->get_evaluation( $i['id'] ) ) : ?>
                     <span class="badge badge-user-eval"><?php echo esc_html( sprintf( __( 'Tu evaluación: %s', 'chilean-data-protection' ), $this->eval_label( $i['status_internal'] ) ) ); ?></span>
                 <?php endif; ?>
             </div>
 
-            <p class="why"><em><?php echo esc_html( $i['why'] ); ?></em></p>
-            <p class="todo"><?php echo esc_html( $i['what_to_do'] ); ?></p>
-
-            <?php if ( ! empty( $i['review_detail'] ) ) : ?>
-                <ul class="review-notes">
-                    <?php foreach ( (array) $i['review_detail'] as $note ) : ?>
-                        <li><?php echo esc_html( $note ); ?></li>
-                    <?php endforeach; ?>
-                </ul>
+            <?php if ( $gc ) : ?>
+                <div class="chilean-dp-guide">
+                    <p class="g-q"><?php esc_html_e( '¿Qué significa?', 'chilean-data-protection' ); ?></p>
+                    <p><?php echo esc_html( $gc['what_it_means'] ); ?></p>
+                    <p class="g-q"><?php esc_html_e( '¿Por qué te importa?', 'chilean-data-protection' ); ?></p>
+                    <p><?php echo esc_html( $gc['why_it_matters'] ); ?></p>
+                    <p class="g-q"><?php esc_html_e( '¿Qué debes revisar?', 'chilean-data-protection' ); ?></p>
+                    <p><?php echo esc_html( $gc['what_to_check'] ); ?></p>
+                    <p class="g-q"><?php esc_html_e( '¿Dónde lo revisas?', 'chilean-data-protection' ); ?></p>
+                    <p><?php echo esc_html( $gc['where_to_check'] ); ?></p>
+                    <p class="g-q"><?php esc_html_e( '¿WooPrivacy puede comprobarlo?', 'chilean-data-protection' ); ?></p>
+                    <p><span class="badge badge-cap cap-<?php echo esc_attr( $gc['detection_capability'] ); ?>"><?php echo esc_html( Chilean_DP_Guide_Content::instance()->capability_label( $gc['detection_capability'] ) ); ?></span></p>
+                    <p class="g-note"><?php echo esc_html( $gc['detection_note'] ); ?></p>
+                    <details class="chilean-dp-details">
+                        <summary><?php esc_html_e( '¿Cuándo marcarlo como Cubierto? · ¿Qué dice la ley?', 'chilean-data-protection' ); ?></summary>
+                        <p class="g-q"><?php esc_html_e( 'Puedes marcarlo Cubierto cuando…', 'chilean-data-protection' ); ?></p>
+                        <p><?php echo esc_html( $gc['how_to_know_covered'] ); ?></p>
+                        <p class="g-q"><?php esc_html_e( 'Qué dice la ley', 'chilean-data-protection' ); ?> <span class="refs">(<?php echo esc_html( implode( ' · ', (array) $i['legal_refs'] ) ); ?>)</span></p>
+                        <p><?php echo esc_html( $gc['legal_explanation'] ); ?></p>
+                    </details>
+                </div>
+            <?php else : ?>
+                <p class="why"><em><?php echo esc_html( $i['why'] ); ?></em></p>
+                <p class="todo"><?php echo esc_html( $i['what_to_do'] ); ?></p>
+                <?php if ( ! empty( $i['review_detail'] ) ) : ?>
+                    <ul class="review-notes">
+                        <?php foreach ( (array) $i['review_detail'] as $note ) : ?><li><?php echo esc_html( $note ); ?></li><?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+                <?php if ( ! empty( $i['legal_refs'] ) ) : ?>
+                    <p class="refs"><?php echo esc_html( implode( ' · ', (array) $i['legal_refs'] ) ); ?></p>
+                <?php endif; ?>
             <?php endif; ?>
 
-            <?php if ( ! empty( $i['observation'] ) ) : ?>
+            <?php foreach ( (array) $i['reasons'] as $r ) :
+                if ( ( $r['code'] ?? '' ) === 'PROFILE_UNKNOWN' ) : ?>
+                    <div class="chilean-dp-profile-hint">
+                        <strong><?php esc_html_e( '¿Cambiaste algo en tu tienda?', 'chilean-data-protection' ); ?></strong>
+                        <a href="<?php echo esc_url( admin_url( 'admin.php?page=chilean-dp-profile' ) ); ?>"><?php esc_html_e( 'Actualiza tus respuestas en tu perfil', 'chilean-data-protection' ); ?></a> — <?php esc_html_e( 'WooPrivacy revisará automáticamente qué aspectos de privacidad aplican a tu tienda.', 'chilean-data-protection' ); ?>
+                    </div>
+                <?php endif;
+            endforeach;
+
+            if ( ! empty( $i['observation'] ) ) : ?>
                 <p class="obs"><?php esc_html_e( 'Tu nota:', 'chilean-data-protection' ); ?> <?php echo esc_html( $i['observation'] ); ?></p>
-            <?php endif; ?>
-
-            <?php if ( ! empty( $i['legal_refs'] ) ) : ?>
-                <p class="refs"><?php echo esc_html( implode( ' · ', (array) $i['legal_refs'] ) ); ?></p>
             <?php endif; ?>
 
             <form method="post" class="chilean-dp-eval-form">
@@ -236,7 +266,7 @@ class Chilean_DP_Dashboard {
                 <button type="submit" class="button button-small"><?php esc_html_e( 'Guardar evaluación', 'chilean-data-protection' ); ?></button>
             </form>
 
-            <?php if ( null !== ( Chilean_DP_Assessment_Engine::instance()->get_evaluation( $i['id'] ) ) ) : ?>
+            <?php if ( null !== Chilean_DP_Assessment_Engine::instance()->get_evaluation( $i['id'] ) ) : ?>
                 <form method="post" class="chilean-dp-retract-form">
                     <?php wp_nonce_field( self::NONCE_ACTION, self::NONCE_FIELD ); ?>
                     <input type="hidden" name="chilean_dp_retract" value="<?php echo esc_attr( $i['id'] ); ?>" />
