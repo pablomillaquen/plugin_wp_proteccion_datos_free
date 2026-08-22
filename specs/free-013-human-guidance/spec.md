@@ -1,7 +1,8 @@
 # SPEC-FREE-013: Human Guidance & Actionability
 
 **Created**: 2026-08-22
-**Status**: Draft
+**Status**: ACCEPTED & FROZEN (2026-08-22 — ver evidence/closure.md)
+**Release asociado**: v1.1.0 (commit a64c962, tag+zip en GitHub)
 **Type**: Content/UX (capa de contenido; motores y contratos frozen intactos)
 **Origen**: F-EVAL-08 — hallazgo de la primera prueba exploratoria real post-release (`findings-origin.md` en esta carpeta)
 **Alcance del release afectado**: v1.0.2 → este SPEC producirá v1.1.0 (minor: mejora sustantiva de contenido, sin cambios funcionales)

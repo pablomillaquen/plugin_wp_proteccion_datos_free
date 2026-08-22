@@ -36,6 +36,10 @@ El motor hace exactamente lo diseñado: aplicabilidad con razones, incertidumbre
 ### Riesgo identificado que debe corregirse
 *"Elimínalos del flujo normal"* (datos sensibles) puede inducir al usuario a borrar datos — debe reformularse para NO inducir eliminaciones.
 
+## Estado
+
+> **F-EVAL-08: RESUELTO por FREE-013** (2026-08-22). Las 29 tarjetas cumplen el requisito; confirmado por re-lectura del dueño del producto.
+
 ## Requisito formal registrado
 
 > **F-EVAL-08**: Todo control mostrado al administrador debe poder ser entendido y accionado por un dueño de tienda WooCommerce sin conocimientos previos de la Ley 21.719, sin consultar la ley para comprender qué se pregunta, qué revisar, dónde hacerlo y qué evidencia necesita para marcarlo como evaluado.
