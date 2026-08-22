@@ -240,7 +240,8 @@ docker compose -f docker/docker-compose.yml exec wordpress wp core update-db --a
 14. ~~FREE-011: FREE/PRO Boundary~~ ✅ Contrato analítico completado, gates 7/7 PASS — **PENDIENTE: aprobación del usuario** para freeze (`specs/free-011-free-pro-boundary/`; línea: FREE=conocimiento snapshot, PRO=cambio+prueba continua; hallazgos F11-01/02 scaffold→FREE-012)
 15. ~~FREE-012~~ ✅ FROZEN — v1.0.0 RELEASE CANDIDATE
 16. ~~RG-SEC~~ ✅ **GATE SUPERADO** (`specs/release-gate-rg-sec/`): no-destructivo demostrado (A→lifecycle→S0 idéntico en 15 tablas), escrituras=4 options propias, 0 destructivos/SQL/HTTP/vendor, hooks solo admin (comercio inalcanzable), uninstall fix F12-SEC-01 + test OK, comercio operativo con plugin activo (orden+stock 8→5)
-17. **🎉 RELEASE PÚBLICO DECLARADO — WooPrivacy (FREE) v1.0.0** · git main+tag v1.0.0 → github.com/pablomillaquen/plugin_wp_proteccion_datos_free · declaración en specs/free-012-validation-release/evidence/release-declaration.md
+17. **🎉 RELEASE PÚBLICO DECLARADO — WooPrivacy (FREE) v1.0.0** · git main+tag v1.0.0 → github.com/pablomillaquen/plugin_wp_proteccion_datos_free
+18. ~~Mantenimiento 1.0.1~~ ✅ BUG-001..004 corregidos y verificados con Chrome DevTools (`594a95b..5b4ea50`, tag v1.0.1 + zip asset publicado). Detalle: BUG-001=FeaturesUtil×5 features; BUG-002=notice éxito+badge "Tu evaluación" en confirmar (guardado ya funcionaba; era invisible por D-F402); BUG-004=(string)false='' marcaba "Sin responder" tras guardar No; BUG-003=URL ya correcta, no reproducible (era scaffold viejo). Sin tocar motores frozen.
 
 ## Notas Importantes
 
