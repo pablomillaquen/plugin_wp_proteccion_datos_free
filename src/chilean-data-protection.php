@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WooPrivacy (FREE)
+ * Plugin Name: WooPrivacy FREE (FREE)
  * Plugin URI: https://example.com/chilean-data-protection
  * Description: Plugin informativo para apoyo en el cumplimiento de la Ley de Protección de Datos Chilena (vigente desde 01-diciembre-2026). Versión FREE - Solo informativa.
  * Version: 1.1.0
@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
 
 /**
  * BUG-001: compatibilidad explícita con features de WooCommerce.
- * Justificado por auditoría RG-SEC: WooPrivacy es administrativo-observacional,
+ * Justificado por auditoría RG-SEC: WooPrivacy FREE es administrativo-observacional,
  * sin hooks en storefront/REST/editor/cron; solo lee opciones y registro de gateways,
  * por lo que su funcionamiento es independiente de cada feature listada.
  */
@@ -83,7 +83,7 @@ final class Chilean_Data_Protection {
 
     public function woocommerce_missing_notice() {
         echo '<div class="notice notice-error is-dismissible"><p>';
-        echo esc_html__('WooPrivacy (FREE) requiere WooCommerce activo.', 'chilean-data-protection');
+        echo esc_html__('WooPrivacy FREE (FREE) requiere WooCommerce activo.', 'chilean-data-protection');
         echo '</p></div>';
     }
 
@@ -115,8 +115,8 @@ final class Chilean_Data_Protection {
 
     public function add_admin_menu() {
         add_menu_page(
-            __('WooPrivacy', 'chilean-data-protection'),
-            __('WooPrivacy (FREE)', 'chilean-data-protection'),
+            __('WooPrivacy FREE', 'chilean-data-protection'),
+            __('WooPrivacy FREE (FREE)', 'chilean-data-protection'),
             'manage_woocommerce',
             'chilean-dp',
             [Chilean_DP_Dashboard::instance(), 'render_page'],

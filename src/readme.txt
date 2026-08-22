@@ -1,4 +1,4 @@
-=== WooPrivacy (FREE) ===
+=== WooPrivacy FREE (FREE) ===
 Contributors: wooprivacy
 Tags: privacy, gdpr, compliance, woocommerce, chile, ley-21719, proteccion de datos
 Requires at least: 6.0
@@ -11,7 +11,7 @@ Assessment & Guidance de privacidad para tiendas WooCommerce bajo la Ley 21.719 
 
 == Description ==
 
-WooPrivacy (FREE) te ayuda a entender qué aspectos de privacidad debes revisar en tu tienda WooCommerce y qué deberías abordar primero.
+WooPrivacy FREE (FREE) te ayuda a entender qué aspectos de privacidad debes revisar en tu tienda WooCommerce y qué deberías abordar primero.
 
 * Perfil de tienda con 9 preguntas mínimas
 * Catálogo normativo: 9 obligaciones y 29 controles basados en la Ley 21.719 (vigente desde 01-diciembre-2026)
@@ -27,13 +27,13 @@ No es un certificado de cumplimiento legal ni asesoría jurídica. No modifica d
 
 = Privacidad =
 
-WooPrivacy no envía datos fuera de tu sitio. Toda la evaluación se guarda localmente. Al desinstalar, sus datos se eliminan.
+WooPrivacy FREE no envía datos fuera de tu sitio. Toda la evaluación se guarda localmente. Al desinstalar, sus datos se eliminan.
 
 == Installation ==
 
 1. Sube la carpeta del plugin a /wp-content/plugins/ o instálalo desde Plugins.
 2. Activa el plugin. Requiere WooCommerce activo.
-3. Abre el menú WooPrivacy y sigue las secciones.
+3. Abre el menú WooPrivacy FREE y sigue las secciones.
 
 == Frequently Asked Questions ==
 
@@ -49,7 +49,7 @@ Sí: hay un diagnóstico inicial disponible de inmediato.
 == Changelog ==
 
 = 1.1.0 =
-* **Lenguaje humano en las 29 tarjetas**: cada punto ahora explica qué significa, por qué importa, qué revisar, dónde revisarlo y qué puede (y qué NO puede) comprobar WooPrivacy.
+* **Lenguaje humano en las 29 tarjetas**: cada punto ahora explica qué significa, por qué importa, qué revisar, dónde revisarlo y qué puede (y qué NO puede) comprobar WooPrivacy FREE.
 * Etiquetas honestas de capacidad: 🔎 detecta / 👤 lo compruebas tú / 🔎👤 detecta una parte.
 * Criterio observable para marcar cada punto como Cubierto.
 * Explicación humana junto a cada referencia legal.

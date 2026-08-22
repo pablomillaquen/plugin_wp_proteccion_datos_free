@@ -22,10 +22,10 @@ class Chilean_DP_Guide {
         }
         ?>
         <div class="wrap">
-            <h1><?php esc_html_e( 'WooPrivacy (FREE) — Guía y acerca de', 'chilean-data-protection' ); ?></h1>
+            <h1><?php esc_html_e( 'WooPrivacy FREE (FREE) — Guía y acerca de', 'chilean-data-protection' ); ?></h1>
 
             <div class="chilean-dp-card warning">
-                <h2><?php esc_html_e( 'Qué es y qué no es WooPrivacy (FREE)', 'chilean-data-protection' ); ?></h2>
+                <h2><?php esc_html_e( 'Qué es y qué no es WooPrivacy FREE (FREE)', 'chilean-data-protection' ); ?></h2>
                 <p><?php echo wp_kses_post( __( 'Es una herramienta de <strong>evaluación y orientación</strong>: te ayuda a entender qué aspectos de privacidad debes revisar en tu tienda WooCommerce según la Ley 21.719 y qué abordar primero.', 'chilean-data-protection' ) ); ?></p>
                 <p><strong><?php esc_html_e( 'No es un certificado de cumplimiento legal ni una asesoría jurídica', 'chilean-data-protection' ); ?></strong> — <?php esc_html_e( 'los resultados expresan estado de preparación, no porcentajes de cumplimiento. Para decisiones legales, consulta a un profesional.', 'chilean-data-protection' ); ?></p>
             </div>
@@ -34,7 +34,7 @@ class Chilean_DP_Guide {
                 <h2><?php esc_html_e( '¿Por qué algunos puntos aparecen como “Necesitan confirmación”?','chilean-data-protection' ); ?></h2>
                 <p><?php echo wp_kses_post( __( 'Algunos puntos del diagnóstico dependen de <strong>definiciones que la propia Ley 21.719 delega en la Agencia de Protección de Datos Personales</strong>, y esa institución aún no ha publicado sus instrucciones (la ley entra en vigencia el 01-diciembre-2026 y la Agencia se encuentra en proceso de implementación).', 'chilean-data-protection' ) ); ?></p>
                 <p><strong><?php esc_html_e( 'Ejemplo concreto:', 'chilean-data-protection' ); ?></strong> <?php esc_html_e( 'para ejercer derechos, la tienda debe verificar razonablemente la identidad de quien solicita (Art. 11). Pero ¿cuánta verificación es suficiente? Demasiado poca abre la puerta a suplantación; demasiada convierte el ejercicio del derecho en un trámite imposible. La respuesta oficial corresponde a la Agencia, y todavía no existe.', 'chilean-data-protection' ); ?></p>
-                <p><?php esc_html_e( 'Ante esta situación, WooPrivacy prefiere ser honesto: no te dará una marca de “resuelto” basada en un estándar que nadie ha publicado todavía. Es preferible una incertidumbre visible que una seguridad inventada.', 'chilean-data-protection' ); ?></p>
+                <p><?php esc_html_e( 'Ante esta situación, WooPrivacy FREE prefiere ser honesto: no te dará una marca de “resuelto” basada en un estándar que nadie ha publicado todavía. Es preferible una incertidumbre visible que una seguridad inventada.', 'chilean-data-protection' ); ?></p>
                 <p><strong><?php esc_html_e( 'Qué hacer mientras tanto:', 'chilean-data-protection' ); ?></strong></p>
                 <ol>
                     <li><?php esc_html_e( 'Adopta una práctica proporcional razonable (por ejemplo, confirmación por el correo registrado).', 'chilean-data-protection' ); ?></li>
@@ -59,7 +59,7 @@ class Chilean_DP_Guide {
             </div>
 
             <div class="chilean-dp-card">
-                <h2><?php esc_html_e( 'Cómo usar WooPrivacy (FREE)', 'chilean-data-protection' ); ?></h2>
+                <h2><?php esc_html_e( 'Cómo usar WooPrivacy FREE (FREE)', 'chilean-data-protection' ); ?></h2>
                 <ol>
                     <li><?php esc_html_e( 'Revisa tu Perfil de tienda (respuestas que definen qué aplica a ti).', 'chilean-data-protection' ); ?></li>
                     <li><?php esc_html_e( 'Abre el panel principal: verás un diagnóstico inicial aunque no respondas nada.', 'chilean-data-protection' ); ?></li>

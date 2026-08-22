@@ -107,7 +107,7 @@ class Chilean_DP_Dashboard {
         $att     = $g['summary']['attention'];
         ?>
         <div class="wrap chilean-dp-dash">
-            <h1>WooPrivacy (FREE)</h1>
+            <h1>WooPrivacy FREE (FREE)</h1>
             <p class="chilean-dp-subtitle">
                 <?php esc_html_e( 'Assessment & Guidance — Ley 21.719 (vigente desde 01-diciembre-2026)', 'chilean-data-protection' ); ?>
                 · <a href="<?php echo esc_url( admin_url( 'admin.php?page=chilean-dp-profile' ) ); ?>"><?php esc_html_e( 'Editar perfil de tienda', 'chilean-data-protection' ); ?></a>
@@ -216,7 +216,7 @@ class Chilean_DP_Dashboard {
                     <p><?php echo esc_html( $gc['what_to_check'] ); ?></p>
                     <p class="g-q"><?php esc_html_e( '¿Dónde lo revisas?', 'chilean-data-protection' ); ?></p>
                     <p><?php echo esc_html( $gc['where_to_check'] ); ?></p>
-                    <p class="g-q"><?php esc_html_e( '¿WooPrivacy puede comprobarlo?', 'chilean-data-protection' ); ?></p>
+                    <p class="g-q"><?php esc_html_e( '¿WooPrivacy FREE puede comprobarlo?', 'chilean-data-protection' ); ?></p>
                     <p><span class="badge badge-cap cap-<?php echo esc_attr( $gc['detection_capability'] ); ?>"><?php echo esc_html( Chilean_DP_Guide_Content::instance()->capability_label( $gc['detection_capability'] ) ); ?></span></p>
                     <p class="g-note"><?php echo esc_html( $gc['detection_note'] ); ?></p>
                     <details class="chilean-dp-details">
@@ -244,7 +244,7 @@ class Chilean_DP_Dashboard {
                 if ( ( $r['code'] ?? '' ) === 'PROFILE_UNKNOWN' ) : ?>
                     <div class="chilean-dp-profile-hint">
                         <strong><?php esc_html_e( '¿Cambiaste algo en tu tienda?', 'chilean-data-protection' ); ?></strong>
-                        <a href="<?php echo esc_url( admin_url( 'admin.php?page=chilean-dp-profile' ) ); ?>"><?php esc_html_e( 'Actualiza tus respuestas en tu perfil', 'chilean-data-protection' ); ?></a> — <?php esc_html_e( 'WooPrivacy revisará automáticamente qué aspectos de privacidad aplican a tu tienda.', 'chilean-data-protection' ); ?>
+                        <a href="<?php echo esc_url( admin_url( 'admin.php?page=chilean-dp-profile' ) ); ?>"><?php esc_html_e( 'Actualiza tus respuestas en tu perfil', 'chilean-data-protection' ); ?></a> — <?php esc_html_e( 'WooPrivacy FREE revisará automáticamente qué aspectos de privacidad aplican a tu tienda.', 'chilean-data-protection' ); ?>
                     </div>
                 <?php endif;
             endforeach;
