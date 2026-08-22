@@ -4,7 +4,7 @@ Tags: privacy, gdpr, compliance, woocommerce, chile, ley-21719, proteccion de da
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 
 Assessment & Guidance de privacidad para tiendas WooCommerce bajo la Ley 21.719 de Chile.
@@ -47,6 +47,9 @@ En la base de datos local de WordPress (options). Nada sale de tu sitio.
 Sí: hay un diagnóstico inicial disponible de inmediato.
 
 == Changelog ==
+
+= 1.1.1 =
+* Pasada editorial-jurídica del contenido de las 29 tarjetas: eliminadas sobreafirmaciones (gratuidad con regla exacta del Art. 10, condición única de prórroga, cookies sin consentimiento previo automático atribuido, HTTPS como medida básica, acuerdos con proveedores sin absolutismos).
 
 = 1.1.0 =
 * **Lenguaje humano en las 29 tarjetas**: cada punto ahora explica qué significa, por qué importa, qué revisar, dónde revisarlo y qué puede (y qué NO puede) comprobar WooPrivacy FREE.

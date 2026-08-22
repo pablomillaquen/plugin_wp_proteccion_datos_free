@@ -3,7 +3,7 @@
  * Plugin Name: WooPrivacy FREE (FREE)
  * Plugin URI: https://example.com/chilean-data-protection
  * Description: Plugin informativo para apoyo en el cumplimiento de la Ley de Protección de Datos Chilena (vigente desde 01-diciembre-2026). Versión FREE - Solo informativa.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Tu Nombre
  * Author URI: https://example.com
  * License: GPL v2 or later
