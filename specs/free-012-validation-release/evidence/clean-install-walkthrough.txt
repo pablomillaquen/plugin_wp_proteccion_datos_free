@@ -1,0 +1,12 @@
+# Instalación limpia + flujo completo como usuario real (HTTP puro, sin WP-CLI)
+## Preparación del entorno (CLI solo como provisioning, equivalente a un hosting)
+DB dropeada+creada · wp core install · WooCommerce activado con registro de cuentas · plugin INACTIVO sin datos
+## Recorrido del usuario (100% HTTP)
+PASO 1 login admin ................................ 302 ✓
+PASO 2 activar WooPrivacy desde Plugins ............ 302 ✓ (activo junto a WooCommerce)
+PASO 3 dashboard inicial (perfil vacío) ............ 200 ✓ "Todavía hay 16 aspectos sin evaluar" + secciones
+PASO 4 responder perfil vía formulario ............. 200 ✓
+PASO 5 dashboard refinado .......................... 200 ✓ "Todavía hay 20 aspectos" (+4 condicionales ahora aplicables)
+PASO 6 evaluar control desde tarjeta UI ............ 200 ✓ "Cubierto a medias" + observación renderizadas
+PASO 7 descargar reporte ........................... 200 ✓ disclaimer no-certificado + procedencia presentes
+PASO 8 página Guía y acerca de ..................... 200 ✓ declaración no-certificado presente

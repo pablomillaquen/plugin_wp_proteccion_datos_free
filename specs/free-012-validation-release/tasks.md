@@ -1,0 +1,11 @@
+# Plan — SPEC-FREE-012
+- [x] T1201 Limpieza scaffold (settings/info/callback muerto) 
+- [x] T1202 Guía & Acerca de nueva
+- [x] T1203 Upgrade path notas sección (NT2/NT5)
+- [x] T1204 Hardening ABSPATH ×10 + uninstall.php + auditoría nonces
+- [x] T1205 Version 1.0.0 + readme.txt + changelog
+- [x] T1206 php -l global + activación
+- [x] T1207 Regresión 7/7 suites
+- [x] T1208 Instalación limpia end-to-end HTTP 8/8
+- [x] T1209 Aprobación usuario (APPROVED) → v1.0.0 RELEASE CANDIDATE congelado · pendiente Release Gate RG-SEC
+- [x] T1210 AGENTS.md final + Engram guardados

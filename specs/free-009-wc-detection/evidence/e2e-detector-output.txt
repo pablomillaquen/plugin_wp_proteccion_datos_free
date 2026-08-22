@@ -1,0 +1,23 @@
+# E2E Detector — SPEC-FREE-009 (2026-08-21)
+
+## CLI (13/13 PASS)
+PASS | 1 meta con versiones
+PASS | 2 5 dimensiones detectables persistidas
+PASS | 3 cero mismatches con perfil vacío
+PASS | 4 hay unconfirmed o undetected
+PASS | 5 customer_accounts observado=true
+PASS | 6 declarado null → unconfirmed
+PASS | 7 mismatch detectado
+PASS | 8 adopt ok
+PASS | 9 tras adoptar → match
+PASS | 10 perfil refleja adopción
+INFO aplicabilidad antes=dfb5bbdf27b50eceb304c3e4950bf560 después=cf3c8fdf1ff51a58b493ec0b9911e2dc (cambia solo si el usuario declara)
+PASS | 11 third_parties observado definido
+PASS | 12 newsletter null (sin evidencia)
+PASS | 13 source auto-detected
+E2E DETECTOR OK
+
+## HTTP UI
+Dashboard con panel evidencia: 200 · 2 mismatches visibles (customer_accounts obs=true vs decl=false; third_parties obs=false vs decl=true)
+POST adoptar customer_accounts: 200 → chip 'Coincide' · perfil ca=true (acto del usuario vía API pública frozen)
+newsletter sin plugins conocidos → 'Sin evidencia técnica' (null honesto, nunca falso negativo afirmativo)

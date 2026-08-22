@@ -1,0 +1,29 @@
+--- Escenario A: perfil vacío ---
+PASS | A1 incondicional → APPLICABLE | esperado=APPLICABLE actual='APPLICABLE'
+PASS | A2 cookies null → REVIEW+PROFILE_UNKNOWN | esperado=REQUIRES_REVIEW actual='REQUIRES_REVIEW'
+PASS | A2b razón PROFILE_UNKNOWN | esperado=PROFILE_UNKNOWN actual='PROFILE_UNKNOWN'
+PASS | A2c dimensión preservada | esperado=cookies actual='cookies'
+PASS | A3 KD-002 → REVIEW+KNOWLEDGE_PENDING | esperado=KNOWLEDGE_PENDING actual='KNOWLEDGE_PENDING'
+PASS | A3b referencia KD-002 | esperado=KD-002 actual='KD-002'
+PASS | A4 KD-001 → referencia KD-001 | esperado=KD-001 actual='KD-001'
+PASS | A5 resumen suma 29 | esperado=29 actual=29
+--- Escenario B: perfil respondido ---
+PASS | B1 cookies=true → APPLICABLE | esperado=APPLICABLE actual='APPLICABLE'
+PASS | B2 newsletter=false AND dm=false → NOT_APPLICABLE | esperado=NOT_APPLICABLE actual='NOT_APPLICABLE'
+PASS | B3 tp=false AND analytics=false → THIRDPARTY-DPA NOT_APPLICABLE | esperado=NOT_APPLICABLE actual='NOT_APPLICABLE'
+PASS | B4 consent derivado true (cookies=true) → CONSENT-MECH APPLICABLE | esperado=APPLICABLE actual='APPLICABLE'
+PASS | B5 KD control aplicable sigue marcando REVIEW | esperado=REQUIRES_REVIEW actual='REQUIRES_REVIEW'
+PASS | B6 transfers=false → NOT_APPLICABLE | esperado=NOT_APPLICABLE actual='NOT_APPLICABLE'
+OBL-TRANSFERS-001 rollup=NOT_APPLICABLE
+PASS | B7 rollup obligación sin controles aplicables | esperado=NOT_APPLICABLE actual='NOT_APPLICABLE'
+--- Escenario C: OR con unknowns ---
+PASS | C1 any_of con un true → APPLICABLE pese a otro null | esperado=APPLICABLE actual='APPLICABLE'
+PASS | C2 any_of ambos null → REQUIRES_REVIEW | esperado=REQUIRES_REVIEW actual='REQUIRES_REVIEW'
+PASS | C2b razones incluyen ambas dimensiones | esperado=2 actual=2
+PASS | C3 derivado true domina nulls → CONSENT-REG APPLICABLE | esperado=APPLICABLE actual='APPLICABLE'
+E2E ENGINE OK
+
+Regresión admin:
+chilean-dp: 200
+chilean-dp-profile: 200
+chilean-dp-settings: 200

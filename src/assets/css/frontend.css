@@ -1,0 +1,202 @@
+/* Chilean Data Protection - Frontend Styles */
+
+/* Cookie Notice Banner (informational only in FREE) */
+.chilean-dp-cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1d2327;
+    color: #fff;
+    padding: 20px;
+    z-index: 999999;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.chilean-dp-cookie-banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.chilean-dp-cookie-banner-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.chilean-dp-cookie-banner-text h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.chilean-dp-cookie-banner-text p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.chilean-dp-cookie-banner-text a {
+    color: #7cc0ff;
+    text-decoration: underline;
+}
+
+.chilean-dp-cookie-banner-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.chilean-dp-btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.chilean-dp-btn-primary {
+    background: #2271b1;
+    color: #fff;
+}
+
+.chilean-dp-btn-primary:hover {
+    background: #135e96;
+}
+
+.chilean-dp-btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.chilean-dp-btn-secondary:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Compliance Badge Widget */
+.chilean-dp-compliance-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #f0f0f1;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #1d2327;
+    text-decoration: none;
+}
+
+.chilean-dp-compliance-badge:hover {
+    background: #e7e7e7;
+    color: #1d2327;
+    text-decoration: none;
+}
+
+.chilean-dp-compliance-badge .dashicons {
+    color: #46b450;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Data Rights Form */
+.chilean-dp-rights-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.chilean-dp-rights-form .form-group {
+    margin-bottom: 20px;
+}
+
+.chilean-dp-rights-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.chilean-dp-rights-form input,
+.chilean-dp-rights-form select,
+.chilean-dp-rights-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.chilean-dp-rights-form input:focus,
+.chilean-dp-rights-form select:focus,
+.chilean-dp-rights-form textarea:focus {
+    outline: none;
+    border-color: #2271b1;
+    box-shadow: 0 0 0 2px rgba(34,113,177,0.2);
+}
+
+.chilean-dp-rights-form .required::after {
+    content: ' *';
+    color: #dc3232;
+}
+
+/* Info Notice */
+.chilean-dp-info-notice {
+    background: #e7f3ff;
+    border-left: 4px solid #2271b1;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.chilean-dp-info-notice.warning {
+    background: #fff3cd;
+    border-left-color: #ffb900;
+}
+
+.chilean-dp-info-notice.error {
+    background: #fcf0f0;
+    border-left-color: #dc3232;
+}
+
+.chilean-dp-info-notice.success {
+    background: #f0fcf4;
+    border-left-color: #46b450;
+}
+
+.chilean-dp-info-notice strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #1d2327;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .chilean-dp-cookie-banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .chilean-dp-cookie-banner-actions {
+        justify-content: center;
+    }
+    
+    .chilean-dp-rights-grid {
+        grid-template-columns: 1fr;
+    }
+}

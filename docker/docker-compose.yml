@@ -1,0 +1,65 @@
+services:
+  wordpress:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: wp-cl-data-protection
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wp_user
+      WORDPRESS_DB_PASSWORD: wp_password
+      WORDPRESS_DB_NAME: wp_cl_data_protection
+      WORDPRESS_DEBUG: 1
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_DEBUG_LOG', true);
+        define('WP_DEBUG_DISPLAY', false);
+        define('SCRIPT_DEBUG', true);
+        define('WP_MEMORY_LIMIT', '256M');
+        define('FS_METHOD', 'direct');
+    volumes:
+      - ../src:/var/www/html/wp-content/plugins/chilean-data-protection
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    depends_on:
+      - db
+    networks:
+      - wp-network
+
+  db:
+    image: mysql:8.0
+    container_name: wp-cl-data-protection-db
+    environment:
+      MYSQL_DATABASE: wp_cl_data_protection
+      MYSQL_USER: wp_user
+      MYSQL_PASSWORD: wp_password
+      MYSQL_ROOT_PASSWORD: root_password
+    volumes:
+      - db-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    networks:
+      - wp-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: wp-cl-data-protection-pma
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: wp_user
+      PMA_PASSWORD: wp_password
+      UPLOAD_LIMIT: 256M
+    depends_on:
+      - db
+    networks:
+      - wp-network
+
+volumes:
+  db-data:
+
+networks:
+  wp-network:
+    driver: bridge

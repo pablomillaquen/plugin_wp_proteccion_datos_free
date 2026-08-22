@@ -1,0 +1,227 @@
+/* Chilean Data Protection - Admin Styles */
+
+.chilean-dp-info-container {
+    max-width: 1000px;
+}
+
+.chilean-dp-card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.chilean-dp-card.warning {
+    border-left: 4px solid #d63638;
+    background: #fcf0f0;
+}
+
+.chilean-dp-card h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    color: #1d2327;
+}
+
+.chilean-dp-meta {
+    color: #646970;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.chilean-dp-meta .dashicons {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.chilean-dp-principles,
+.chilean-dp-resources {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chilean-dp-principles li,
+.chilean-dp-resources li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f1;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.chilean-dp-principles li:last-child,
+.chilean-dp-resources li:last-child {
+    border-bottom: none;
+}
+
+.chilean-dp-principles .dashicons-yes {
+    color: #46b450;
+    margin-top: 3px;
+}
+
+.chilean-dp-principles strong {
+    display: inline-block;
+    min-width: 180px;
+}
+
+.chilean-dp-rights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.chilean-dp-right {
+    background: #f6f7f7;
+    padding: 15px;
+    border-radius: 4px;
+    border-left: 3px solid #2271b1;
+}
+
+.chilean-dp-right h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    color: #1d2327;
+}
+
+.chilean-dp-right p {
+    margin: 0;
+    font-size: 13px;
+    color: #646970;
+}
+
+.chilean-dp-obligations,
+.chilean-dp-comparison {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.chilean-dp-obligations th,
+.chilean-dp-obligations td,
+.chilean-dp-comparison th,
+.chilean-dp-comparison td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: top;
+}
+
+.chilean-dp-obligations th,
+.chilean-dp-comparison th {
+    background: #f6f7f7;
+    font-weight: 600;
+}
+
+.chilean-dp-obligations tr:nth-child(even),
+.chilean-dp-comparison tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge.info {
+    background: #e7f3ff;
+    color: #0073aa;
+}
+
+.badge.partial {
+    background: #fff3cd;
+    color: #856d0b;
+}
+
+.chilean-dp-resources a {
+    color: #2271b1;
+    text-decoration: none;
+}
+
+.chilean-dp-resources a:hover {
+    text-decoration: underline;
+}
+
+/* Settings page */
+.chilean-dp-settings .form-table th {
+    width: 250px;
+}
+
+.chilean-dp-settings .description {
+    font-style: italic;
+    color: #646970;
+}
+
+/* Dashboard widget */
+.chilean-dp-dashboard-widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chilean-dp-dashboard-widget li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chilean-dp-dashboard-widget li:last-child {
+    border-bottom: none;
+}
+
+.chilean-dp-status-ok { color: #46b450; }
+.chilean-dp-status-warning { color: #ffb900; }
+.chilean-dp-status-error { color: #dc3232; }
+.chilean-dp-status-info { color: #2271b1; }
+/* ===== Dashboard (SPEC-FREE-008) ===== */
+.chilean-dp-dash { max-width: 1100px; }
+.chilean-dp-subtitle { color: #646970; }
+.chilean-dp-attention { padding: 12px 16px; border-left: 4px solid #72aee6; background: #f0f6fc; margin: 12px 0; }
+.chilean-dp-attention-warning { border-color: #dba617; background: #fcf9e8; }
+.chilean-dp-attention-ok { border-color: #00a32a; background: #edfaef; }
+.chilean-dp-phrase { font-size: 15px; font-weight: 600; margin: 10px 0 16px; }
+.chilean-dp-counters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.chilean-dp-counter { background: #fff; border: 1px solid #dcdcde; border-radius: 4px; min-width: 120px; padding: 10px 14px; }
+.chilean-dp-counter .num { display: block; font-size: 22px; font-weight: 700; }
+.chilean-dp-counter .lbl { color: #646970; font-size: 11px; text-transform: uppercase; letter-spacing: .3px; }
+.chilean-dp-counter-alta .num { color: #d63638; }
+.chilean-dp-counter-media .num { color: #996800; }
+.chilean-dp-counter-ok .num { color: #00a32a; }
+.chilean-dp-section-title { margin-top: 28px; }
+.chilean-dp-item { background: #fff; border: 1px solid #dcdcde; border-left-width: 4px; border-radius: 4px; padding: 14px 16px; margin-bottom: 12px; }
+.chilean-dp-item-hacer_ahora { border-left-color: #d63638; }
+.chilean-dp-item-confirmar { border-left-color: #dba617; }
+.chilean-dp-item-evaluar { border-left-color: #72aee6; }
+.chilean-dp-item-hecho { border-left-color: #00a32a; opacity: .85; }
+.chilean-dp-item-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+.badge-alta { background: #fcf0f1; color: #b32d2e; }
+.badge-media { background: #fcf9e8; color: #8a6116; }
+.badge-status { background: #f0f0f1; color: #50575e; }
+.chilean-dp-item .why { color: #646970; margin: 8px 0 4px; }
+.chilean-dp-item .todo { margin: 0 0 8px; }
+.chilean-dp-item .review-notes { color: #996800; background: #fcf9e8; padding: 6px 10px 6px 26px; border-radius: 3px; }
+.chilean-dp-item .obs, .chilean-dp-item .refs { color: #646970; font-size: 12px; margin: 4px 0; }
+.chilean-dp-eval-form { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
+.chilean-dp-retract-form { margin-top: 4px; }
+
+/* ===== Evidencia entorno (FREE-009) ===== */
+.chilean-dp-evidence-note { color: #646970; font-size: 12px; }
+.chilean-dp-evidence-table .badge-ev-ok { background: #edfaef; color: #00a32a; }
+.chilean-dp-evidence-table .badge-ev-warn { background: #fcf0f1; color: #b32d2e; }
+.chilean-dp-evidence-table .badge-ev-info { background: #f0f6fc; color: #135e96; }
+.chilean-dp-evidence-table .badge-ev-muted { background: #f0f0f1; color: #787c82; }
+.chilean-dp-evidence-detail { color: #787c82; font-size: 11px; }
+
+/* Upgrade path (FREE-012) */
+.chilean-dp-pro-note { color: #50575e; background: #f6f7f7; border-radius: 3px; padding: 6px 10px; font-size: 12px; margin: -4px 0 10px; }

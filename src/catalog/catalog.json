@@ -1,0 +1,495 @@
+{
+  "meta": {
+    "catalog_version": "1.0.0",
+    "schema_version": "1.0.0",
+    "law": "Ley 21.719 de Protección de Datos Personales (Chile)",
+    "law_source": "docs/ley_21719.md",
+    "effective_date": "2026-12-01",
+    "language": "es_CL",
+    "product": "WooPrivacy FREE",
+    "derived_from": "knowledge/ (Bootstrap desde PRO, READ ONLY) + specs/free-002-knowledge-catalog",
+    "states_enum": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+    "applicability_dimensions": {
+      "customer_accounts": { "label": "La tienda permite creación de cuentas de cliente" },
+      "checkout_data": { "label": "La tienda recopila datos durante el checkout" },
+      "direct_marketing": { "label": "La tienda realiza marketing directo" },
+      "newsletter": { "label": "La tienda utiliza newsletter/suscripciones" },
+      "analytics": { "label": "La tienda usa herramientas de analítica web" },
+      "cookies": { "label": "La tienda usa cookies o tecnologías similares" },
+      "third_parties": { "label": "La tienda utiliza servicios de terceros que tratan datos" },
+      "special_categories": { "label": "La tienda trata categorías especiales de datos" },
+      "international_transfers": { "label": "La tienda realiza transferencias internacionales de datos" },
+      "consent_processing": { "label": "Existen tratamientos basados en consentimiento (dimensión derivada del perfil)" }
+    }
+  },
+  "obligations": [
+    {
+      "id": "OBL-RIGHTS-001",
+      "name": "Garantizar los derechos del titular",
+      "description": "La tienda debe permitir a los titulares ejercer acceso, rectificación, supresión, oposición, portabilidad y bloqueo sobre sus datos personales.",
+      "legal_references": ["Art. 4"],
+      "category": "rights",
+      "priority": "HIGH"
+    },
+    {
+      "id": "OBL-CHANNEL-001",
+      "name": "Medios expeditos de ejercicio",
+      "description": "Debe existir un medio tecnológico sencillo, expedito, ágil y eficaz para ejercer derechos, con las reglas de gratuidad del Art. 10.",
+      "legal_references": ["Art. 10"],
+      "category": "channel",
+      "priority": "HIGH"
+    },
+    {
+      "id": "OBL-DSRPROC-001",
+      "name": "Procedimiento formal de solicitudes",
+      "description": "Solicitud escrita con identificación y autenticación, acuse de recibo, respuesta en 30 días corridos (prórroga única por 30), respuesta escrita, denegación fundada con aviso del derecho a reclamar ante la Agencia y bloqueo temporal en 2 días hábiles cuando corresponda.",
+      "legal_references": ["Art. 11"],
+      "category": "procedure",
+      "priority": "HIGH"
+    },
+    {
+      "id": "OBL-EVIDENCE-001",
+      "name": "Acreditación y respaldos",
+      "description": "El responsable puede acreditar la licitud del tratamiento: conserva respaldo íntegro de sus respuestas y registros suficientes de operaciones relevantes.",
+      "legal_references": ["Art. 3 letra a)", "Art. 11 inciso 3", "Art. 14 letra a)"],
+      "category": "accountability",
+      "priority": "HIGH"
+    },
+    {
+      "id": "OBL-TRANSPARENCY-001",
+      "name": "Información de transparencia permanente",
+      "description": "El sitio mantiene permanentemente accesible la información de los 12 literales del Art. 14 ter: política con fecha/versión, responsable, contacto, categorías/finalidades/bases, seguridad, derechos, Agencia, transferencias, conservación, fuente, retiro del consentimiento y decisiones automatizadas.",
+      "legal_references": ["Art. 14 ter"],
+      "category": "transparency",
+      "priority": "HIGH"
+    },
+    {
+      "id": "OBL-LICITBASE-001",
+      "name": "Bases de licitud y consentimiento",
+      "description": "Todo tratamiento cuenta con consentimiento libre, informado, específico, previo e inequívoco o una base del Art. 13. El consentimiento es revocable y el responsable puede probarlo.",
+      "legal_references": ["Art. 3", "Art. 12", "Art. 13"],
+      "category": "licitness",
+      "priority": "HIGH"
+    },
+    {
+      "id": "OBL-SECURITY-001",
+      "name": "Seguridad del tratamiento",
+      "description": "Medidas técnicas y organizativas apropiadas al riesgo, incluido el registro de incidentes que se detecten.",
+      "legal_references": ["Art. 14 quinquies"],
+      "category": "security",
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "OBL-THIRDPARTY-001",
+      "name": "Encargados y terceros",
+      "description": "Los proveedores que tratan datos personales por cuenta de la tienda cuentan con acuerdos o cláusulas adecuadas de encargo de tratamiento.",
+      "legal_references": ["Arts. sobre encargados del tratamiento"],
+      "category": "third_parties",
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "OBL-TRANSFERS-001",
+      "name": "Transferencias internacionales",
+      "description": "Las transferencias de datos hacia el exterior cuentan con garantías adecuadas y se declaran en transparencia cuando aplican.",
+      "legal_references": ["Art. 27"],
+      "category": "transfers",
+      "priority": "MEDIUM"
+    }
+  ],
+  "controls": [
+    {
+      "id": "CTRL-RIGHTS-CHANNEL-001",
+      "name": "Canal público para ejercer derechos",
+      "obligations": ["OBL-RIGHTS-001", "OBL-CHANNEL-001"],
+      "description": "Existe un canal público y siempre disponible donde el titular puede solicitar ejercer sus derechos, sencillo en su operación.",
+      "objective": "Sin canal, el responsable incumple directamente el deber de medios expeditos (Art. 10).",
+      "applicability": {},
+      "evaluation_method": "mixed",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Publica una página accesible desde el pie del sitio con instrucciones claras para solicitar cada derecho (email o formulario). Indica qué datos deben incluirse en la solicitud.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-RIGHTS-COVERAGE-001",
+      "name": "Cobertura de los seis derechos ARCO+",
+      "obligations": ["OBL-RIGHTS-001"],
+      "description": "El canal existente permite solicitar los seis derechos: acceso, rectificación, supresión, oposición, portabilidad y bloqueo.",
+      "objective": "Un canal que solo cubre algunos derechos deja titulares sin ejercicio efectivo (Art. 4).",
+      "applicability": {},
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Verifica que tu canal mencione explícitamente los seis derechos y cómo solicitarlos. Si solo cubres algunos, amplía la información al menos como recepción de solicitudes.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-RIGHTS-FREE-001",
+      "name": "Gratuidad del ejercicio aplicada",
+      "obligations": ["OBL-CHANNEL-001"],
+      "description": "Rectificación, supresión y oposición son gratuitas; el acceso es gratuito al menos una vez por trimestre. Solo se cobran costos directos por repetición excesiva de acceso/portabilidad.",
+      "objective": "Cobros indebidos desincentivan el ejercicio y contravienen el Art. 10.",
+      "applicability": {},
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Revisa tus condiciones comerciales: no establezcas cargos fijos por atender derechos. Si contemplas cobros por repetición, documenta el criterio de costos directos.",
+      "priority": "MEDIUM",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-RIGHTS-SLA-001",
+      "name": "Acuse de recibo y plazos de respuesta",
+      "obligations": ["OBL-DSRPROC-001"],
+      "description": "Toda solicitud recibe acuse de recibo y respuesta escrita dentro de 30 días corridos, prorrogables una sola vez por otros 30 días informados al titular.",
+      "objective": "Los plazos del Art. 11 son exigibles; su pérdida genera exposición ante la Agencia.",
+      "applicability": {},
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Define un proceso interno con responsable y calendario para solicitudes de privacidad. Si usas email genérico, habilita etiquetas/reglas para no perder solicitudes y registra fecha de entrada y vencimiento.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-RIGHTS-BLOCK-001",
+      "name": "Bloqueo temporal disponible",
+      "obligations": ["OBL-DSRPROC-001"],
+      "description": "Cuando el titular lo pide junto a una rectificación, supresión u oposición, la tienda responde el bloqueo en 2 días hábiles y suspende el tratamiento mientras se resuelve (sin afectar el almacenamiento).",
+      "objective": "Evita seguir tratando datos disputados durante la resolución (Arts. 8 ter, 11 inc. 7).",
+      "applicability": {},
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Documenta cómo pausar envíos de marketing y tratamientos activos de un cliente específico mientras se resuelve su solicitud.",
+      "priority": "MEDIUM",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-RIGHTS-DENIAL-001",
+      "name": "Denegación fundada con aviso a la Agencia",
+      "obligations": ["OBL-DSRPROC-001"],
+      "description": "Si se deniega total o parcialmente una solicitud, la decisión se funda en causa y antecedentes, y se informa al titular que dispone de 30 días hábiles para reclamar ante la Agencia.",
+      "objective": "Una denegación sin fundamento ni aviso agrava la posición del responsable (Art. 11 inc. 5).",
+      "applicability": {},
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Prepara una plantilla de denegación que incluya causa, antecedentes y la mención expresa del derecho a reclamar ante la Agencia.",
+      "priority": "MEDIUM",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-RIGHTS-IDVERIFY-001",
+      "name": "Verificación de identidad del solicitante",
+      "obligations": ["OBL-DSRPROC-001"],
+      "description": "Antes de entregar o modificar datos, la tienda verifica razonablemente la identidad del solicitante para evitar entregas a terceros.",
+      "objective": "Atender solicitudes sin verificar identidad crea riesgo de suplantación; verificar en exceso obstaculiza el derecho.",
+      "applicability": {},
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Define un nivel de verificación proporcional (por ejemplo, confirmación por el email registrado). Revisa periódicamente las instrucciones que dicte la Agencia.",
+      "priority": "HIGH",
+      "requires_review": true,
+      "review_reason": "KD-002: nivel de autenticación que exigirá la Agencia para ejercicio vía web aún no está definido (deuda heredada de PRO)."
+    },
+    {
+      "id": "CTRL-RIGHTS-EVIDENCE-001",
+      "name": "Respaldo íntegro de respuestas",
+      "obligations": ["OBL-EVIDENCE-001", "OBL-DSRPROC-001"],
+      "description": "La tienda conserva respaldo de cada respuesta enviada: remisión, fecha y contenido íntegro, recuperable para acreditar su gestión.",
+      "objective": "El Art. 11 exige almacenar respaldos; sin ellos no es posible acreditar la atención oportuna (Art. 3.a).",
+      "applicability": {},
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Guarda copia de toda respuesta a solicitudes de privacidad (bandeja dedicada o carpeta) con fecha y destinatario, durante al menos el período de conservación definido.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-INVENTORY-001",
+      "name": "Inventario de datos personales tratados",
+      "obligations": ["OBL-EVIDENCE-001", "OBL-TRANSPARENCY-001"],
+      "description": "La tienda conoce qué datos personales trata, dónde residen (cuenta WooCommerce, pedidos, plugins, proveedores) y con qué finalidad.",
+      "objective": "Sin inventario no es posible responder acceso, declarar transparencia ni delimitar conservación.",
+      "applicability": {},
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Lista tus fuentes de datos: clientes/pedidos de WooCommerce, formularios, analítica, email marketing y plugins. Anota para cada una qué datos guarda y para qué.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-TRANSP-PAGE-001",
+      "name": "Página de transparencia con los 12 literales",
+      "obligations": ["OBL-TRANSPARENCY-001"],
+      "description": "Existe una página pública permanentemente accesible que representa los 12 literales del Art. 14 ter, incluida la mención del derecho a reclamar ante la Agencia.",
+      "objective": "Es el deber de información central de la ley; su ausencia es una brecha visible de alto riesgo.",
+      "applicability": {},
+      "evaluation_method": "mixed",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Crea o revisa tu página de privacidad para cubrir: política con versión, identificación del responsable, contacto, categorías/finalidades/bases, seguridad, derechos ARCO+, Agencia, transferencias, conservación, fuente, retiro del consentimiento y decisiones automatizadas si existen.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-PRIVACYPOLICY-001",
+      "name": "Política de privacidad con fecha y versión",
+      "obligations": ["OBL-TRANSPARENCY-001"],
+      "description": "La política de tratamiento publicada indica fecha y versión, y se mantiene actualizada cuando cambian tratamientos.",
+      "objective": "El literal a) del Art. 14 ter exige fecha y versión; políticas sin control de cambios pierden trazabilidad.",
+      "applicability": {},
+      "evaluation_method": "mixed",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Añade encabezado con fecha de última actualización y número de versión; registra un historial de cambios simple.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-TRANSP-CONTACT-001",
+      "name": "Identificación del responsable y canal de contacto",
+      "obligations": ["OBL-TRANSPARENCY-001"],
+      "description": "El sitio identifica al responsable (razón social/RUT si aplica), domicilio y un canal vigente para solicitudes (email o formulario).",
+      "objective": "Literales b) y c): el titular necesita saber contra quién ejerce derechos y cómo contactarlo.",
+      "applicability": {},
+      "evaluation_method": "mixed",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Completa los datos legales de tu empresa y verifica que el correo de contacto de privacidad exista realmente y sea revisado.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-RETENTION-DECL-001",
+      "name": "Períodos de conservación definidos",
+      "obligations": ["OBL-TRANSPARENCY-001", "OBL-EVIDENCE-001"],
+      "description": "La tienda define cuánto tiempo conserva cada categoría de datos (clientes, pedidos, marketing) y lo comunica en transparencia.",
+      "objective": "Literal i) del Art. 14 ter; además limita riesgo acumulado por datos retenidos sin finalidad.",
+      "applicability": {},
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Define plazos por categoría (por ejemplo, pedidos según obligaciones tributarias; marketing hasta revocación) y publícalos. Considera asesoría para el caso de pedidos con obligación legal de conservación.",
+      "priority": "MEDIUM",
+      "requires_review": true,
+      "review_reason": "KD-001: alcance exacto de la excepción tributaria sobre pedidos frente a supresión aún abierto en PRO."
+    },
+    {
+      "id": "CTRL-AUTOMATEDDEC-DECL-001",
+      "name": "Decisiones automatizadas declaradas si existen",
+      "obligations": ["OBL-TRANSPARENCY-001"],
+      "description": "Si la tienda usa decisiones automatizadas o perfilado con efectos significativos (precios dinámicos, scoring antifraude), lo declara en transparencia.",
+      "objective": "Literal l); si no existen, la declaración explícita de ausencia también aporta transparencia.",
+      "applicability": {},
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Revisa tus plugins (antifraude, precios dinámicos, recomendadores). Declara su existencia y lógica general, o deja constancia de que no realizas decisiones automatizadas.",
+      "priority": "MEDIUM",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-LAWFULBASE-MAP-001",
+      "name": "Base de licitud identificada por tratamiento",
+      "obligations": ["OBL-LICITBASE-001"],
+      "description": "Para cada tratamiento (venta, facturación, marketing, analítica), la tienda sabe qué base lo ampara: contrato, obligación legal, interés legítimo o consentimiento.",
+      "objective": "Sin base identificada no hay licitud demostrable (Arts. 3, 13).",
+      "applicability": {},
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Haz un mapa simple: venta/facturación → contrato y obligación legal; marketing → consentimiento o interés legítimo evaluado; analítica → consentimiento según configuración.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-CONSENT-MECH-001",
+      "name": "Consentimiento opt-in distinguible",
+      "obligations": ["OBL-LICITBASE-001"],
+      "description": "Los tratamientos que requieren consentimiento lo obtienen mediante acción afirmativa, clara y separada de otros aceptos (no premarcado, no condicionado a comprar).",
+      "objective": "El consentimiento inválido contamina todo el tratamiento posterior (Art. 12).",
+      "applicability": { "any_of": [{ "all_of": [{ "dimension": "consent_processing", "equals": true }] }] },
+      "evaluation_method": "mixed",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Revisa formularios y checkout: checkboxes de marketing/newsletter sin premarcar, texto específico sobre qué autoriza y separado de los términos de compra.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-CONSENT-REG-001",
+      "name": "Registro que prueba el consentimiento",
+      "obligations": ["OBL-LICITBASE-001", "OBL-EVIDENCE-001"],
+      "description": "La tienda puede demostrar quién consintió, qué consintió, cuándo y mediante qué interfaz.",
+      "objective": "Corresponde al responsable probar el consentimiento (Art. 12 inciso final).",
+      "applicability": { "any_of": [{ "all_of": [{ "dimension": "consent_processing", "equals": true }] }] },
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Identifica dónde queda registrado cada opt-in (plugin de newsletter, plataforma de email, logs). Si hoy no hay registro, prioriza implementarlo en tu herramienta de marketing.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-CONSENT-REV-001",
+      "name": "Vía de revocación del consentimiento",
+      "obligations": ["OBL-LICITBASE-001", "OBL-RIGHTS-001"],
+      "description": "Existe una vía sencilla y operativa para retirar el consentimiento (link de baja, panel de cuenta o solicitud por el canal), con efecto en tratamientos futuros.",
+      "objective": "El consentimiento es revocable en cualquier momento (Art. 12 inc. 5); una baja rota equivale a seguir tratando sin base.",
+      "applicability": { "any_of": [{ "all_of": [{ "dimension": "consent_processing", "equals": true }] }] },
+      "evaluation_method": "mixed",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Prueba tu link de desuscripción real: debe funcionar en todos los correos y reflejar la baja en la herramienta de envío. Publica además la vía alternativa por el canal de derechos.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-COOKIES-001",
+      "name": "Gestión e información de cookies",
+      "obligations": ["OBL-LICITBASE-001", "OBL-TRANSPARENCY-001"],
+      "description": "Las cookies no esenciales cuentan con mecanismo de aceptación/rechazo y existe información clara de qué cookies se usan y para qué.",
+      "objective": "Alinea el uso de tecnologías de seguimiento con bases de licitud y transparencia.",
+      "applicability": { "any_of": [{ "all_of": [{ "dimension": "cookies", "equals": true }] }] },
+      "evaluation_method": "mixed",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Inventaria tus cookies (incluidas las de plugins y scripts de terceros), publica esa tabla y evalúa un banner/mechanismo que permita rechazar las no esenciales antes de cargarlas.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-NEWSLETTER-001",
+      "name": "Suscripción y baja de newsletter operativas",
+      "obligations": ["OBL-RIGHTS-001", "OBL-LICITBASE-001"],
+      "description": "La suscripción requiere acción afirmativa y la baja es inmediata, verificada y reflejada en la lista de envío.",
+      "objective": "El marketing sin baja funcional es tratamiento continuado sin respeto a la oposición (Art. 8).",
+      "applicability": {
+        "any_of": [
+          { "all_of": [{ "dimension": "newsletter", "equals": true }] },
+          { "all_of": [{ "dimension": "direct_marketing", "equals": true }] }
+        ]
+      },
+      "evaluation_method": "mixed",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Envía una campaña de prueba y valida que la baja funcione de punta a punta; revisa que contactos dados de baja no vuelvan a entrar por sincronizaciones.",
+      "priority": "MEDIUM",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-SEC-HTTPS-001",
+      "name": "HTTPS/TLS activo en todo el sitio",
+      "obligations": ["OBL-SECURITY-001"],
+      "description": "El sitio completo (incluido checkout y admin) sirve bajo HTTPS con certificado vigente.",
+      "objective": "Medida básica e indispensable de seguridad del transporte (Art. 14 quinquies).",
+      "applicability": {},
+      "evaluation_method": "auto",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Activa HTTPS con certificado válido (Let's Encrypt u otro) y fuerza redirección desde HTTP; verifica que no haya recursos mixtos.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-SEC-ROLES-001",
+      "name": "Roles y accesos administrativos gestionados",
+      "obligations": ["OBL-SECURITY-001"],
+      "description": "Los usuarios con acceso al admin tienen roles mínimos necesarios, credenciales robustas y se eliminan accesos obsoletos.",
+      "objective": "Limita superficie de acceso a datos personales de clientes.",
+      "applicability": {},
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Revisa tu lista de usuarios admin, elimina cuentas sin uso y evita compartir credenciales; considera 2FA para administradores.",
+      "priority": "MEDIUM",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-SEC-BACKUP-001",
+      "name": "Copias de seguridad definidas",
+      "obligations": ["OBL-SECURITY-001"],
+      "description": "Existen backups periódicos con procedimiento de restauración conocido, y su ubicación está identificada (puede implicar transferencia internacional).",
+      "objective": "Disponibilidad e integridad son parte de la seguridad exigida; los backups también contienen datos personales.",
+      "applicability": {},
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Confirma frecuencia y destino de tus backups; documenta cómo restaurar y declara el proveedor de backup en tu inventario de terceros.",
+      "priority": "MEDIUM",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-THIRDPARTY-INV-001",
+      "name": "Inventario de proveedores que tratan datos",
+      "obligations": ["OBL-THIRDPARTY-001", "OBL-EVIDENCE-001"],
+      "description": "La tienda lista pasarelas de pago, plataformas de email, CRM, hosting, CDN, soporte y cualquier servicio que reciba datos personales de clientes.",
+      "objective": "No puedes gestionar encargados ni cesiones que no conoces; alimenta literales d) y h) de transparencia.",
+      "applicability": {
+        "any_of": [
+          { "all_of": [{ "dimension": "third_parties", "equals": true }] },
+          { "all_of": [{ "dimension": "analytics", "equals": true }] }
+        ]
+      },
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Revisa plugins activos y servicios contratados; anota qué datos reciben y si operan fuera de Chile.",
+      "priority": "MEDIUM",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-THIRDPARTY-DPA-001",
+      "name": "Encargos de tratamiento con proveedores",
+      "obligations": ["OBL-THIRDPARTY-001"],
+      "description": "Los proveedores clave que tratan datos por cuenta de la tienda cuentan con acuerdo/cláusulas de encargado (confidencialidad, seguridad, instrucciones, subencargados).",
+      "objective": "Tratamientos delegados sin marco contractual trasladan riesgo al responsable.",
+      "applicability": { "any_of": [{ "all_of": [{ "dimension": "third_parties", "equals": true }] }] },
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Prioriza pasarelas de pago y email marketing: verifica términos de servicio/DPA disponibles y guárdalos con tu documentación de cumplimiento.",
+      "priority": "MEDIUM",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-TRANSFERS-DECL-001",
+      "name": "Transferencias internacionales identificadas",
+      "obligations": ["OBL-TRANSFERS-001", "OBL-TRANSPARENCY-001"],
+      "description": "Las transferencias hacia el exterior están identificadas (hosting, backups, SaaS) y cuentan con garantías adecuadas; se declaran en transparencia.",
+      "objective": "Literal h) del Art. 14 ter y garantías del Art. 27.",
+      "applicability": { "any_of": [{ "all_of": [{ "dimension": "international_transfers", "equals": true }] }] },
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Identifica países de destino de tus proveedores y mecanismos de garantía; declara las categorías de datos transferidos en tu página de privacidad.",
+      "priority": "MEDIUM",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-SENSITIVE-EXCL-001",
+      "name": "Sin tratamiento de datos sensibles fuera de flujo especial",
+      "obligations": ["OBL-RIGHTS-001", "OBL-LICITBASE-001"],
+      "description": "La tienda no trata datos sensibles (salud, biometría, ideología, origen, etc.) salvo con flujo especialmente diseñado y asesoría legal.",
+      "objective": "Regla general reforzada del Art. 16; el e-commerce estándar no debería encontrarlos.",
+      "applicability": { "any_of": [{ "all_of": [{ "dimension": "special_categories", "equals": true }] }] },
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Si detectas datos sensibles (por ejemplo notas de pedido con salud del cliente), elimínalos del flujo normal o diseña un manejo específico con asesoría legal.",
+      "priority": "HIGH",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-DATA-MIN-001",
+      "name": "Minimización de datos en cuenta y checkout",
+      "obligations": ["OBL-LICITBASE-001"],
+      "description": "Los formularios de registro y checkout recolectan solo datos necesarios para la finalidad declarada.",
+      "objective": "Datos excesivos amplían riesgo sin beneficio (proporcionalidad, Arts. 4/13).",
+      "applicability": {
+        "any_of": [
+          { "all_of": [{ "dimension": "customer_accounts", "equals": true }] },
+          { "all_of": [{ "dimension": "checkout_data", "equals": true }] }
+        ]
+      },
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Revisa campos de registro y checkout: elimina los que no uses realmente (por ejemplo segundo teléfono, campos obligatorios innecesarios).",
+      "priority": "MEDIUM",
+      "requires_review": false
+    },
+    {
+      "id": "CTRL-CHECKOUT-NOTICE-001",
+      "name": "Información de tratamiento visible en checkout",
+      "obligations": ["OBL-TRANSPARENCY-001", "OBL-LICITBASE-001"],
+      "description": "En el momento de recolectar datos (checkout, registro) el titular accede a información breve sobre finalidad, responsable y enlace a la política completa.",
+      "objective": "Transparencia contextual: la política lejana no sustituye la información en el punto de captura.",
+      "applicability": { "any_of": [{ "all_of": [{ "dimension": "checkout_data", "equals": true }] }] },
+      "evaluation_method": "declared",
+      "states": ["IMPLEMENTED", "PARTIAL", "PENDING", "UNKNOWN", "NOT_APPLICABLE"],
+      "recommendation": "Añade en el checkout un texto breve con enlace a la política de privacidad indicando finalidad (procesar pedido) y contacto para ejercer derechos.",
+      "priority": "MEDIUM",
+      "requires_review": false
+    }
+  ]
+}

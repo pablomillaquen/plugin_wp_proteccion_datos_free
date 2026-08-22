@@ -1,0 +1,17 @@
+
+=== PERFIL 1: primera instalación, sin responder nada ===
+prioridad_alta=0 prioridad_media=0 revision=13 incert=0 sin_evaluar=16 implementados=0 no_aplicables=0
+
+=== PERFIL 2: tienda típica (cuentas+checkout+marketing+newsletter+analítica+cookies+terceros, sin transfers ni sensibles) ===
+prioridad_alta=0 prioridad_media=0 revision=2 incert=0 sin_evaluar=25 implementados=0 no_aplicables=2
+Áreas con brechas tras evaluar algunas cosas:
+prioridad_alta=3 prioridad_media=0 revision=2 incert=0 sin_evaluar=20 implementados=2 no_aplicables=2
+Brechas alta:
+  - CTRL-RIGHTS-CHANNEL-001 [PARTIAL]
+  - CTRL-CONSENT-MECH-001 [PENDING]
+  - CTRL-COOKIES-001 [PENDING]
+
+=== PERFIL 3: tienda mínima (solo checkout + pasarela) ===
+prioridad_alta=0 prioridad_media=0 revision=2 incert=0 sin_evaluar=20 implementados=0 no_aplicables=7
+
+WALKTHROUGH OK

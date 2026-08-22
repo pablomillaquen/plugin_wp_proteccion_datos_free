@@ -1,0 +1,28 @@
+# Release Gate RG-SEC — Resultados (2026-08-21)
+
+## A+B. Inventario de escrituras + auditoría destructiva (estático)
+update_option ×4 — TODAS claves propias (profile/assessments/detections), autoload off
+delete_option ×4 — SOLO en uninstall.php, SOLO claves propias
+wp_cache_set ×1 — caché en memoria (infraestructura benigna)
+Patrones destructivos (wp_delete_*/wc_delete_*/$wpdb->delete/TRUNCATE/DROP): 0
+$wpdb directo: 0 · HTTP externo: 0 · dependencias vendor: 0
+
+## C. Checklist seguridad WordPress/WooCommerce
+Nonces en 100% formularios ✓ · check_admin_referer/wp_verify_nonce en handlers ✓
+current_user_can(manage_woocommerce) en todos los render/handlers ✓
+sanitize_* en inputs / esc_* en outputs ✓ · $wpdb->prepare: N/A (cero SQL propio)
+ABSPATH guards: 10/10 archivos ✓ · sin vendor deps ✓
+Hooks registrados: SOLO admin_init/admin_post/admin_menu/enqueue/init/plugins_loaded/admin_notices
+→ CERO hooks frontend/comercio: checkout/carrito/pagos/emails/webhooks/REST/cron inalcanzables por construcción
+
+## D. Invariancia dinámica de datos WooCommerce
+Fixtures: 2 productos c/stock y precio · cupón TEST10 · cliente · orden completada (stock Alfa 15→13 correcto)
+Snapshot A (plugin INACTIVO) → activación HTTP → ciclo completo FREE (dash/perfil/evaluación/detector/reporte/CSV)
+→ **Snapshot S0 vs A: IDÉNTICOS en las 15 tablas/entradas de negocio** ← propiedad no-destructiva demostrada
+Operación de tienda CON plugin activo (pedido Beta×3): total 13770 ✓ · stock automático 8→5 ✓
+Snapshot B vs S0: diffs SOLO artefactos del pedido de tienda (esperado)
+
+## E. Desinstalación
+F12-SEC-01 HALLADO Y CORREGIDO: uninstall.php estaba en raíz del repo, NO se desplegaba con el plugin
+  → desinstalación habría sido no-op dejando datos propios (fuga, no destrucción)
+Movido a src/uninstall.php ✓ · post-uninstall: options chilean_dp = 0 ✓ · tablas negocio IDÉNTICAS a B ✓

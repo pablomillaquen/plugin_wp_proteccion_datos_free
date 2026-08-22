@@ -1,0 +1,10 @@
+# E2E Dashboard — SPEC-FREE-008 (2026-08-21)
+Dashboard HTTP: 200 · "WooPrivacy (FREE)" ×4 en página
+Secciones renderizadas: Necesitan confirmación / Aún sin evaluar / Cubierto (Acciones prioritarias se omite si vacía — diseño)
+POST evaluar (nonce válido): 200 → GUARDADO: PARTIAL | obs=Banner sin botón de rechazo
+  → "Cubierto a medias" y la observación aparecen renderizados tras guardar
+POST retract: 200 → evaluación retirada (get_evaluation = null)
+Códigos internos en HTML del dashboard: 0
+Anti-score sobre región propia (sin scripts core): LIMPIO
+  (matches previos eran artefactos URL-encoding y clases WooCommerce core en scripts globales)
+Regresión: chilean-dp-profile 200 · chilean-dp-settings 200 · chilean-dp-info 200

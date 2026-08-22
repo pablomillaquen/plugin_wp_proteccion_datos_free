@@ -1,0 +1,14 @@
+Caso C (fresco): consent=NULL customer_accounts=NULL
+Caso A (dm=true): consent=true newsletter=NULL
+meta.answered_at set: true source=user-declared
+Caso B (todo false): consent=false | preservado customer_accounts=true (RS3)
+option persistida dims: 9
+E2E PERFIL OK
+
+--- Verificación HTTP (guardado real vía formulario admin) ---
+POST sin nonce válido  -> HTTP 403 (CSRF rechazado, sin guardado)
+POST con nonce válido  -> HTTP 200
+Estado tras POST HTTP  -> dm=false nl=NULL tp=true ca=true; consent derivado=NULL (correcto: hay nulls y ningún true)
+answered_at            -> actualizado por el POST HTTP (21:16:52 vs ahora 21:17:53)
+Página chilean-dp-profile -> HTTP 200, renderiza título, 9 preguntas tristate ("Aún no lo sé" ×10)
+Regresión              -> chilean-dp 200, chilean-dp-settings 200

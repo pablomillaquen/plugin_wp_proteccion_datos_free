@@ -1,0 +1,26 @@
+PASS | S1 vista tiene 29 controles
+PASS | S1b sin evaluaciones aún
+PASS | S2 record ok
+PASS | S2b observación sanitizada
+PASS | S2c assessed_at int
+PASS | S3 status inválido rechazado
+PASS | S3b source inválido rechazado
+PASS | S3c control inexistente rechazado
+PASS | S3d almacenamiento intacto (INV4)
+PASS | S5 unknown/not-verifiable válido
+PASS | INV2 applicability passthrough idéntico
+PASS | INV5 cookies ahora NOT_APPLICABLE
+PASS | INV5b su evaluación PARTIAL sigue visible
+PASS | INV1 KD control: applicability sigue REQUIRES_REVIEW
+PASS | INV1b tras evaluarlo, applicability NO mutó a PENDING
+PASS | INV1c assessment PENDING queda en SU capa
+PASS | retract elimina
+PASS | retract verificable
+PASS | retract inexistente devuelve false
+E2E ASSESSMENT OK
+
+--- Regresión admin ---
+chilean-dp: 200
+chilean-dp-profile: 200
+chilean-dp-settings: 200
+chilean-dp-info: 200

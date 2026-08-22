@@ -1,0 +1,25 @@
+--- E1 perfil vacío ---
+PASS | 1 aviso atención presente pese a alta=0
+PASS | 2 mensaje no implica ausencia de problemas
+PASS | 3 frase incluye sin evaluar
+PASS | 4 frase incluye confirmación
+PASS | 5 evaluar ordenado HIGH primero
+--- E2 tienda típica + evaluaciones ---
+PASS | 6 hacer_ahora=2
+PASS | 7 PENDING antes que PARTIAL
+PASS | 8 label contextual PENDING HIGH
+PASS | 9 label PARTIAL
+PASS | 10 what_to_do viene del catálogo
+PASS | 11 legal_refs presentes
+PASS | 12 hecho contiene HTTPS
+PASS | 13 cero códigos internos en texto usuario (F-EVAL-02)
+PASS | 14 confirmar incluye KD traducida
+PASS | 15 KD ref preservada como referencia
+--- E3 todo aplicable cubierto ---
+PASS | 16 frase terminal correcta
+PASS | 17 sin aviso de atención
+PASS | 18 anti-score guidance
+E2E GUIDANCE OK
+--- Regresión + renombrado ---
+chilean-dp: 200 chilean-dp-profile: 200 
+3

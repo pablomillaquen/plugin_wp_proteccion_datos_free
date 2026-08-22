@@ -1,0 +1,23 @@
+--- A: perfil vacío, sin evaluaciones ---
+PASS | A1 sin_evaluar=16
+PASS | A2 requiere_revision=13
+PASS | A3 prioridad_alta=0
+PASS | A4 no_aplicables=0
+PASS | A5 total=29
+--- B: perfil respondido + evaluaciones mixtas ---
+PASS | B1 prioridad_alta=5 (CHANNEL+PRIVACYPOLICY+SLA+INVENTORY+COOKIES, todos HIGH)
+PASS | B2 prioridad_media=1 (solo DATA-MIN MEDIUM)
+PASS | B3 implementados=2
+PASS | B4 incertidumbres_evaluacion=1 (LAWFULBASE UNKNOWN)
+PASS | B5 no_aplicables>0 (transfers=false)
+PASS | B6 gap COOKIES es alta (HIGH en catálogo)
+PASS | B7 gap CHANNEL es alta
+PASS | B8 razones preservadas en diagnóstico (KD)
+PASS | B9 área transparencia registra brechas
+PASS | B10 gaps alta=5 media=1
+PASS | G anti-score: sin claves de score/porcentaje en output
+E2E DIAGNOSTIC OK
+
+--- Regresión admin ---
+chilean-dp: 200
+chilean-dp-profile: 200

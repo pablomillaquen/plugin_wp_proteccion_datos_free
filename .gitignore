@@ -1,0 +1,38 @@
+# Dependencies
+vendor/
+node_modules/
+
+# Docker
+docker/.env
+docker/db-data/
+
+# WordPress
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/backup-*/
+wp-content/plugins/akismet/
+wp-content/plugins/hello.php
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+debug.log
+error_log
+
+# Testing
+.phpunit.result.cache
+coverage/
+
+# Misc
+*.bak
+*.tmp
+.env.local

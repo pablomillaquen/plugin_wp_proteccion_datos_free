@@ -1,0 +1,15 @@
+# E2E Report & Export — SPEC-FREE-010 (2026-08-21)
+
+## Descargas HTTP
+Reporte HTML: 200 attachment wooprivacy-reporte-*.html · CSV: 200 attachment, 30 líneas (header+29 controles)
+
+## Contenido HTML
+Disclaimer no-certificado: presente ('No es un certificado de cumplimiento')
+Procedencias renderizadas: Declarado por el administrador ×1 (tras evaluar) · incertidumbre documentada ×12 · Pendiente de evaluación ×17
+KDs visibles: (KD-001) y (KD-002) ×2
+Secciones roadmap: 22 menciones
+
+## Gates
+Anti-score texto visible: LIMPIO (match inicial 'porcentaje'=disclaimer propio; F10-01 documentado)
+Códigos internos en narrativa HTML: 0 (enums solo en columna CSV machine-readable)
+Regresión dashboard: 200
