@@ -109,7 +109,7 @@ class Chilean_DP_Report {
  ul.notes{margin:6px 0;padding-left:20px}
  @media print{body{margin:12mm}h2{break-after:avoid}}
 </style></head><body>
-<h1>WooPrivacy (FREE) — Reporte de Assessment &amp; Guidance</h1>
+<h1>DataRights for WooCommerce — Reporte de Assessment &amp; Guidance</h1>
 <p class="meta">
  <?php echo esc_html( $m['site_name'] . ' · ' . $m['site_url'] ); ?><br>
  <?php echo esc_html( 'Generado: ' . wp_date( 'd/m/Y H:i', $m['generated_at'] ) ); ?>

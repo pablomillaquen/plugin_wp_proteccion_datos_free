@@ -4,7 +4,7 @@
     "language": "es_CL",
     "audience": "Dueño de tienda WooCommerce sin conocimientos jurídicos",
     "rule": "Una referencia legal complementa la explicación; nunca la reemplaza.",
-    "covered_definition": "'Cubierto' significa que, según la condición descrita en la tarjeta, el administrador declara la situación resuelta. Nunca significa que WooPrivacy FREE certificó cumplimiento legal."
+    "covered_definition": "'Cubierto' significa que, según la condición descrita en la tarjeta, el administrador declara la situación resuelta. Nunca significa que DataRights certificó cumplimiento legal."
   },
   "controls": {
     "CTRL-RIGHTS-CHANNEL-001": {
@@ -14,7 +14,7 @@
       "what_to_check": "Revisa si tu sitio tiene un lugar visible donde el cliente vea cómo solicitar sus derechos. Si no existe, crea una página sencilla con un correo de contacto y explica qué datos debe incluir la solicitud.",
       "where_to_check": "Tu sitio web: pie de página, página de contacto o política de privacidad.",
       "detection_capability": "manual",
-      "detection_note": "Hoy WooPrivacy FREE NO puede detectarlo; en próximas versiones podrá avisarte si existe una página de privacidad creada. Mientras tanto, revísalo tú.",
+      "detection_note": "Hoy DataRights NO puede detectarlo; en próximas versiones podrá avisarte si existe una página de privacidad creada. Mientras tanto, revísalo tú.",
       "how_to_know_covered": "Cuando exista una página o correo publicado y accesible desde tu sitio que explique cómo solicitar cada derecho.",
       "legal_explanation": "La ley obliga a ofrecer medios sencillos para que las personas ejerzan sus derechos sobre sus datos."
     },
@@ -25,7 +25,7 @@
       "what_to_check": "Lee tu página o formulario de contacto de privacidad y marca cuáles de los seis derechos aparecen mencionados. Agrega los que falten.",
       "where_to_check": "La misma página o formulario donde publicaste cómo solicitar derechos.",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE no lee el contenido de tus páginas: solo tú puedes confirmar que los seis derechos están incluidos.",
+      "detection_note": "DataRights no lee el contenido de tus páginas: solo tú puedes confirmar que los seis derechos están incluidos.",
       "how_to_know_covered": "Cuando tu canal mencione explícitamente los seis derechos y cómo solicitar cada uno.",
       "legal_explanation": "El Art. 4 enumera los derechos que toda persona tiene sobre sus datos personales."
     },
@@ -36,7 +36,7 @@
       "what_to_check": "Abre tus condiciones comerciales o términos de venta y busca cualquier cobro asociado a solicitudes sobre datos personales. Elimínalo si existe.",
       "where_to_check": "Tus términos y condiciones, políticas de venta o el texto que usas al confirmar compras.",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE no lee tus condiciones comerciales: esto solo tú puedes revisarlo.",
+      "detection_note": "DataRights no lee tus condiciones comerciales: esto solo tú puedes revisarlo.",
       "how_to_know_covered": "Cuando ninguna de tus políticas establezca cargos fijos por solicitudes, y cualquier cobro por acceso/portabilidad repetida esté limitado a costos directos documentados.",
       "legal_explanation": "El Art. 10 fija la gratuidad: solo se permite cobrar costos directos cuando el titular repite solicitudes de acceso dentro del mismo trimestre."
     },
@@ -47,7 +47,7 @@
       "what_to_check": "Decide quién recibe estas solicitudes y crea un registro simple de fecha de entrada y fecha límite. Por ejemplo, una etiqueta en tu correo o una hoja de cálculo con vencimientos.",
       "where_to_check": "El correo donde hoy llegarían mensajes de clientes sobre sus datos.",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE no puede saber cómo organizas tu correo interno: este control depende completamente de ti.",
+      "detection_note": "DataRights no puede saber cómo organizas tu correo interno: este control depende completamente de ti.",
       "how_to_know_covered": "Cuando tengas escrito y funcionando un proceso: dónde llegan las solicitudes, quién responde y cómo registras el plazo.",
       "legal_explanation": "El Art. 11 define el procedimiento: acuse de recibo y respuesta escrita en 30 días corridos, prorrogables una vez por otros 30."
     },
@@ -58,7 +58,7 @@
       "what_to_check": "Piensa qué harías mañana si un cliente pide detener el uso de sus datos: ¿sabrías exactamente dónde apagarlo? Anota las herramientas donde habría que pausarlo (por ejemplo, tu plataforma de email marketing).",
       "where_to_check": "Las herramientas externas que usan datos de clientes: email marketing, CRM, campañas publicitarias.",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE NO puede modificar ni bloquear tratamientos por ti: esta acción corresponde siempre al administrador o a sus herramientas.",
+      "detection_note": "DataRights NO puede modificar ni bloquear tratamientos por ti: esta acción corresponde siempre al administrador o a sus herramientas.",
       "how_to_know_covered": "Cuando puedas explicar paso a paso cómo detendrías el uso de los datos de un cliente mientras resuelves su caso.",
       "legal_explanation": "Los Arts. 8 ter y 11 regulan el bloqueo temporal: suspender el uso sin borrar nada, respondiendo en 2 días hábiles."
     },
@@ -69,7 +69,7 @@
       "what_to_check": "Prepara un texto modelo para rechazos: motivo concreto, antecedentes y la frase informando el derecho a reclamar ante la Agencia.",
       "where_to_check": "Guarda esa plantilla junto a las herramientas donde respondes a clientes (correo, documentos de la empresa).",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE no participa en tus respuestas a clientes: solo tú sabes si tienes esta plantilla lista.",
+      "detection_note": "DataRights no participa en tus respuestas a clientes: solo tú sabes si tienes esta plantilla lista.",
       "how_to_know_covered": "Cuando exista una plantilla escrita que incluya causa, antecedentes y aviso de reclamación ante la Agencia.",
       "legal_explanation": "El Art. 11 exige fundar toda denegación e informar al titular su derecho a reclamar ante la Agencia."
     },
@@ -80,7 +80,7 @@
       "what_to_check": "Define un mecanismo simple y proporcional: por ejemplo, responder solo al correo registrado del cliente. Escríbelo y aplícalo siempre igual.",
       "where_to_check": "El proceso con el que hoy atiendes solicitudes sobre datos (tu correo de contacto de privacidad).",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE no puede comprobar tu proceso interno. Además este punto permanece abierto: la Agencia aún no publica qué nivel de autenticación exigirá (KD-002).",
+      "detection_note": "DataRights no puede comprobar tu proceso interno. Además este punto permanece abierto: la Agencia aún no publica qué nivel de autenticación exigirá (KD-002).",
       "how_to_know_covered": "Cuando tengas escrito tu criterio de verificación y lo apliques a toda solicitud antes de entregar o modificar datos.",
       "legal_explanation": "El Art. 11 exige identificar y autenticar al solicitante; el procedimiento específico lo definirá la Agencia."
     },
@@ -91,7 +91,7 @@
       "what_to_check": "Crea una carpeta o etiqueta dedicada en tu correo donde guardes copia completa de todas las respuestas sobre datos, con fecha y destinatario.",
       "where_to_check": "Tu correo electrónico: una etiqueta dedicada funciona perfectamente para empezar.",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE no accede a tu correo ni a tus archivos: solo tú puedes crear y mantener este respaldo.",
+      "detection_note": "DataRights no accede a tu correo ni a tus archivos: solo tú puedes crear y mantener este respaldo.",
       "how_to_know_covered": "Cuando exista una ubicación definida donde guardes todas las respuestas y la uses consistentemente.",
       "legal_explanation": "El Art. 11 obliga a conservar respaldo de remisión, fecha y contenido íntegro; el Art. 3 letra a) exige acreditar el tratamiento lícito."
     },
@@ -102,7 +102,7 @@
       "what_to_check": "Escribe una lista simple: por cada fuente (clientes y pedidos de WooCommerce, formularios, newsletter, analítica, plugins) anota qué datos guarda y para qué la usas.",
       "where_to_check": "WooCommerce → Clientes y Pedidos · tus plugins activos · servicios externos contratados. La lista escríbela en un documento propio (hoja de cálculo o texto) y guárdalo donde lo encuentres después.",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE puede mostrarte qué componentes técnicos existen, pero NO conoce tus servicios externos ni las finalidades reales de uso: la lista la construye el administrador.",
+      "detection_note": "DataRights puede mostrarte qué componentes técnicos existen, pero NO conoce tus servicios externos ni las finalidades reales de uso: la lista la construye el administrador.",
       "how_to_know_covered": "Cuando tengas un documento con tus fuentes de datos, qué guarda cada una y para qué.",
       "legal_explanation": "El Art. 5 obliga a informar origen y finalidad de los datos tratados; sin inventario propio eso es imposible."
     },
@@ -113,7 +113,7 @@
       "what_to_check": "Abre tu página de privacidad y comprueba que cubre estos doce puntos: política con fecha y versión · quién es el responsable · contacto · categorías/finalidades/bases · seguridad · derechos ARCO+ · reclamar ante la Agencia · transferencias internacionales · plazos de conservación · fuente de los datos · retiro del consentimiento · decisiones automatizadas si existen.",
       "where_to_check": "WordPress → Ajustes → Privacidad muestra qué página está asignada. Revisa además que esté enlazada de forma visible (por ejemplo, en el pie del sitio).",
       "detection_capability": "manual",
-      "detection_note": "En futuras versiones WooPrivacy FREE podrá detectar si existe una página de privacidad asignada; hoy el contenido lo revisas tú.",
+      "detection_note": "En futuras versiones DataRights podrá detectar si existe una página de privacidad asignada; hoy el contenido lo revisas tú.",
       "how_to_know_covered": "Cuando tu página contenga los doce puntos y esté enlazada de manera visible.",
       "legal_explanation": "El Art. 14 ter enumera los doce elementos de información que el responsable debe mantener accesibles permanentemente."
     },
@@ -124,7 +124,7 @@
       "what_to_check": "Abre tu política de privacidad: si no tiene encabezado con fecha de actualización y número de versión, agrégalo (por ejemplo: Versión 2 — actualizada 01/09/2026). Cada vez que cambies algo, sube la versión.",
       "where_to_check": "La página de privacidad de tu sitio (WordPress → Páginas → Política de privacidad).",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE no lee el contenido de tus páginas: la fecha y versión las controla tú al editar.",
+      "detection_note": "DataRights no lee el contenido de tus páginas: la fecha y versión las controla tú al editar.",
       "how_to_know_covered": "Cuando la política muestre fecha de última actualización y número de versión visibles al inicio.",
       "legal_explanation": "El literal a) del Art. 14 ter exige publicar la política de tratamiento con su fecha y versión."
     },
@@ -135,7 +135,7 @@
       "what_to_check": "Completa los datos legales de tu empresa en la página de privacidad. Envía una prueba al correo de contacto publicado y confirma que alguien realmente lo revisa.",
       "where_to_check": "Tu página de privacidad o contacto, más el buzón de correo que publiques.",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE puede detectar datos de empresa configurados, pero no puede comprobar que el correo publicado funcione y sea revisado: eso es tuyo.",
+      "detection_note": "DataRights puede detectar datos de empresa configurados, pero no puede comprobar que el correo publicado funcione y sea revisado: eso es tuyo.",
       "how_to_know_covered": "Cuando los datos legales estén publicados y hayas probado que el canal responde.",
       "legal_explanation": "Los literales b) y c) del Art. 14 ter exigen identificar al responsable y mantener un canal vigente para solicitudes."
     },
@@ -146,7 +146,7 @@
       "what_to_check": "Escribe plazos por categoría según tu realidad: los datos de compras pueden requerir conservarse por razones legales o tributarias; los datos usados solo para publicidad pueden eliminarse cuando el cliente retira su autorización. Si dudas con casos como pedidos (que suelen tener obligación tributaria), consulta con un profesional.",
       "where_to_check": "Primero tu inventario de datos (qué guardas y para qué); luego publica los plazos definidos en tu página de privacidad.",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE no puede inventar plazos: dependen de tu actividad y de normas tributarias o comerciales aplicables. Este punto permanece abierto mientras se aclare hasta dónde llega la obligación de conservar pedidos (KD-001).",
+      "detection_note": "DataRights no puede inventar plazos: dependen de tu actividad y de normas tributarias o comerciales aplicables. Este punto permanece abierto mientras se aclare hasta dónde llega la obligación de conservar pedidos (KD-001).",
       "how_to_know_covered": "Cuando tengas escritos los plazos por categoría y estén publicados en tu página de privacidad.",
       "legal_explanation": "El literal i) del Art. 14 ter exige informar el período de conservación de los datos."
     },
@@ -157,7 +157,7 @@
       "what_to_check": "Revisa tus plugins y servicios: ¿hay antifraude, precios dinámicos o filtros automáticos que rechacen clientes? Agrega a tu política de privacidad una línea explicándolo, o una línea que diga que no realizas decisiones automatizadas.",
       "where_to_check": "Lista de plugins activos y servicios contratados; el texto va en tu página de privacidad (literal l).",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE no puede leer la lógica interna de otros plugins: identificar decisiones automatizadas es tarea del administrador.",
+      "detection_note": "DataRights no puede leer la lógica interna de otros plugins: identificar decisiones automatizadas es tarea del administrador.",
       "how_to_know_covered": "Cuando tu página de privacidad declare explícitamente si existen o no decisiones automatizadas.",
       "legal_explanation": "El literal l) del Art. 14 ter exige informar la existencia de decisiones automatizadas o perfilado."
     },
@@ -168,7 +168,7 @@
       "what_to_check": "Escribe un mapa simple junto a tu inventario: venta y facturación → contrato y obligación legal · marketing → consentimiento o interés legítimo evaluado · analítica → según cómo la configures.",
       "where_to_check": "Guárdalo junto a tu inventario de datos (mismo documento).",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE no puede determinar tus razones de negocio: el mapa lo construye quien conoce la tienda.",
+      "detection_note": "DataRights no puede determinar tus razones de negocio: el mapa lo construye quien conoce la tienda.",
       "how_to_know_covered": "Cuando cada tratamiento de tu lista tenga anotada su base de licitud.",
       "legal_explanation": "Los Arts. 3 y 13 exigen que todo tratamiento tenga consentimiento válido o una de las bases legales enumeradas."
     },
@@ -179,7 +179,7 @@
       "what_to_check": "Abre tu formulario de checkout y de registro: busca las casillas de marketing/newsletter y confirma que ninguna viene marcada de fábrica y que su texto dice exactamente qué autoriza el cliente.",
       "where_to_check": "WooCommerce → ajustes de cuentas y checkout; formularios de registro; plugins de newsletter.",
       "detection_capability": "mixed",
-      "detection_note": "🔎👤 WooPrivacy FREE puede detectar si tienes plugins de marketing instalados, pero no puede ver cómo están configuradas tus casillas: esa revisión es tuya.",
+      "detection_note": "🔎👤 DataRights puede detectar si tienes plugins de marketing instalados, pero no puede ver cómo están configuradas tus casillas: esa revisión es tuya.",
       "how_to_know_covered": "Cuando todas las casillas de autorización estén sin premarcar y su texto explique específicamente qué acepta el cliente.",
       "legal_explanation": "El Art. 12 exige consentimiento libre, informado, específico e inequívoco: una casilla oculta o premarcada no cumple ese estándar."
     },
@@ -190,7 +190,7 @@
       "what_to_check": "Abre la herramienta que usa tu tienda para enviar correos masivos (Mailchimp, Brevo u otra) y busca si guarda, por cada contacto, cuándo y cómo aceptó recibir comunicaciones.",
       "where_to_check": "Tu plugin o servicio de email marketing: ficha del contacto, sección de consentimiento o similar.",
       "detection_capability": "mixed",
-      "detection_note": "🔎👤 WooPrivacy FREE puede detectar qué herramientas de marketing tienes instaladas, pero no puede entrar a ellas para comprobar si cada contacto tiene prueba válida de consentimiento.",
+      "detection_note": "🔎👤 DataRights puede detectar qué herramientas de marketing tienes instaladas, pero no puede entrar a ellas para comprobar si cada contacto tiene prueba válida de consentimiento.",
       "how_to_know_covered": "Cuando puedas abrir la ficha de un contacto cualquiera y encontrar registrada su autorización con fecha.",
       "legal_explanation": "El Art. 12 establece que corresponde al responsable probar que contó con el consentimiento."
     },
@@ -201,7 +201,7 @@
       "what_to_check": "Envíate una campaña de prueba: abre el enlace de baja, confírmala y verifica que el contacto quedó fuera de la lista. Comprueba además que sincronizaciones posteriores no lo reingresen.",
       "where_to_check": "Tu plataforma de email marketing (probar de punta a punta) y el canal público de derechos.",
       "detection_capability": "mixed",
-      "detection_note": "🔎👤 WooPrivacy FREE puede detectar la plataforma instalada, pero NO puede probar tu enlace de baja ni verificar sincronizaciones: esa prueba de punta a punta es tuya.",
+      "detection_note": "🔎👤 DataRights puede detectar la plataforma instalada, pero NO puede probar tu enlace de baja ni verificar sincronizaciones: esa prueba de punta a punta es tuya.",
       "how_to_know_covered": "Cuando hayas probado la baja de punta a punta y confirmes que el contacto sale de la lista y permanece fuera.",
       "legal_explanation": "El Art. 12 permite revocar el consentimiento en cualquier momento sin efectos retroactivos."
     },
@@ -212,7 +212,7 @@
       "what_to_check": "Inventaria tus cookies (incluidas las de plugins y scripts externos) y publícala en tu política. Evalúa luego qué base aplica a cada una y si necesitas un mecanismo que permita rechazar las no esenciales antes de cargarlas.",
       "where_to_check": "Plugins activos, scripts de terceros integrados en tu tema, y tu página de privacidad donde publicarás la tabla.",
       "detection_capability": "mixed",
-      "detection_note": "🔎👤 WooPrivacy FREE puede detectar plugins conocidos de cookies/consentimiento instalados, pero no puede escanear todas las cookies que tu tema y scripts generan.",
+      "detection_note": "🔎👤 DataRights puede detectar plugins conocidos de cookies/consentimiento instalados, pero no puede escanear todas las cookies que tu tema y scripts generan.",
       "how_to_know_covered": "Cuando tengas la tabla publicada y un mecanismo que permita rechazar cookies no esenciales (si las usas).",
       "legal_explanation": "El uso de tecnologías de seguimiento debe alinearse con las bases de licitud (Arts. 12-13) y la transparencia (Art. 14 ter)."
     },
@@ -223,7 +223,7 @@
       "what_to_check": "Registra una cuenta de prueba, suscríbela, dale de baja y comprueba que desaparece de la lista de envío. Revisa además que sincronizaciones automáticas no la reingresen.",
       "where_to_check": "Formulario de suscripción de tu sitio + panel de tu plataforma de email marketing.",
       "detection_capability": "mixed",
-      "detection_note": "🔎👤 WooPrivacy FREE puede detectar plataformas de email marketing instaladas; probar la baja de punta a punta es tuyo.",
+      "detection_note": "🔎👤 DataRights puede detectar plataformas de email marketing instaladas; probar la baja de punta a punta es tuyo.",
       "how_to_know_covered": "Cuando la baja probada elimine el contacto de la lista y no vuelva a ingresar.",
       "legal_explanation": "Arts. 4 y 8: continuar tratando datos tras la oposición o baja carece de sustento."
     },
@@ -234,7 +234,7 @@
       "what_to_check": "Abre tu sitio en un navegador y mira la barra de direcciones. Si muestra advertencia o http:// simple (sin candado), activa un certificado SSL gratuito (Let's Encrypt lo ofrece casi todo hosting) y fuerza la redirección automática a https.",
       "where_to_check": "Barra del navegador al navegar tu tienda · panel de tu hosting (sección SSL/Seguridad).",
       "detection_capability": "manual",
-      "detection_note": "Hoy WooPrivacy FREE NO lo verifica automáticamente; en próximas versiones podrá hacerlo leyendo la configuración del sitio. Mientras tanto, revísalo tú en la barra del navegador.",
+      "detection_note": "Hoy DataRights NO lo verifica automáticamente; en próximas versiones podrá hacerlo leyendo la configuración del sitio. Mientras tanto, revísalo tú en la barra del navegador.",
       "how_to_know_covered": "Cuando todas las páginas abran con https:// y candado válido, sin avisos del navegador.",
       "legal_explanation": "El Art. 14 quinquies exige medidas de seguridad apropiadas al riesgo; HTTPS es una medida técnica básica para proteger las comunicaciones de la tienda."
     },
@@ -245,7 +245,7 @@
       "what_to_check": "Abre la lista de usuarios, filtra por rol Administrador y Tienda: elimina cuentas que ya no se usan, cambia claves débiles y evita compartir credenciales entre personas. Si tu hosting lo permite, activa verificación en dos pasos.",
       "where_to_check": "WordPress → Usuarios → todos los roles administrativos.",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE NO puede listar ni auditar usuarios: esta revisión es completamente tuya.",
+      "detection_note": "DataRights NO puede listar ni auditar usuarios: esta revisión es completamente tuya.",
       "how_to_know_covered": "Cuando cada administrador tenga cuenta propia vigente y no existan cuentas sin uso real.",
       "legal_explanation": "El Art. 14 quinquies exige medidas organizativas apropiadas; limitar y controlar los accesos es la forma concreta de cumplirlo en la gestión de tu tienda."
     },
@@ -256,7 +256,7 @@
       "what_to_check": "Confirma tres cosas en tu hosting o plugin de backups: cada cuánto se copia, dónde se guarda y cómo se restaura. Anota el proveedor de backup en tu lista de servicios que tratan datos.",
       "where_to_check": "Panel de tu hosting o plugin de backups instalado; anota lo encontrado en tu inventario.",
       "detection_capability": "manual",
-      "detection_note": "WooPrivacy FREE no puede ver tu configuración de hosting: frecuencia y destino de backups solo tú los conoces.",
+      "detection_note": "DataRights no puede ver tu configuración de hosting: frecuencia y destino de backups solo tú los conoces.",
       "how_to_know_covered": "Cuando puedas responder las tres preguntas (cada cuánto, dónde, cómo restaurar) y tengas el proveedor anotado.",
       "legal_explanation": "Disponibilidad e integridad forman parte de la seguridad exigida por el Art. 14 quinquies."
     },
@@ -267,7 +267,7 @@
       "what_to_check": "Recorre dos listas y consolida: 1) plugins activos de WooCommerce (pasarelas, envíos, marketing), 2) servicios contratados fuera de WordPress (hosting, email, contabilidad). Anota qué datos recibe cada uno.",
       "where_to_check": "WordPress → Plugins · tus contratos y paneles de servicios externos. Anótalo junto a tu inventario de datos.",
       "detection_capability": "mixed",
-      "detection_note": "🔎👤 WooPrivacy FREE puede detectar pasarelas activas y algunos plugins conocidos, pero NO conoce tus servicios contratados fuera de WordPress: solo tú los conoces.",
+      "detection_note": "🔎👤 DataRights puede detectar pasarelas activas y algunos plugins conocidos, pero NO conoce tus servicios contratados fuera de WordPress: solo tú los conoces.",
       "how_to_know_covered": "Cuando tu lista incluya todos los proveedores con los datos que maneja cada uno.",
       "legal_explanation": "Conocer a quiénes les llegan datos alimenta las literales d) y h) del Art. 14 ter y la gestión de encargados."
     },
@@ -278,7 +278,7 @@
       "what_to_check": "Para tus proveedores principales (pasarela de pago, email marketing): busca en su sitio los términos de servicio o acuerdo de tratamiento de datos (DPA), descárgalos y guárdalos junto a los documentos que usas para administrar tu tienda.",
       "where_to_check": "Sitio web o centro legal de cada proveedor; crea una carpeta propia para conservar esas copias.",
       "detection_capability": "manual",
-      "detection_note": "🔎👤 WooPrivacy FREE puede detectar qué proveedores tienes activos, pero NO puede obtener ni guardar sus acuerdos por ti: eso es tarea tuya.",
+      "detection_note": "🔎👤 DataRights puede detectar qué proveedores tienes activos, pero NO puede obtener ni guardar sus acuerdos por ti: eso es tarea tuya.",
       "how_to_know_covered": "Cuando tengas copia guardada de los términos/acuerdos de tus proveedores principales.",
       "legal_explanation": "La normativa exige regular contractualmente el tratamiento por cuenta de terceros."
     },
@@ -289,7 +289,7 @@
       "what_to_check": "Revisa en los sitios de tus proveedores dónde alojan sus servidores (busca data center, ubicación o país). Con esa lista, agrega a tu política de privacidad una sección de transferencias internacionales indicando qué categorías de datos viajan.",
       "where_to_check": "Sitios y centros legales de tus proveedores; la declaración va en tu página de privacidad.",
       "detection_capability": "manual",
-      "detection_note": "🔎👤 WooPrivacy FREE detecta qué proveedores tienes, pero NO puede determinar los países de destino ni las garantías: están en la documentación pública de cada proveedor.",
+      "detection_note": "🔎👤 DataRights detecta qué proveedores tienes, pero NO puede determinar los países de destino ni las garantías: están en la documentación pública de cada proveedor.",
       "how_to_know_covered": "Cuando sepas qué proveedores operan desde el extranjero y tu política declare esas transferencias.",
       "legal_explanation": "Art. 27 regula transferencias internacionales; literal h) del Art. 14 ter exige declararlas."
     },
@@ -300,7 +300,7 @@
       "what_to_check": "Revisa campos de checkout y registro, notas internas de pedidos históricas y formularios personalizados. Si encuentras este tipo de información, NO la elimines por tu cuenta: primero identifica para qué se recibió y consulta cómo manejarla, porque requiere un tratamiento específico.",
       "where_to_check": "Pedidos (notas), páginas de contacto, formularios de productos personalizados.",
       "detection_capability": "manual",
-      "detection_note": "🔎👤 WooPrivacy FREE puede preguntarte si tratas categorías especiales (perfil), pero no puede escanear el contenido de tus pedidos: esa revisión es tuya.",
+      "detection_note": "🔎👤 DataRights puede preguntarte si tratas categorías especiales (perfil), pero no puede escanear el contenido de tus pedidos: esa revisión es tuya.",
       "how_to_know_covered": "Cuando hayas comprobado que no recibes estos datos, o tengas diseñado con asesoría profesional el manejo de los que recibes.",
       "legal_explanation": "El Art. 16 establece la regla general reforzada sobre datos sensibles."
     },
@@ -311,7 +311,7 @@
       "what_to_check": "Abre tu página de registro y tu checkout como cliente: elimina campos obligatorios que no uses realmente (segundo teléfono, empresa, campos personalizados heredados de algún plugin).",
       "where_to_check": "WooCommerce → Ajustes → Cuentas y privacidad · campos de checkout (con tu tema o plugin de checkout) · formulario Mi cuenta / Registro.",
       "detection_capability": "mixed",
-      "detection_note": "🔎👤 WooPrivacy FREE sabe si tu tienda usa cuentas y checkout, pero NO puede leer tus formularios campo a campo: esa revisión es visual y tuya.",
+      "detection_note": "🔎👤 DataRights sabe si tu tienda usa cuentas y checkout, pero NO puede leer tus formularios campo a campo: esa revisión es visual y tuya.",
       "how_to_know_covered": "Cuando ningún campo obligatorio carezca de finalidad real que puedas explicar.",
       "legal_explanation": "Principio de proporcionalidad: Arts. 4 y 13."
     },
@@ -322,7 +322,7 @@
       "what_to_check": "Agrega en tu checkout un párrafo breve: finalidad principal (procesar y despachar tu pedido), enlace a la política de privacidad y mención del correo para ejercer derechos. La mayoría de los temas/plugins de checkout permiten añadir texto antes del botón de compra.",
       "where_to_check": "Página de checkout (con el editor de bloques de Woo o el ajuste de tu plugin de checkout).",
       "detection_capability": "manual",
-      "detection_note": "🔎👤 WooPrivacy FREE sabe si tu tienda usa checkout, pero NO puede ver el contenido de tu página de pago: la existencia y redacción del aviso se revisa visualmente.",
+      "detection_note": "🔎👤 DataRights sabe si tu tienda usa checkout, pero NO puede ver el contenido de tu página de pago: la existencia y redacción del aviso se revisa visualmente.",
       "how_to_know_covered": "Cuando el checkout muestre ese texto con enlace funcionando a la política.",
       "legal_explanation": "Transparencia contextual exigida por Arts. 14 ter y 12."
     }

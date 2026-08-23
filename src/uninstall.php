@@ -1,6 +1,6 @@
 <?php
 /**
- * Desinstalación WooPrivacy (FREE): elimina datos propios. No toca datos de WooCommerce.
+ * Desinstalación DataRights for WooCommerce (slug interno chilean-data-protection): elimina datos propios. No toca datos de WooCommerce.
  * FREE-012 — limpieza completa en desinstalar.
  */
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) { exit; }

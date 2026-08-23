@@ -1,11 +1,11 @@
-=== WooPrivacy (FREE) ===
+=== DataRights for WooCommerce ===
 Contributors: pablomillaquen
 Tags: privacy, woocommerce, data-protection, compliance, chile
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
 Requires Plugins: woocommerce
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ Privacy assessment & guidance for WooCommerce stores under Chilean Law 21.719.
 
 == Description ==
 
-WooPrivacy FREE helps you understand which privacy aspects you should review in your WooCommerce store and which ones to tackle first, under Chilean Law 21.719 (in force from December 1, 2026).
+DataRights for WooCommerce helps you understand which privacy aspects you should review in your WooCommerce store and which ones to tackle first, under Chilean Law 21.719 (in force from December 1, 2026).
 
 **What it does**
 
@@ -31,7 +31,7 @@ Not a legal-compliance certificate and not legal advice. It does not implement o
 
 **Privacy of this plugin**
 
-Runs locally on your WordPress install. It sends nothing to external servers, uses no tracking, and removes its own data on uninstall.
+DataRights runs locally on your WordPress install. It sends nothing to external servers, uses no tracking, and removes its own data on uninstall.
 
 == Installation ==
 
@@ -54,6 +54,9 @@ Locally, in your WordPress database (options). Nothing leaves your site.
 Yes. An initial diagnosis is available right away.
 
 == Changelog ==
+
+= 1.2.1 =
+* Public rebranding to **DataRights for WooCommerce** (previously known as WooPrivacy FREE). Same features, same local-only privacy guarantees.
 
 = 1.2.0 =
 * Downloadable report now uses the same human language as the dashboard.
