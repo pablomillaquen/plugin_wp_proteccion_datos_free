@@ -22,10 +22,10 @@ class Chilean_DP_Guide {
         }
         ?>
         <div class="wrap">
-            <h1><?php esc_html_e( 'WooPrivacy FREE (FREE) — Guía y acerca de', 'chilean-data-protection' ); ?></h1>
+            <h1><?php esc_html_e( 'WooPrivacy (FREE) — Guía y acerca de', 'chilean-data-protection' ); ?></h1>
 
             <div class="chilean-dp-card warning">
-                <h2><?php esc_html_e( 'Qué es y qué no es WooPrivacy FREE (FREE)', 'chilean-data-protection' ); ?></h2>
+                <h2><?php esc_html_e( 'Qué es y qué no es WooPrivacy (FREE)', 'chilean-data-protection' ); ?></h2>
                 <p><?php echo wp_kses_post( __( 'Es una herramienta de <strong>evaluación y orientación</strong>: te ayuda a entender qué aspectos de privacidad debes revisar en tu tienda WooCommerce según la Ley 21.719 y qué abordar primero.', 'chilean-data-protection' ) ); ?></p>
                 <p><strong><?php esc_html_e( 'No es un certificado de cumplimiento legal ni una asesoría jurídica', 'chilean-data-protection' ); ?></strong> — <?php esc_html_e( 'los resultados expresan estado de preparación, no porcentajes de cumplimiento. Para decisiones legales, consulta a un profesional.', 'chilean-data-protection' ); ?></p>
             </div>
@@ -59,7 +59,7 @@ class Chilean_DP_Guide {
             </div>
 
             <div class="chilean-dp-card">
-                <h2><?php esc_html_e( 'Cómo usar WooPrivacy FREE (FREE)', 'chilean-data-protection' ); ?></h2>
+                <h2><?php esc_html_e( 'Cómo usar WooPrivacy (FREE)', 'chilean-data-protection' ); ?></h2>
                 <ol>
                     <li><?php esc_html_e( 'Revisa tu Perfil de tienda (respuestas que definen qué aplica a ti).', 'chilean-data-protection' ); ?></li>
                     <li><?php esc_html_e( 'Abre el panel principal: verás un diagnóstico inicial aunque no respondas nada.', 'chilean-data-protection' ); ?></li>

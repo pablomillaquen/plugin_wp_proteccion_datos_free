@@ -1,17 +1,17 @@
-=== WooPrivacy FREE (FREE) ===
+=== WooPrivacy (FREE) ===
 Contributors: wooprivacy
 Tags: privacy, gdpr, compliance, woocommerce, chile, ley-21719, proteccion de datos
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.1
+Stable tag: 1.2.0
 License: GPLv2 or later
 
 Assessment & Guidance de privacidad para tiendas WooCommerce bajo la Ley 21.719 de Chile.
 
 == Description ==
 
-WooPrivacy FREE (FREE) te ayuda a entender qué aspectos de privacidad debes revisar en tu tienda WooCommerce y qué deberías abordar primero.
+WooPrivacy (FREE) te ayuda a entender qué aspectos de privacidad debes revisar en tu tienda WooCommerce y qué deberías abordar primero.
 
 * Perfil de tienda con 9 preguntas mínimas
 * Catálogo normativo: 9 obligaciones y 29 controles basados en la Ley 21.719 (vigente desde 01-diciembre-2026)
@@ -47,6 +47,10 @@ En la base de datos local de WordPress (options). Nada sale de tu sitio.
 Sí: hay un diagnóstico inicial disponible de inmediato.
 
 == Changelog ==
+
+= 1.2.0 =
+* El reporte descargable ahora usa el mismo lenguaje humano que el panel: cada punto incluye qué significa, por qué importa, qué revisar, dónde revisarlo, qué puede comprobar WooPrivacy FREE y cuándo marcarlo Cubierto.
+* CSV con títulos actualizados para procesamiento posterior.
 
 = 1.1.1 =
 * Pasada editorial-jurídica del contenido de las 29 tarjetas: eliminadas sobreafirmaciones (gratuidad con regla exacta del Art. 10, condición única de prórroga, cookies sin consentimiento previo automático atribuido, HTTPS como medida básica, acuerdos con proveedores sin absolutismos).

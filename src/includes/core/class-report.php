@@ -62,7 +62,9 @@ class Chilean_DP_Report {
                 $ev = Chilean_DP_Assessment_Engine::instance()->get_evaluation( $i['id'] );
                 $app = Chilean_DP_Applicability_Engine::instance()->evaluate_all()['results'][ $i['id'] ] ?? [];
                 fputcsv( $fh, [
-                    $i['id'], $i['title'], $section,
+                    $i['id'],
+                    ( Chilean_DP_Guide_Content::instance()->get( $i['id'] )['title'] ?? $i['title'] ),
+                    $section,
                     $i['status_internal'] ?? '', $i['priority'] ?? '',
                     $app['status'] ?? '',
                     $ev['status'] ?? '', $ev['source'] ?? '',
@@ -102,7 +104,7 @@ class Chilean_DP_Report {
  ul.notes{margin:6px 0;padding-left:20px}
  @media print{body{margin:12mm}h2{break-after:avoid}}
 </style></head><body>
-<h1>WooPrivacy FREE (FREE) — Reporte de Assessment &amp; Guidance</h1>
+<h1>WooPrivacy (FREE) — Reporte de Assessment &amp; Guidance</h1>
 <p class="meta">
  <?php echo esc_html( $m['site_name'] . ' · ' . $m['site_url'] ); ?><br>
  <?php echo esc_html( 'Generado: ' . wp_date( 'd/m/Y H:i', $m['generated_at'] ) ); ?>
@@ -167,13 +169,31 @@ foreach ( $titles as $key => $t ) :
  if ( empty( $d['roadmap'][ $key ] ) ) { continue; } ?>
  <h3 style="font-size:14px;margin-bottom:6px"><?php echo esc_html( $t ); ?></h3>
  <?php foreach ( $d['roadmap'][ $key ] as $i ) : ?>
+  <?php $gc = Chilean_DP_Guide_Content::instance()->get( $i['id'] );
+        $caps = [ 'auto' => '🔎 WooPrivacy FREE lo puede detectar', 'manual' => '👤 Debes comprobarlo tú', 'mixed' => '🔎👤 Detecta una parte — el resto lo compruebas tú' ]; ?>
   <div class="item <?php echo esc_attr( $key ); ?>">
-   <strong><?php echo esc_html( $i['title'] ); ?></strong>
+   <strong><?php echo esc_html( $gc['title'] ?? $i['title'] ); ?></strong>
    <?php if ( 'alta' === $i['priority'] ) : ?><span class="badge">Prioridad alta</span><?php endif; ?>
    <?php if ( 'media' === $i['priority'] ) : ?><span class="badge">Prioridad media</span><?php endif; ?>
    <span class="badge"><?php echo esc_html( $i['status_label'] ); ?></span>
-   <p style="margin:6px 0 2px"><em><?php echo esc_html( $i['why'] ); ?></em></p>
-   <p style="margin:2px 0"><?php echo esc_html( $i['what_to_do'] ); ?></p>
+   <?php if ( $gc ) : ?>
+    <p style="margin:6px 0 2px"><em><?php echo esc_html( $gc['what_it_means'] ); ?></em></p>
+    <p style="margin:6px 0 0"><strong>Por qué importa:</strong></p>
+    <p style="margin:2px 0"><?php echo esc_html( $gc['why_it_matters'] ); ?></p>
+    <p style="margin:6px 0 0"><strong>Qué debes revisar:</strong></p>
+    <p style="margin:2px 0"><?php echo esc_html( $gc['what_to_check'] ); ?></p>
+    <p style="margin:6px 0 0"><strong>Dónde lo revisas:</strong></p>
+    <p style="margin:2px 0"><?php echo esc_html( $gc['where_to_check'] ); ?></p>
+    <p style="margin:6px 0 0"><strong><?php echo esc_html( $caps[ $gc['detection_capability'] ] ?? '' ); ?></strong></p>
+    <p style="margin:2px 0;color:#50575e"><?php echo esc_html( $gc['detection_note'] ); ?></p>
+    <p style="margin:6px 0 0"><strong>Puedes marcarlo Cubierto cuando…</strong></p>
+    <p style="margin:2px 0"><?php echo esc_html( $gc['how_to_know_covered'] ); ?></p>
+    <p style="margin:6px 0 0"><strong>Qué dice la ley:</strong></p>
+    <p style="margin:2px 0"><?php echo esc_html( $gc['legal_explanation'] ); ?></p>
+   <?php else : ?>
+    <p style="margin:6px 0 2px"><em><?php echo esc_html( $i['why'] ); ?></em></p>
+    <p style="margin:2px 0"><?php echo esc_html( $i['what_to_do'] ); ?></p>
+   <?php endif; ?>
    <?php if ( ! empty( $i['review_detail'] ) ) : ?>
     <ul class="notes"><?php foreach ( (array) $i['review_detail'] as $note ) : ?><li><?php echo esc_html( $note ); ?></li><?php endforeach; ?></ul>
    <?php endif; ?>
@@ -183,7 +203,7 @@ foreach ( $titles as $key => $t ) :
  <?php endforeach;
 endforeach; ?>
 
-<p class="meta" style="margin-top:30px">Generado por WooPrivacy FREE (FREE). Catálogo normativo <?php echo esc_html( $m['catalog_version'] ); ?>. Este reporte conserva incertidumbres y procedencia por diseño: los puntos marcados como "necesitan confirmación" dependen de definiciones oficiales aún pendientes.</p>
+<p class="meta" style="margin-top:30px">Generado por WooPrivacy (FREE). Catálogo normativo <?php echo esc_html( $m['catalog_version'] ); ?>. Este reporte conserva incertidumbres y procedencia por diseño: los puntos marcados como "necesitan confirmación" dependen de definiciones oficiales aún pendientes.</p>
 </body></html><?php
     }
 
