@@ -102,10 +102,10 @@ class Chilean_DP_Compliance_Profile {
         check_admin_referer( self::NONCE_ACTION, self::NONCE_FIELD );
 
         $answers = isset( $_POST['chilean_dp_profile'] ) && is_array( $_POST['chilean_dp_profile'] )
-            ? wp_unslash( $_POST['chilean_dp_profile'] )
+            ? array_map( 'sanitize_text_field', wp_unslash( $_POST['chilean_dp_profile'] ) )
             : [];
 
-        $this->save_answers( array_map( 'strval', $answers ) );
+        $this->save_answers( $answers );
 
         add_settings_error(
             'chilean_dp_profile',

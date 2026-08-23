@@ -1,18 +1,19 @@
 <?php
 /**
  * Plugin Name: WooPrivacy (FREE)
- * Plugin URI: https://example.com/chilean-data-protection
- * Description: Plugin informativo para apoyo en el cumplimiento de la Ley de Protección de Datos Chilena (vigente desde 01-diciembre-2026). Versión FREE - Solo informativa.
+ * Plugin URI: https://github.com/pablomillaquen/plugin_wp_proteccion_datos_free
+ * Description: Evaluación y orientación de privacidad para tiendas WooCommerce según la Ley 21.719 de Chile (entra en vigencia el 01-diciembre-2026). Diagnóstico por puntos, prioridades y reporte.
  * Version: 1.2.0
- * Author: Tu Nombre
- * Author URI: https://example.com
+ * Author: Pablo Millaquén
+ * Author URI: https://github.com/pablomillaquen
  * License: GPL v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: chilean-data-protection
- * Domain Path: /languages
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * WC requires at least: 8.0
- * WC tested up to: 9.0
+ * WC tested up to: 11.0
+ * Requires Plugins: woocommerce
  */
 
 // Prevent direct access
@@ -59,16 +60,12 @@ final class Chilean_Data_Protection {
     }
 
     private function init_hooks() {
-        add_action('plugins_loaded', [$this, 'load_textdomain']);
         add_action('init', [$this, 'init_plugin']);
         add_action('admin_menu', [$this, 'add_admin_menu']);
         add_action('wp_enqueue_scripts', [$this, 'enqueue_frontend_assets']);
         add_action('admin_enqueue_scripts', [$this, 'enqueue_admin_assets']);
     }
 
-    public function load_textdomain() {
-        load_plugin_textdomain('chilean-data-protection', false, dirname(CHILEAN_DP_PLUGIN_BASENAME) . '/languages');
-    }
 
     public function init_plugin() {
         // Check WooCommerce is active

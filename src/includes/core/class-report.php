@@ -51,19 +51,20 @@ class Chilean_DP_Report {
     }
 
     public function to_csv(): string {
-        $d      = $this->generate();
-        $fh     = fopen( 'php://temp', 'r+' );
-        fputcsv( $fh, [ 'control_id', 'nombre', 'seccion_roadmap', 'estado_diagnostico', 'prioridad_brecha',
-                        'estado_aplicabilidad', 'estado_evaluacion', 'fuente_evaluacion', 'fecha_evaluacion',
-                        'observacion', 'referencias_legales' ] );
+        $d  = $this->generate();
+        $gc = Chilean_DP_Guide_Content::instance();
+
+        $rows = [ [ 'control_id', 'nombre', 'seccion_roadmap', 'estado_diagnostico', 'prioridad_brecha',
+                    'estado_aplicabilidad', 'estado_evaluacion', 'fuente_evaluacion', 'fecha_evaluacion',
+                    'observacion', 'referencias_legales' ] ];
 
         foreach ( $d['roadmap'] as $section => $items ) {
             foreach ( $items as $i ) {
-                $ev = Chilean_DP_Assessment_Engine::instance()->get_evaluation( $i['id'] );
+                $ev  = Chilean_DP_Assessment_Engine::instance()->get_evaluation( $i['id'] );
                 $app = Chilean_DP_Applicability_Engine::instance()->evaluate_all()['results'][ $i['id'] ] ?? [];
-                fputcsv( $fh, [
+                $rows[] = [
                     $i['id'],
-                    ( Chilean_DP_Guide_Content::instance()->get( $i['id'] )['title'] ?? $i['title'] ),
+                    ( $gc->get( $i['id'] )['title'] ?? $i['title'] ),
                     $section,
                     $i['status_internal'] ?? '', $i['priority'] ?? '',
                     $app['status'] ?? '',
@@ -71,13 +72,17 @@ class Chilean_DP_Report {
                     isset( $ev['assessed_at'] ) ? gmdate( 'c', $ev['assessed_at'] ) : '',
                     $i['observation'] ?? '',
                     implode( ' | ', (array) $i['legal_refs'] ),
-                ] );
+                ];
             }
         }
-        rewind( $fh );
-        $csv = (string) stream_get_contents( $fh );
-        fclose( $fh );
-        return $csv;
+
+        return implode( "\r\n", array_map( function ( $row ) {
+            return implode( ',', array_map( function ( $f ) {
+                $f = (string) $f;
+                if ( preg_match( '/[",\r\n]/', $f ) ) { $f = '"' . str_replace( '"', '""', $f ) . '"'; }
+                return $f;
+            }, $row ) );
+        }, $rows ) );
     }
 
     /* ================= HTML ================= */

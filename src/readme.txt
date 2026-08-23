@@ -1,85 +1,72 @@
 === WooPrivacy (FREE) ===
-Contributors: wooprivacy
-Tags: privacy, gdpr, compliance, woocommerce, chile, ley-21719, proteccion de datos
+Contributors: pablomillaquen
+Tags: privacy, woocommerce, data-protection, compliance, chile
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
+Requires Plugins: woocommerce
 Stable tag: 1.2.0
 License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Assessment & Guidance de privacidad para tiendas WooCommerce bajo la Ley 21.719 de Chile.
+Privacy assessment & guidance for WooCommerce stores under Chilean Law 21.719.
 
 == Description ==
 
-WooPrivacy (FREE) te ayuda a entender qué aspectos de privacidad debes revisar en tu tienda WooCommerce y qué deberías abordar primero.
+WooPrivacy FREE helps you understand which privacy aspects you should review in your WooCommerce store and which ones to tackle first, under Chilean Law 21.719 (in force from December 1, 2026).
 
-* Perfil de tienda con 9 preguntas mínimas
-* Catálogo normativo: 9 obligaciones y 29 controles basados en la Ley 21.719 (vigente desde 01-diciembre-2026)
-* Motor de aplicabilidad: qué aplica a TU tienda, con razones claras
-* Evaluación por punto, con procedencia (declarado / detectado)
-* Diagnóstico honesto: prioridades y puntos que requieren revisión — sin porcentajes de "cumplimiento"
-* Evidencia técnica del entorno (detección opcional que tú adoptas)
-* Reporte imprimible + exportación CSV
+**What it does**
 
-= Qué NO es =
+* Store profile with 9 minimal questions
+* Normative catalog: 9 obligations and 29 controls derived from the law, with article references
+* Applicability engine: what applies to YOUR store, with clear reasons
+* Evaluation per control with provenance (declared by admin / technically detected)
+* Honest diagnosis: priorities and items needing confirmation — no fake "compliance" percentages
+* Environment evidence (optional technical observations you choose to adopt)
+* Printable report + CSV export
 
-No es un certificado de cumplimiento legal ni asesoría jurídica. No modifica datos de tu tienda ni automatiza controles: evalúa y orienta.
+**What it is NOT**
 
-= Privacidad =
+Not a legal-compliance certificate and not legal advice. It does not implement or automate controls; it assesses and guides.
 
-WooPrivacy FREE no envía datos fuera de tu sitio. Toda la evaluación se guarda localmente. Al desinstalar, sus datos se eliminan.
+**Privacy of this plugin**
+
+Runs locally on your WordPress install. It sends nothing to external servers, uses no tracking, and removes its own data on uninstall.
 
 == Installation ==
 
-1. Sube la carpeta del plugin a /wp-content/plugins/ o instálalo desde Plugins.
-2. Activa el plugin. Requiere WooCommerce activo.
-3. Abre el menú WooPrivacy FREE y sigue las secciones.
+1. Upload the plugin folder to /wp-content/plugins/ or install from Plugins → Add New.
+2. Activate the plugin (requires WooCommerce).
+3. Open the WooPrivacy menu — an initial diagnosis is available immediately.
 
 == Frequently Asked Questions ==
 
-= ¿Este plugin hace que mi tienda cumpla la ley? =
-No. Evalúa y orienta sobre qué revisar. El cumplimiento depende de decisiones del responsable del tratamiento.
+= Does this plugin make my store legally compliant? =
 
-= ¿Dónde guarda mis respuestas? =
-En la base de datos local de WordPress (options). Nada sale de tu sitio.
+No. It assesses and guides you on what to review. Compliance depends on decisions made by the data controller.
 
-= ¿Puedo usarlo sin responder el perfil? =
-Sí: hay un diagnóstico inicial disponible de inmediato.
+= Where is my data stored? =
+
+Locally, in your WordPress database (options). Nothing leaves your site.
+
+= Can I use it without answering the profile? =
+
+Yes. An initial diagnosis is available right away.
 
 == Changelog ==
 
 = 1.2.0 =
-* El reporte descargable ahora usa el mismo lenguaje humano que el panel: cada punto incluye qué significa, por qué importa, qué revisar, dónde revisarlo, qué puede comprobar WooPrivacy FREE y cuándo marcarlo Cubierto.
-* CSV con títulos actualizados para procesamiento posterior.
-
-= 1.1.1 =
-* Pasada editorial-jurídica del contenido de las 29 tarjetas: eliminadas sobreafirmaciones (gratuidad con regla exacta del Art. 10, condición única de prórroga, cookies sin consentimiento previo automático atribuido, HTTPS como medida básica, acuerdos con proveedores sin absolutismos).
+* Downloadable report now uses the same human language as the dashboard.
+* CSV includes updated human titles.
 
 = 1.1.0 =
-* **Lenguaje humano en las 29 tarjetas**: cada punto ahora explica qué significa, por qué importa, qué revisar, dónde revisarlo y qué puede (y qué NO puede) comprobar WooPrivacy FREE.
-* Etiquetas honestas de capacidad: 🔎 detecta / 👤 lo compruebas tú / 🔎👤 detecta una parte.
-* Criterio observable para marcar cada punto como Cubierto.
-* Explicación humana junto a cada referencia legal.
-* Mensaje claro sobre recálculo automático al cambiar el perfil.
-
-= 1.0.2 =
-* Nueva explicación en la Guía: por qué algunos puntos aparecen como "Necesitan confirmación" (definiciones pendientes de la Agencia) con enlace contextual desde el panel.
-
-= 1.0.1 =
-* Corrección: el perfil ahora refleja correctamente la respuesta "No" guardada.
-* Corrección: las evaluaciones en "Necesita confirmación" muestran confirmación visible y aviso de éxito.
-* Compatibilidad declarada explícitamente con features de WooCommerce (HPOS, cart/checkout blocks, block editor, analytics, blueprints).
-* Verificación del enlace oficial a la Ley 21.719.
+* Human-readable guidance for all 29 controls.
+* Detection capability labels and profile recalculation messaging.
 
 = 1.0.0 =
-* Primer release público.
-* Catálogo normativo v1.0.0 (Ley 21.719): 9 obligaciones, 29 controles.
-* Perfil mínimo de tienda, motor de aplicabilidad con estados e incertidumbres documentadas.
-* Evaluación con procedencia (declarado/detectado) y diagnóstico priorizado sin score.
-* Evidencia técnica del entorno con adopción explícita del administrador.
-* Dashboard, guía integrada, reporte imprimible y exportación CSV.
+* Initial public release.
 
 == Upgrade Notice ==
 
-= 1.0.0 =
-Primera versión estable.
+= 1.2.0 =
+Report now speaks the same plain language as your dashboard.

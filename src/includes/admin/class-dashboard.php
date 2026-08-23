@@ -28,21 +28,27 @@ class Chilean_DP_Dashboard {
     }
 
     public function download_html() {
-        if ( ! current_user_can( 'manage_woocommerce' ) || ! wp_verify_nonce( $_GET['_wpnonce'] ?? '', 'chilean_dp_report' ) ) {
+        $nonce = isset( $_GET['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ) : '';
+        if ( ! current_user_can( 'manage_woocommerce' ) || ! wp_verify_nonce( $nonce, 'chilean_dp_report' ) ) {
             wp_die( esc_html__( 'Enlace no válido o caducado.', 'chilean-data-protection' ) );
         }
         header( 'Content-Type: text/html; charset=utf-8' );
         header( 'Content-Disposition: attachment; filename=wooprivacy-reporte-' . gmdate( 'Ymd-His' ) . '.html' );
+        // Salida intencionalmente cruda: documento HTML completo generado por el propio plugin.
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- reporte completo, no fragmento.
         echo Chilean_DP_Report::instance()->render_html();
         exit;
     }
 
     public function download_csv() {
-        if ( ! current_user_can( 'manage_woocommerce' ) || ! wp_verify_nonce( $_GET['_wpnonce'] ?? '', 'chilean_dp_report' ) ) {
+        $nonce = isset( $_GET['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ) : '';
+        if ( ! current_user_can( 'manage_woocommerce' ) || ! wp_verify_nonce( $nonce, 'chilean_dp_report' ) ) {
             wp_die( esc_html__( 'Enlace no válido o caducado.', 'chilean-data-protection' ) );
         }
         header( 'Content-Type: text/csv; charset=utf-8' );
         header( 'Content-Disposition: attachment; filename=wooprivacy-controles-' . gmdate( 'Ymd-His' ) . '.csv' );
+        // Salida intencionalmente cruda: datos para procesamiento machine-readable.
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escapar rompería el CSV.
         echo Chilean_DP_Report::instance()->to_csv();
         exit;
     }
@@ -59,14 +65,14 @@ class Chilean_DP_Dashboard {
         $assess = Chilean_DP_Assessment_Engine::instance();
 
         if ( isset( $_POST['chilean_dp_record'] ) && is_array( $_POST['chilean_dp_record'] ) ) {
-            $rec = wp_unslash( $_POST['chilean_dp_record'] );
-            $cid = sanitize_text_field( $rec['control_id'] ?? '' );
+            $rec = array_map( 'sanitize_text_field', wp_unslash( $_POST['chilean_dp_record'] ) );
+            $cid = $rec['control_id'] ?? '';
             if ( '' !== $cid ) {
                 $result = $assess->record(
                     $cid,
-                    isset( $rec['status'] ) ? sanitize_text_field( $rec['status'] ) : '',
+                    $rec['status'] ?? '',
                     'user-declared',
-                    isset( $rec['observation'] ) ? sanitize_text_field( $rec['observation'] ) : ''
+                    $rec['observation'] ?? ''
                 );
                 if ( ! empty( $result['ok'] ) ) {
                     $this->flash_notice = __( 'Evaluación guardada correctamente.', 'chilean-data-protection' );
@@ -202,7 +208,14 @@ class Chilean_DP_Dashboard {
                 <?php if ( 'media' === $i['priority'] ) : ?><span class="badge badge-media"><?php esc_html_e( 'Prioridad media', 'chilean-data-protection' ); ?></span><?php endif; ?>
                 <span class="badge badge-status"><?php echo esc_html( $i['status_label'] ); ?></span>
                 <?php if ( 'confirmar' === $section && ! empty( $i['status_internal'] ) && null !== Chilean_DP_Assessment_Engine::instance()->get_evaluation( $i['id'] ) ) : ?>
-                    <span class="badge badge-user-eval"><?php echo esc_html( sprintf( __( 'Tu evaluación: %s', 'chilean-data-protection' ), $this->eval_label( $i['status_internal'] ) ) ); ?></span>
+                    <?php
+                    /* translators: %s: estado de la evaluación declarada por el administrador. */
+                    ?>
+                    <?php
+                    /* translators: %s: estado de la evaluación declarada por el administrador. */
+                    $user_eval = sprintf( __( 'Tu evaluación: %s', 'chilean-data-protection' ), $this->eval_label( $i['status_internal'] ) );
+                    ?>
+                    <span class="badge badge-user-eval"><?php echo esc_html( $user_eval ); ?></span>
                 <?php endif; ?>
             </div>
 
