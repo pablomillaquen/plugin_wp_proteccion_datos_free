@@ -3,7 +3,7 @@
  * Plugin Name: DataRights for WooCommerce
  * Plugin URI: https://github.com/pablomillaquen/plugin_wp_proteccion_datos_free
  * Description: DataRights — Evaluación y orientación de privacidad para tiendas WooCommerce según la Ley 21.719 de Chile (entra en vigencia el 01-diciembre-2026). Diagnóstico por puntos, prioridades y reporte.
- * Version: 1.2.1
+ * Version: 1.2.2
  * Author: Pablo Millaquén
  * Author URI: https://github.com/pablomillaquen
  * License: GPL v2 or later
@@ -23,7 +23,7 @@ if (!defined('ABSPATH')) {
 
 /**
  * BUG-001: compatibilidad explícita con features de WooCommerce.
- * Justificado por auditoría RG-SEC: WooPrivacy FREE es administrativo-observacional,
+ * Justificado por auditoría RG-SEC: DataRights (antes WooPrivacy FREE) es administrativo-observacional,
  * sin hooks en storefront/REST/editor/cron; solo lee opciones y registro de gateways,
  * por lo que su funcionamiento es independiente de cada feature listada.
  */
@@ -112,8 +112,8 @@ final class Chilean_Data_Protection {
 
     public function add_admin_menu() {
         add_menu_page(
-            __('WooPrivacy FREE', 'chilean-data-protection'),
-            __('WooPrivacy (FREE)', 'chilean-data-protection'),
+            __('DataRights for WooCommerce', 'chilean-data-protection'),
+            __('DataRights for WooCommerce', 'chilean-data-protection'),
             'manage_woocommerce',
             'chilean-dp',
             [Chilean_DP_Dashboard::instance(), 'render_page'],

@@ -5,7 +5,7 @@ Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
 Requires Plugins: woocommerce
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,7 +37,7 @@ DataRights runs locally on your WordPress install. It sends nothing to external 
 
 1. Upload the plugin folder to /wp-content/plugins/ or install from Plugins → Add New.
 2. Activate the plugin (requires WooCommerce).
-3. Open the WooPrivacy menu — an initial diagnosis is available immediately.
+3. Open the DataRights menu — an initial diagnosis is available immediately.
 
 == Frequently Asked Questions ==
 
@@ -54,6 +54,10 @@ Locally, in your WordPress database (options). Nothing leaves your site.
 Yes. An initial diagnosis is available right away.
 
 == Changelog ==
+
+= 1.2.2 =
+* Admin menu label and page title updated to the new DataRights branding.
+* Consistent wording in upgrade notes.
 
 = 1.2.1 =
 * Public rebranding to **DataRights for WooCommerce** (previously known as WooPrivacy FREE). Same features, same local-only privacy guarantees.

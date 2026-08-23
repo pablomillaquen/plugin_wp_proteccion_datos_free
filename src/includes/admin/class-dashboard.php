@@ -155,7 +155,7 @@ class Chilean_DP_Dashboard {
             // Contenido upgrade-path congelado en FREE-011 §5 (NT2: solo tras entregar el contenido completo; NT5: capacidad, nunca miedo)
             $pro_notes = [
                 'hacer_ahora' => __( 'WooPrivacy PRO puede implementar estos puntos y registrar la evidencia por ti.', 'chilean-data-protection' ),
-                'confirmar'   => __( 'Cuando la autoridad publique definiciones, WooPrivacy PRO incorporará los criterios actualizados.', 'chilean-data-protection' ),
+                'confirmar'   => __( 'Cuando la autoridad publique definiciones, la versión PRO incorporará los criterios actualizados.', 'chilean-data-protection' ),
                 'hecho'       => __( 'WooPrivacy PRO puede automatizar estos controles y auditarlos de forma continua.', 'chilean-data-protection' ),
             ];
             $guide_url = admin_url( 'admin.php?page=chilean-dp-guide' );

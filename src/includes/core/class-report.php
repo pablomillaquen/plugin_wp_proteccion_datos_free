@@ -91,7 +91,7 @@ class Chilean_DP_Report {
         $m = $d['meta'];
         ?><!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
-<title><?php echo esc_html( 'Reporte WooPrivacy FREE — ' . $m['site_name'] ); ?></title>
+<title><?php echo esc_html( 'Reporte DataRights for WooCommerce — ' . $m['site_name'] ); ?></title>
 <style>
  body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;color:#1d2327;margin:40px auto;max-width:860px;line-height:1.5;font-size:14px}
  h1{font-size:22px;border-bottom:2px solid #1d2327;padding-bottom:8px}
@@ -114,14 +114,14 @@ class Chilean_DP_Report {
  <?php echo esc_html( $m['site_name'] . ' · ' . $m['site_url'] ); ?><br>
  <?php echo esc_html( 'Generado: ' . wp_date( 'd/m/Y H:i', $m['generated_at'] ) ); ?>
  · WordPress <?php echo esc_html( $m['wp_version'] ); ?> · WooCommerce <?php echo esc_html( $m['wc_version'] ); ?><br>
- <?php echo esc_html( 'WooPrivacy FREE ' . $m['plugin_version'] . ' · Catálogo ' . $m['catalog_version'] . ' · Perfil v' . $m['profile_version'] ); ?><br>
+ <?php echo esc_html( 'DataRights for WooCommerce v' . $m['plugin_version'] . ' · Catálogo ' . $m['catalog_version'] . ' · Perfil v' . $m['profile_version'] ); ?><br>
  <?php echo esc_html( $m['law'] . ' — vigente desde el 01-diciembre-2026' ); ?>
 </p>
 
 <div class="notice">
  <strong>Qué es y qué no es este documento.</strong>
  Es el resultado de una evaluación informativa sobre prácticas de privacidad de esta tienda WooCommerce:
- qué evaluó WooPrivacy FREE, qué encontró, qué fue declarado por su administrador, qué fue detectado técnicamente
+ qué evaluó DataRights, qué encontró, qué fue declarado por su administrador, qué fue detectado técnicamente
  y qué se recomienda revisar. <strong>No es un certificado de cumplimiento legal</strong> ni una asesoría jurídica;
  no sustituye la asesoría de un profesional. Los resultados expresan estado de preparación, no porcentajes de cumplimiento.
 </div>
@@ -175,7 +175,7 @@ foreach ( $titles as $key => $t ) :
  <h3 style="font-size:14px;margin-bottom:6px"><?php echo esc_html( $t ); ?></h3>
  <?php foreach ( $d['roadmap'][ $key ] as $i ) : ?>
   <?php $gc = Chilean_DP_Guide_Content::instance()->get( $i['id'] );
-        $caps = [ 'auto' => '🔎 WooPrivacy FREE lo puede detectar', 'manual' => '👤 Debes comprobarlo tú', 'mixed' => '🔎👤 Detecta una parte — el resto lo compruebas tú' ]; ?>
+        $caps = [ 'auto' => '🔎 DataRights lo puede detectar', 'manual' => '👤 Debes comprobarlo tú', 'mixed' => '🔎👤 Detecta una parte — el resto lo compruebas tú' ]; ?>
   <div class="item <?php echo esc_attr( $key ); ?>">
    <strong><?php echo esc_html( $gc['title'] ?? $i['title'] ); ?></strong>
    <?php if ( 'alta' === $i['priority'] ) : ?><span class="badge">Prioridad alta</span><?php endif; ?>
@@ -208,7 +208,7 @@ foreach ( $titles as $key => $t ) :
  <?php endforeach;
 endforeach; ?>
 
-<p class="meta" style="margin-top:30px">Generado por WooPrivacy (FREE). Catálogo normativo <?php echo esc_html( $m['catalog_version'] ); ?>. Este reporte conserva incertidumbres y procedencia por diseño: los puntos marcados como "necesitan confirmación" dependen de definiciones oficiales aún pendientes.</p>
+<p class="meta" style="margin-top:30px">Generado por DataRights for WooCommerce. Catálogo normativo <?php echo esc_html( $m['catalog_version'] ); ?>. Este reporte conserva incertidumbres y procedencia por diseño: los puntos marcados como "necesitan confirmación" dependen de definiciones oficiales aún pendientes.</p>
 </body></html><?php
     }
 
