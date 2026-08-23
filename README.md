@@ -1,8 +1,10 @@
-# WooPrivacy (FREE)
+# DataRights for WooCommerce
 
-**Assessment & Guidance de privacidad para tiendas WooCommerce bajo la [Ley 21.719](https://www.bcn.cl/leychile/navegar?idNorma=1209272) de Chile** — que entra en vigencia el **01-diciembre-2026**.
+**Assessment & Guidance de privacidad para tiendas WooCommerce bajo la [Ley 21.719](https://www.bcn.cl/leychile/navegar?idNorma=1185493) de Chile** — que entra en vigencia el **01-diciembre-2026**.
 
-> *WooPrivacy FREE te ayuda a entender qué aspectos de privacidad debes revisar en tu tienda WooCommerce y qué deberías abordar primero.*
+> *DataRights te ayuda a entender qué aspectos de privacidad debes revisar en tu tienda WooCommerce y qué deberías abordar primero.*
+
+> ℹ️ Antes conocido como **WooPrivacy FREE** — mismo producto, nueva marca pública.
 
 ---
 
@@ -27,7 +29,7 @@
 
 ## No destructivo respecto de WooCommerce, demostrado
 
-WooPrivacy FREE se instala en plataformas que manejan dinero, así que esta propiedad está **respaldada por evidencia**, no por promesa — aquí está cómo verificarla tú mismo:
+DataRights se instala en plataformas que manejan dinero, así que esta propiedad está **respaldada por evidencia**, no por promesa — aquí está cómo verificarla tú mismo:
 
 1. **Estático** — sus únicas escrituras persistentes son 4 options propias (`chilean_dp_*`); cero SQL directo, cero HTTP externo, cero dependencias vendor.
 2. **Estructural** — sus hooks son solo de administración; checkout, carrito, pagos, emails, REST y cron son inalcanzables por construcción.
@@ -37,7 +39,7 @@ Auditoría completa: [`specs/release-gate-rg-sec/`](specs/release-gate-rg-sec/).
 
 ## Datos almacenados y comunicaciones
 
-WooPrivacy almacena únicamente la información necesaria para el perfil de cumplimiento, las evaluaciones y su configuración — todo localmente en tu base de datos de WordPress. **No realiza ninguna comunicación HTTP externa** ni envía datos de la tienda a servicios de terceros. Al desinstalar, elimina sus propios datos.
+DataRights almacena únicamente la información necesaria para el perfil de cumplimiento, las evaluaciones y su configuración — todo localmente en tu base de datos de WordPress. **No realiza ninguna comunicación HTTP externa** ni envía datos de la tienda a servicios de terceros. Al desinstalar, elimina sus propios datos.
 
 ## Requisitos
 
@@ -49,9 +51,9 @@ WooPrivacy almacena únicamente la información necesaria para el perfil de cump
 
 ## Instalación
 
-1. Descarga [`wooprivacy-free-1.0.0.zip`](https://github.com/pablomillaquen/plugin_wp_proteccion_datos_free/releases/download/v1.0.0/wooprivacy-free-1.0.0.zip) desde el [release v1.0.0](../../releases/tag/v1.0.0).
+1. Descarga [`datarights-for-woocommerce.1.2.2.zip`](https://github.com/pablomillaquen/plugin_wp_proteccion_datos_free/releases/download/v1.2.2/datarights-for-woocommerce.1.2.2.zip) desde el [release más reciente](../../releases/latest).
 2. En tu WordPress: *Plugins → Añadir nuevo → Subir plugin* → selecciona el zip → Activar.
-3. Abre el menú **WooPrivacy**: el diagnóstico inicial funciona de inmediato; el perfil afina los resultados.
+3. Abre el menú **DataRights**: el diagnóstico inicial funciona de inmediato; el perfil afina los resultados.
 
 <details>
 <summary>Instalación manual (desarrolladores)</summary>
@@ -63,7 +65,7 @@ Copia el contenido de [`src/`](src/) como carpeta `chilean-data-protection` dent
 
 ```text
 src/            Plugin instalable (slug técnico: chilean-data-protection)
-specs/          Trazabilidad EDSE completa: FREE-001..012 + Release Gate RG-SEC
+specs/          Trazabilidad EDSE completa: FREE-001..013 + Release Gate RG-SEC
 knowledge/      Base de conocimiento normativa (Ley → obligaciones → controles)
 docs/           Texto íntegro de la Ley 21.719
 docker/         Entorno de desarrollo (WordPress + WooCommerce + MySQL)
@@ -71,13 +73,13 @@ docker/         Entorno de desarrollo (WordPress + WooCommerce + MySQL)
 
 ## Metodología
 
-Construido con **Evidence-Driven Software Evolution**: cada SPEC congela contrato, decisiones con evidencia mínima E3, regresiones automatizadas y gates de calidad. El release v1.0.0 pasó además un gate de seguridad y no-destructividad ([`specs/release-gate-rg-sec/`](specs/release-gate-rg-sec/spec.md)).
+Construido con **Evidence-Driven Software Evolution**: cada SPEC congela contrato, decisiones con evidencia mínima E3, regresiones automatizadas y gates de calidad. El release pasó además un gate de seguridad y no-destructividad ([`specs/release-gate-rg-sec/`](specs/release-gate-rg-sec/spec.md)).
 
 ## Licencia
 
-[GPL v2 o posterior](https://www.gnu.org/licenses/gpl-2.0.html)
+[GPL v2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 
-## WooPrivacy FREE / PRO
+## DataRights FREE / WooPrivacy PRO
 
-FREE observa → evalúa → explica → orienta → reporta.
+DataRights observa → evalúa → explica → orienta → reporta.
 La capa de implementación, automatización, evidencia continua y acreditación corresponde a la línea **WooPrivacy PRO** (mismos identificadores conceptuales, frontera documentada en [`specs/free-011-free-pro-boundary/`](specs/free-011-free-pro-boundary/spec.md)).
