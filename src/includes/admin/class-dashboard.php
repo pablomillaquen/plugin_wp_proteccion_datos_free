@@ -154,9 +154,9 @@ class Chilean_DP_Dashboard {
             <?php
             // Contenido upgrade-path congelado en FREE-011 §5 (NT2: solo tras entregar el contenido completo; NT5: capacidad, nunca miedo)
             $pro_notes = [
-                'hacer_ahora' => __( 'WooPrivacy PRO puede implementar estos puntos y registrar la evidencia por ti.', 'chilean-data-protection' ),
+                'hacer_ahora' => __( 'La versión PRO puede implementar estos puntos y registrar la evidencia por ti.', 'chilean-data-protection' ),
                 'confirmar'   => __( 'Cuando la autoridad publique definiciones, la versión PRO incorporará los criterios actualizados.', 'chilean-data-protection' ),
-                'hecho'       => __( 'WooPrivacy PRO puede automatizar estos controles y auditarlos de forma continua.', 'chilean-data-protection' ),
+                'hecho'       => __( 'La versión PRO puede automatizar estos controles y auditarlos de forma continua.', 'chilean-data-protection' ),
             ];
             $guide_url = admin_url( 'admin.php?page=chilean-dp-guide' );
             $kd_link   = [
@@ -229,7 +229,7 @@ class Chilean_DP_Dashboard {
                     <p><?php echo esc_html( $gc['what_to_check'] ); ?></p>
                     <p class="g-q"><?php esc_html_e( '¿Dónde lo revisas?', 'chilean-data-protection' ); ?></p>
                     <p><?php echo esc_html( $gc['where_to_check'] ); ?></p>
-                    <p class="g-q"><?php esc_html_e( '¿WooPrivacy FREE puede comprobarlo?', 'chilean-data-protection' ); ?></p>
+                    <p class="g-q"><?php esc_html_e( '¿DataRights puede comprobarlo?', 'chilean-data-protection' ); ?></p>
                     <p><span class="badge badge-cap cap-<?php echo esc_attr( $gc['detection_capability'] ); ?>"><?php echo esc_html( Chilean_DP_Guide_Content::instance()->capability_label( $gc['detection_capability'] ) ); ?></span></p>
                     <p class="g-note"><?php echo esc_html( $gc['detection_note'] ); ?></p>
                     <details class="chilean-dp-details">
