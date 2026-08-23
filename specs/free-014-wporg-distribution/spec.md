@@ -1,6 +1,26 @@
 # SPEC-FREE-014: WordPress.org Distribution Readiness
 
-**Created**: 2026-08-22 · **Status**: Draft · **Base**: v1.2.0 (FREE-001..013 FROZEN)
+**Created**: 2026-08-22
+**Status**: ACCEPTED & FROZEN (2026-08-22) — producto congelado en v1.2.2 durante submission
+**Base**: v1.2.0 → producto final congelado: v1.2.2 (rebranding DataRights)
+
+## Resultado de gates al cierre
+
+| Gate | Estado | Nota |
+|------|--------|------|
+| G1 Identidad | ✅ | Headers reales completos |
+| G2 Licensing | ✅ GPL v2+ en todo, sin terceros | |
+| G3 Seguridad WP | ✅ RG-SEC + Plugin Check 0 errores | |
+| G4 Privacidad plugin | ✅ 0 HTTP externo, 4 options propias | |
+| G5 Plugin Check | ✅ 7 errores→0; warnings documentados | |
+| G6 Compatibilidad | ✅ instalación limpia + flujo HTTP 8/8 + upgrade tags | |
+| G7 Packaging | ✅ zip reproducible verificado por descarga | |
+| G8 readme.txt | ✅ EN, ≤5 tags | |
+| **G9 Assets** | ⏳ DIFERIDO → fase distribución | icon/banner/screenshots pendientes de diseño |
+| **G10 Submission** | ⏳ DIFERIDO → fase distribución | requiere username WP.org del usuario |
+| **G11 Review/SVN** | ⏳ DIFERIDO → fase distribución | tras aprobación del directorio |
+
+> Los tres diferidos son tareas operativas externas (cuenta, diseño, trámite), no defectos del producto. El código queda congelado; si la revisión de WP.org exige cambios, se documentan como excepción con nueva versión.
 **Objetivo**: responder *"¿WooPrivacy FREE 1.2.0 está preparado para ser instalado por cualquier usuario de WordPress.org, sin nuestro entorno y cumpliendo las reglas del directorio?"*
 
 ## Gates
