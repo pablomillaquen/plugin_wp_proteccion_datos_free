@@ -89,18 +89,11 @@ class Chilean_DP_Report {
 
     private function html_document( array $d ): void {
         $m = $d['meta'];
+        $css_url = esc_url( CHILEAN_DP_PLUGIN_URL . 'assets/css/report.css' );
         ?><!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
 <title><?php echo esc_html( 'Reporte DataRights for WooCommerce — ' . $m['site_name'] ); ?></title>
-<style>
- <?php
- $css_path = CHILEAN_DP_PLUGIN_DIR . 'assets/css/report.css';
- // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
- $css = @file_get_contents( $css_path );
- // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- standalone HTML report, CSS from trusted plugin file.
- echo false !== $css ? $css : 'body{font-family:sans-serif}';
- ?>
-</style></head><body>
+<link rel="stylesheet" href="<?php echo $css_url; // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet, WordPress.Security.EscapeOutput.OutputNotEscaped ?>"></head><body>
 <h1>DataRights for WooCommerce — Reporte de Assessment &amp; Guidance</h1>
 <p class="meta">
  <?php echo esc_html( $m['site_name'] . ' · ' . $m['site_url'] ); ?><br>
