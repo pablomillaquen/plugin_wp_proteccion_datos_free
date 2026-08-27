@@ -5,7 +5,7 @@ Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
 Requires Plugins: woocommerce
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,12 @@ Locally, in your WordPress database (options). Nothing leaves your site.
 Yes. An initial diagnosis is available right away.
 
 == Changelog ==
+
+= 1.2.3 =
+* Text domain aligned to plugin slug (WordPress.org requirement).
+* Main plugin file renamed to match slug.
+* Report CSS extracted to separate file.
+* WordPress.org directory assets removed from plugin zip.
 
 = 1.2.2 =
 * Admin menu label and page title updated to the new DataRights branding.

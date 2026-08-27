@@ -110,14 +110,14 @@ class Chilean_DP_Compliance_Profile {
         add_settings_error(
             'chilean_dp_profile',
             'chilean_dp_profile_saved',
-            __( 'Perfil guardado correctamente.', 'chilean-data-protection' ),
+            __( 'Perfil guardado correctamente.', 'datarights-for-woocommerce' ),
             'success'
         );
     }
 
     public function render_page() {
         if ( ! current_user_can( 'manage_woocommerce' ) ) {
-            wp_die( esc_html__( 'No tienes permisos para acceder a esta página.', 'chilean-data-protection' ) );
+            wp_die( esc_html__( 'No tienes permisos para acceder a esta página.', 'datarights-for-woocommerce' ) );
         }
 
         $profile  = $this->get_profile();
@@ -125,8 +125,8 @@ class Chilean_DP_Compliance_Profile {
         $groups   = $this->get_groups();
         ?>
         <div class="wrap">
-            <h1><?php echo esc_html__( 'Perfil de Cumplimiento', 'chilean-data-protection' ); ?></h1>
-            <p><?php echo esc_html__( 'Estas respuestas determinan qué obligaciones y controles aplican a tu tienda. Responde solo lo que conozcas: si dejas algo en "Aún no lo sé", ese punto quedará marcado para revisión.', 'chilean-data-protection' ); ?></p>
+            <h1><?php echo esc_html__( 'Perfil de Cumplimiento', 'datarights-for-woocommerce' ); ?></h1>
+            <p><?php echo esc_html__( 'Estas respuestas determinan qué obligaciones y controles aplican a tu tienda. Responde solo lo que conozcas: si dejas algo en "Aún no lo sé", ese punto quedará marcado para revisión.', 'datarights-for-woocommerce' ); ?></p>
             <?php settings_errors( 'chilean_dp_profile' ); ?>
             <form method="post">
                 <?php wp_nonce_field( self::NONCE_ACTION, self::NONCE_FIELD ); ?>
@@ -143,7 +143,7 @@ class Chilean_DP_Compliance_Profile {
                         <?php endforeach; ?>
                     </table>
                 <?php endforeach; ?>
-                <?php submit_button( __( 'Guardar perfil', 'chilean-data-protection' ) ); ?>
+                <?php submit_button( __( 'Guardar perfil', 'datarights-for-woocommerce' ) ); ?>
             </form>
         </div>
         <?php
@@ -188,9 +188,9 @@ class Chilean_DP_Compliance_Profile {
 
     private function render_tristate( $dimension, $current ) {
         $options = [
-            '1' => __( 'Sí', 'chilean-data-protection' ),
-            '0' => __( 'No', 'chilean-data-protection' ),
-            ''  => __( 'Aún no lo sé', 'chilean-data-protection' ),
+            '1' => __( 'Sí', 'datarights-for-woocommerce' ),
+            '0' => __( 'No', 'datarights-for-woocommerce' ),
+            ''  => __( 'Aún no lo sé', 'datarights-for-woocommerce' ),
         ];
         // BUG-004: (string)false === '' marcaba "Sin responder" tras guardar No.
         $cur = null === $current ? '' : ( true === $current ? '1' : '0' );

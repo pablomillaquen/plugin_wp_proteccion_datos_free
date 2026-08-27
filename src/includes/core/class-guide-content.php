@@ -64,9 +64,9 @@ class Chilean_DP_Guide_Content {
 
     public function capability_label( $cap ) {
         return [
-            'auto'   => __( '🔎 WooPrivacy FREE lo puede detectar', 'chilean-data-protection' ),
-            'mixed'  => __( '🔎👤 Detecta una parte — el resto lo compruebas tú', 'chilean-data-protection' ),
-            'manual' => __( '👤 Debes comprobarlo tú', 'chilean-data-protection' ),
+            'auto'   => __( '🔎 WooPrivacy FREE lo puede detectar', 'datarights-for-woocommerce' ),
+            'mixed'  => __( '🔎👤 Detecta una parte — el resto lo compruebas tú', 'datarights-for-woocommerce' ),
+            'manual' => __( '👤 Debes comprobarlo tú', 'datarights-for-woocommerce' ),
         ][ $cap ] ?? '';
     }
 

@@ -3,12 +3,12 @@
  * Plugin Name: DataRights for WooCommerce
  * Plugin URI: https://github.com/pablomillaquen/plugin_wp_proteccion_datos_free
  * Description: DataRights — Evaluación y orientación de privacidad para tiendas WooCommerce según la Ley 21.719 de Chile (entra en vigencia el 01-diciembre-2026). Diagnóstico por puntos, prioridades y reporte.
- * Version: 1.2.2
+ * Version: 1.2.3
  * Author: Pablo Millaquén
  * Author URI: https://github.com/pablomillaquen
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: chilean-data-protection
+ * Text Domain: datarights-for-woocommerce
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * WC requires at least: 8.0
@@ -36,7 +36,7 @@ add_action( 'before_woocommerce_init', function () {
 	}
 } );
 
-define('CHILEAN_DP_VERSION', '0.1.0');
+define('CHILEAN_DP_VERSION', '1.2.3');
 define('CHILEAN_DP_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('CHILEAN_DP_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('CHILEAN_DP_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -80,7 +80,7 @@ final class Chilean_Data_Protection {
 
     public function woocommerce_missing_notice() {
         echo '<div class="notice notice-error is-dismissible"><p>';
-        echo esc_html__('WooPrivacy (FREE) requiere WooCommerce activo.', 'chilean-data-protection');
+        echo esc_html__('WooPrivacy (FREE) requiere WooCommerce activo.', 'datarights-for-woocommerce');
         echo '</p></div>';
     }
 
@@ -112,8 +112,8 @@ final class Chilean_Data_Protection {
 
     public function add_admin_menu() {
         add_menu_page(
-            __('DataRights for WooCommerce', 'chilean-data-protection'),
-            __('DataRights for WooCommerce', 'chilean-data-protection'),
+            __('DataRights for WooCommerce', 'datarights-for-woocommerce'),
+            __('DataRights for WooCommerce', 'datarights-for-woocommerce'),
             'manage_woocommerce',
             'chilean-dp',
             [Chilean_DP_Dashboard::instance(), 'render_page'],
@@ -123,8 +123,8 @@ final class Chilean_Data_Protection {
 
         add_submenu_page(
             'chilean-dp',
-            __('Guía y acerca de', 'chilean-data-protection'),
-            __('Guía', 'chilean-data-protection'),
+            __('Guía y acerca de', 'datarights-for-woocommerce'),
+            __('Guía', 'datarights-for-woocommerce'),
             'manage_woocommerce',
             'chilean-dp-guide',
             [Chilean_DP_Guide::instance(), 'render_page']
@@ -132,8 +132,8 @@ final class Chilean_Data_Protection {
 
         add_submenu_page(
             'chilean-dp',
-            __('Perfil de Cumplimiento', 'chilean-data-protection'),
-            __('Perfil', 'chilean-data-protection'),
+            __('Perfil de Cumplimiento', 'datarights-for-woocommerce'),
+            __('Perfil', 'datarights-for-woocommerce'),
             'manage_woocommerce',
             'chilean-dp-profile',
             [Chilean_DP_Compliance_Profile::instance(), 'render_page']
