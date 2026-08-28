@@ -5,7 +5,7 @@ Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
 Requires Plugins: woocommerce
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,11 @@ Locally, in your WordPress database (options). Nothing leaves your site.
 Yes. An initial diagnosis is available right away.
 
 == Changelog ==
+
+= 1.2.5 =
+* Removed all remaining inline `style=""` attributes from the report generator and admin interface, replacing them with semantic CSS classes.
+* Report HTML embeds its CSS inline so the downloadable report works fully standalone/offline (wp_enqueue is not applicable for downloaded files).
+* All WordPress admin interface CSS continues to load via wp_enqueue_style, scoped to the plugin screens.
 
 = 1.2.4 =
 * Report CSS now properly enqueued via wp_enqueue_style (WordPress.org requirement).

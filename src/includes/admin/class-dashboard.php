@@ -113,7 +113,7 @@ class Chilean_DP_Dashboard {
         $att     = $g['summary']['attention'];
         ?>
         <div class="wrap chilean-dp-dash">
-            <h1>DataRights <span style="font-weight:400">for WooCommerce</span></h1>
+            <h1>DataRights <span class="chilean-dp-title-light">for WooCommerce</span></h1>
             <p class="chilean-dp-subtitle">
                 <?php esc_html_e( 'Assessment & Guidance — Ley 21.719 (vigente desde 01-diciembre-2026)', 'datarights-for-woocommerce' ); ?>
                 · <a href="<?php echo esc_url( admin_url( 'admin.php?page=chilean-dp-profile' ) ); ?>"><?php esc_html_e( 'Editar perfil de tienda', 'datarights-for-woocommerce' ); ?></a>

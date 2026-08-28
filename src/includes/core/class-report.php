@@ -89,11 +89,14 @@ class Chilean_DP_Report {
 
     private function html_document( array $d ): void {
         $m = $d['meta'];
-        $css_url = esc_url( CHILEAN_DP_PLUGIN_URL . 'assets/css/report.css' );
+        $css_path = CHILEAN_DP_PLUGIN_DIR . 'assets/css/report.css';
+        // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+        $css = @file_get_contents( $css_path );
+        $css = false !== $css ? $css : 'body{font-family:sans-serif}';
         ?><!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
 <title><?php echo esc_html( 'Reporte DataRights for WooCommerce — ' . $m['site_name'] ); ?></title>
-<link rel="stylesheet" href="<?php echo $css_url; // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet, WordPress.Security.EscapeOutput.OutputNotEscaped ?>"></head><body>
+<style><?php echo $css; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet -- standalone HTML download, CSS from trusted plugin file; WordPress enqueue not applicable for downloaded files. ?></style></head><body>
 <h1>DataRights for WooCommerce — Reporte de Assessment &amp; Guidance</h1>
 <p class="meta">
  <?php echo esc_html( $m['site_name'] . ' · ' . $m['site_url'] ); ?><br>
@@ -157,7 +160,7 @@ $titles = [
 ];
 foreach ( $titles as $key => $t ) :
  if ( empty( $d['roadmap'][ $key ] ) ) { continue; } ?>
- <h3 style="font-size:14px;margin-bottom:6px"><?php echo esc_html( $t ); ?></h3>
+ <h3 class="roadmap-title"><?php echo esc_html( $t ); ?></h3>
  <?php foreach ( $d['roadmap'][ $key ] as $i ) : ?>
   <?php $gc = Chilean_DP_Guide_Content::instance()->get( $i['id'] );
         $caps = [ 'auto' => '🔎 DataRights lo puede detectar', 'manual' => '👤 Debes comprobarlo tú', 'mixed' => '🔎👤 Detecta una parte — el resto lo compruebas tú' ]; ?>
@@ -167,22 +170,22 @@ foreach ( $titles as $key => $t ) :
    <?php if ( 'media' === $i['priority'] ) : ?><span class="badge">Prioridad media</span><?php endif; ?>
    <span class="badge"><?php echo esc_html( $i['status_label'] ); ?></span>
    <?php if ( $gc ) : ?>
-    <p style="margin:6px 0 2px"><em><?php echo esc_html( $gc['what_it_means'] ); ?></em></p>
-    <p style="margin:6px 0 0"><strong>Por qué importa:</strong></p>
-    <p style="margin:2px 0"><?php echo esc_html( $gc['why_it_matters'] ); ?></p>
-    <p style="margin:6px 0 0"><strong>Qué debes revisar:</strong></p>
-    <p style="margin:2px 0"><?php echo esc_html( $gc['what_to_check'] ); ?></p>
-    <p style="margin:6px 0 0"><strong>Dónde lo revisas:</strong></p>
-    <p style="margin:2px 0"><?php echo esc_html( $gc['where_to_check'] ); ?></p>
-    <p style="margin:6px 0 0"><strong><?php echo esc_html( $caps[ $gc['detection_capability'] ] ?? '' ); ?></strong></p>
-    <p style="margin:2px 0;color:#50575e"><?php echo esc_html( $gc['detection_note'] ); ?></p>
-    <p style="margin:6px 0 0"><strong>Puedes marcarlo Cubierto cuando…</strong></p>
-    <p style="margin:2px 0"><?php echo esc_html( $gc['how_to_know_covered'] ); ?></p>
-    <p style="margin:6px 0 0"><strong>Qué dice la ley:</strong></p>
-    <p style="margin:2px 0"><?php echo esc_html( $gc['legal_explanation'] ); ?></p>
+    <p class="guide-intro"><em><?php echo esc_html( $gc['what_it_means'] ); ?></em></p>
+    <p class="guide-section-label"><strong>Por qué importa:</strong></p>
+    <p class="guide-description"><?php echo esc_html( $gc['why_it_matters'] ); ?></p>
+    <p class="guide-section-label"><strong>Qué debes revisar:</strong></p>
+    <p class="guide-description"><?php echo esc_html( $gc['what_to_check'] ); ?></p>
+    <p class="guide-section-label"><strong>Dónde lo revisas:</strong></p>
+    <p class="guide-description"><?php echo esc_html( $gc['where_to_check'] ); ?></p>
+    <p class="guide-section-label"><strong><?php echo esc_html( $caps[ $gc['detection_capability'] ] ?? '' ); ?></strong></p>
+    <p class="guide-note"><?php echo esc_html( $gc['detection_note'] ); ?></p>
+    <p class="guide-section-label"><strong>Puedes marcarlo Cubierto cuando…</strong></p>
+    <p class="guide-description"><?php echo esc_html( $gc['how_to_know_covered'] ); ?></p>
+    <p class="guide-section-label"><strong>Qué dice la ley:</strong></p>
+    <p class="guide-description"><?php echo esc_html( $gc['legal_explanation'] ); ?></p>
    <?php else : ?>
-    <p style="margin:6px 0 2px"><em><?php echo esc_html( $i['why'] ); ?></em></p>
-    <p style="margin:2px 0"><?php echo esc_html( $i['what_to_do'] ); ?></p>
+    <p class="guide-intro"><em><?php echo esc_html( $i['why'] ); ?></em></p>
+    <p class="guide-description"><?php echo esc_html( $i['what_to_do'] ); ?></p>
    <?php endif; ?>
    <?php if ( ! empty( $i['review_detail'] ) ) : ?>
     <ul class="notes"><?php foreach ( (array) $i['review_detail'] as $note ) : ?><li><?php echo esc_html( $note ); ?></li><?php endforeach; ?></ul>
@@ -193,7 +196,7 @@ foreach ( $titles as $key => $t ) :
  <?php endforeach;
 endforeach; ?>
 
-<p class="meta" style="margin-top:30px">Generado por DataRights for WooCommerce. Catálogo normativo <?php echo esc_html( $m['catalog_version'] ); ?>. Este reporte conserva incertidumbres y procedencia por diseño: los puntos marcados como "necesitan confirmación" dependen de definiciones oficiales aún pendientes.</p>
+<p class="meta report-footer">Generado por DataRights for WooCommerce. Catálogo normativo <?php echo esc_html( $m['catalog_version'] ); ?>. Este reporte conserva incertidumbres y procedencia por diseño: los puntos marcados como "necesitan confirmación" dependen de definiciones oficiales aún pendientes.</p>
 </body></html><?php
     }
 

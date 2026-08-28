@@ -12,4 +12,10 @@ body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;color:#1d2327;margin
  .badge{display:inline-block;background:#f0f0f1;border-radius:10px;padding:1px 8px;font-size:11px;margin-right:6px}
  .prov{color:#646970;font-size:11.5px;margin:6px 0 0}
  ul.notes{margin:6px 0;padding-left:20px}
+ .roadmap-title{font-size:14px;margin-bottom:6px}
+ .guide-intro{margin:6px 0 2px}
+ .guide-section-label{margin:6px 0 0}
+ .guide-description{margin:2px 0}
+ .guide-note{margin:2px 0;color:#50575e}
+ .report-footer{margin-top:30px}
  @media print{body{margin:12mm}h2{break-after:avoid}}
