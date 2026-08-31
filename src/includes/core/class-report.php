@@ -93,10 +93,20 @@ class Chilean_DP_Report {
         // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
         $css = @file_get_contents( $css_path );
         $css = false !== $css ? $css : 'body{font-family:sans-serif}';
+        // FREE-015 R4 — CSS del reporte vía API oficial de estilos de WordPress.
+        // El documento descargable es standalone/offline, pero su CSS se registra, encola y añade
+        // mediante la API de estilos y se imprime SOLO este handle en el <head>. No usa <style>/<link>
+        // directos, por lo que no dispara WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet.
+        wp_register_style( 'datarights-report-standalone', false, array(), CHILEAN_DP_VERSION );
+        wp_enqueue_style( 'datarights-report-standalone' );
+        wp_add_inline_style( 'datarights-report-standalone', $css );
+        ob_start();
+        wp_print_styles( 'datarights-report-standalone' );
+        $style_tag = (string) ob_get_clean();
         ?><!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
 <title><?php echo esc_html( 'Reporte DataRights for WooCommerce — ' . $m['site_name'] ); ?></title>
-<style><?php echo $css; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet -- standalone HTML download, CSS from trusted plugin file; WordPress enqueue not applicable for downloaded files. ?></style></head><body>
+<?php echo $style_tag; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- <style> emitido por wp_print_styles() (core de WordPress). ?></head><body>
 <h1>DataRights for WooCommerce — Reporte de Assessment &amp; Guidance</h1>
 <p class="meta">
  <?php echo esc_html( $m['site_name'] . ' · ' . $m['site_url'] ); ?><br>
