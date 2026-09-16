@@ -53,6 +53,14 @@ Locally, in your WordPress database (options). Nothing leaves your site.
 
 Yes. An initial diagnosis is available right away.
 
+== Screenshots ==
+
+1. DataRights dashboard — privacy overview of your WooCommerce store, with environment evidence and evaluation status.
+2. Evaluate each control with plain-language guidance: what it means, why it matters, what to review, and when to mark it covered.
+3. Guide — what DataRights is and is not, and why some items wait for the Data Protection Agency's definitions (Art. 11).
+4. Compliance Profile — describe your store's data-handling characteristics so only the applicable obligations are assessed.
+5. Standalone report — a printable summary of what was evaluated, declared, and detected, with priorities.
+
 == Changelog ==
 
 = 1.2.8 =

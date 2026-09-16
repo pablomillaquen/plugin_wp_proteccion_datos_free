@@ -4,6 +4,8 @@
 
 > *DataRights te ayuda a entender qué aspectos de privacidad debes revisar en tu tienda WooCommerce y qué deberías abordar primero.*
 
+> 🚀 **Publicado en WordPress.org** — instala la última versión directamente desde el [directorio oficial de plugins](https://wordpress.org/plugins/datarights-for-woocommerce/) o desde tu panel (*Plugins → Añadir nuevo → buscar "DataRights"*). 
+
 > ℹ️ Antes conocido como **WooPrivacy FREE** — mismo producto, nueva marca pública.
 
 ---
@@ -51,8 +53,8 @@ DataRights almacena únicamente la información necesaria para el perfil de cump
 
 ## Instalación
 
-1. Descarga [`datarights-for-woocommerce.1.2.2.zip`](https://github.com/pablomillaquen/plugin_wp_proteccion_datos_free/releases/download/v1.2.2/datarights-for-woocommerce.1.2.2.zip) desde el [release más reciente](../../releases/latest).
-2. En tu WordPress: *Plugins → Añadir nuevo → Subir plugin* → selecciona el zip → Activar.
+1. **Desde WordPress.org** (recomendado): *Plugins → Añadir nuevo → buscar **DataRights for WooCommerce** → Instalar → Activar*. El plugin está disponible públicamente en el [directorio oficial](https://wordpress.org/plugins/datarights-for-woocommerce/); las actualizaciones llegan automáticamente.
+2. **Alternativa (ZIP)**: descarga [`datarights-for-woocommerce-1.2.8.zip`](https://github.com/pablomillaquen/plugin_wp_proteccion_datos_free/releases/download/v1.2.8/datarights-for-woocommerce-1.2.8.zip) desde el [release v1.2.8](../../releases/tag/v1.2.8) y súbelo en *Plugins → Añadir nuevo → Subir plugin*.
 3. Abre el menú **DataRights**: el diagnóstico inicial funciona de inmediato; el perfil afina los resultados.
 
 <details>

@@ -83,6 +83,24 @@ FREE-001..006: TODAS FROZEN — MVP mínimo real COMPLETADO y evaluado
 Motores puros sin UI; superficie de usuario = FREE-007/008 con requisitos de findings.md
 ```
 
+## Estado de Publicación — FREE-015 CLOSED (2026-09-15)
+
+```text
+FREE-015 (WP.org submission & review):           CLOSED
+WordPress.org approval:                           APPROVED (Review ID .../T6 15Sep26/4.2.1, P0TDX358735HGN)
+Public release (producción):                      1.2.8  ← VERSIÓN PÚBLICA ACTUAL
+SVN tag:                                          1.2.8
+Public directory:                                 datarights-for-woocommerce (https://wordpress.org/plugins/datarights-for-woocommerce)
+SVN repo:                                         https://plugins.svn.wordpress.org/datarights-for-woocommerce
+Assets publicados:                                banners 772/1544 · iconos 128/256 · screenshot-1..5
+Public installation (desde WP.org):               VERIFIED (v1.2.8, Plugin Check limpio salvo error_log preexistentes)
+Plugin Check:                                     CLEAN except 2 pre-existing error_log (class-catalog-loader.php:176, class-guide-content.php:75)
+Release status:                                   PUBLIC / ACTIVE
+Review process:                                   COMPLETED
+```
+
+> ⚠️ **IMPORTANTE — 1.2.8 es la versión pública en producción. NO tratar 1.2.7 como release de producción.** La versión *aprobada* fue 1.2.7; la versión *publicada* es 1.2.8 (1.2.7 tenía el bug de pantalla no-full-width corregido en 1.2.8). Cualquier tarea futura asume 1.2.8 como línea base del directorio.
+
 ## Flujo del producto (FREE 1.0)
 
 ```text
@@ -249,6 +267,9 @@ docker compose -f docker/docker-compose.yml exec wordpress wp core update-db --a
 20. ~~SPEC-FREE-013~~ ✅ **FROZEN — IMPLEMENTADA Y PUBLICADA v1.1.0**
 21. ~~Mantenimiento 1.2.0~~ ✅ Reporte alineado a FREE-013
 22. ~~Rebranding 1.2.1~~ ✅ DataRights for WooCommerce: headers/readme/guía/reporte/dashboard/uninstall/overlay renombrados; Plugin Check sin warnings de marca (`v1.2.1` tag+zip). Auditoría naming: 4 slugs candidatos libres; hallazgo arco.legal descartó ARCO+: lenguaje humano por punto (qué significa/por qué importa/qué revisar/dónde/capacidad 🔎👤/Cubierto cuando/ley explicada) + CSV con títulos humanos (`v1.2.0` tag+zip). Motivado porque el reporte aún usaba el formato pre-FREE-013. (`a64c962`, tag+zip en GitHub; cierre con relectura del dueño satisfecha + pasada 2 editorial-jurídica 10 correcciones; F-EVAL-08 RESUELTO): primera prueba exploratoria real encontró F-EVAL-08 — contenido de tarjetas en lenguaje jurídico-técnico incomprensible para dueño de tienda (`specs/free-013-human-guidance/`). Solución: capa overlay `guide-content.json` (29 controles × estructura ¿Qué significa?/¿Por qué importa?/¿Qué revisar?/¿Dónde?/¿Qué detecta WooPrivacy?/¿Cuándo Cubierto?/explicación legal humana) + rediseño tarjeta dashboard + etiquetas detección 🔎/👤/🔎👤 + mensaje perfil→recalculo. INVARIANTES: motores frozen intactos, IDs/estados/aplicabilidad intactos, no inventar plazos, no inducir borrados, referencia legal nunca sustituye explicación. Gate de aceptación = "prueba del dueño" 8 preguntas × 29 tarjetas.
+23. ~~FREE-014 & FREE-015 (WP.org submission + review)~~ ✅ **APROBADO por el Plugins Team** (Review ID `APPROVED datarights-for-woocommerce/pablomillaquen/25Aug26/T6 15Sep26/4.2.1`). Iteraciones de revisión enviadas: 1.2.2→1.2.3 (textdomain+assets+wp_enqueue) → 1.2.4 (`<link>` en reporte, R1) → 1.2.5 (reporte standalone `<style>` sin inline, R2) → 1.2.6 (CSS del reporte vía styles API de WP en reporte standalone, R3) → **1.2.7 (aprobada: `wp_print_styles()` directo en el punto de salida, sin buffer intermedio ni `echo $var` ni `phpcs:ignore`)**. Nota técnica del cierre (T4/T5): el hallazgo del reviewer era el patrón captura+echo+silenciador, no la cadena de estilos. ZIPs iteración = asset en commit GitHub (`datarights-for-woocommerce-1.2.x.zip`).
+24. ~~Mantenimiento 1.2.8~~ ✅ Publicado como versión estable (ver #25). Fix de pantalla no-full-width del admin del plugin: se eliminó el `wp_enqueue_style` de `report.css` en `enqueue_admin_assets` (su `body{max-width:860px;margin:40px auto}` — CSS del reporte descargable — leakeaba al admin = causa raíz del centrado/estrechamiento; el reporte sigue leyendo `report.css` desde disco y es standalone) + eliminado `.chilean-dp-dash{max-width:1100px}`. Verificado como **superconjunto byte a byte de la 1.2.7 aprobada** (diff de tags = solo 3 archivos: admin.css -1 línea, main file bump+1 enqueue, readme changelog). Batería completa de 1.2.7 re-ejecutada OK (Plugin Check, 3 páginas admin 200 sin report.css, reporte HTML/CSV, full-width en navegador, instalación limpia del ZIP).
+25. 🎉 **PUBLICACIÓN WP.org COMPLETADA (2026-09-15)** — DataRights for WooCommerce **v1.2.8** live en https://wordpress.org/plugins/datarights-for-woocommerce · SVN `https://plugins.svn.wordpress.org/datarights-for-woocommerce` (usuario `pablomillaquen`, contraseña separada desde perfil WP.org — nunca en chat): `trunk/` = código validado + readme con `== Screenshots ==` (5 títulos por OCR de las capturas) · `tags/1.2.8/` idéntico a trunk · `assets/` = 9 archivos (banners 772/1544, iconos 128/256, screenshot-1..5) · verificado: descarga pública `downloads.wordpress.org/...` idéntica byte a byte al trunk, instalación desde WP.org OK (v1.2.8, Plugin Check limpio, dashboard 200 sin report.css). **CRITERIO OPERATIVO DESDE AQUÍ**: WordPress.org = canal de distribución, no objetivo de release; solo publicar versiones ready-to-use (regla del propio Plugins Team). Cliente svn instalado local vía `brew install subversion`. Staging de import en `/tmp/datarights-for-woocommerce-svn`.
 
 ## Notas Importantes
 
@@ -261,4 +282,4 @@ docker compose -f docker/docker-compose.yml exec wordpress wp core update-db --a
 
 ---
 
-*Última actualización: 2026-08-22 · v1.2.0 publicada (reporte alineado a FREE-013) · G3 cerrado con re-lectura del dueño satisfecha*
+*Última actualización: 2026-09-15 · v1.2.8 publicado en WordPress.org (DataRights for WooCommerce) · APROBADO T6 15Sep26 · WP.org = canal de distribución*
